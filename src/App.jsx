@@ -5,12 +5,12 @@ import Program from './components/Program.jsx';
 import GalleryItem from './components/GalleryItem.jsx';
 import NewsItem from './components/NewsItem.jsx';
 import Footer from './components/Footer.jsx';
+import HeaderNav from './components/HeaderNav.jsx';
 
 function App() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <Header />
-      <Nav />
+        <HeaderNav />
       <HeroCarousel />
       <div id="programs" className="container mx-auto py-8">
         <h2 className="text-3xl font-bold text-center text-teal-800 mb-6">Our Programs</h2>

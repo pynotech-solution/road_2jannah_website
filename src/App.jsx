@@ -14,6 +14,10 @@ function App() {
       <HeroCarousel />
       <div id="programs" className="container mx-auto py-8">
         <h2 className="text-3xl font-bold text-center text-teal-800 mb-6">Our Programs</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
         <Program
           title="Ramadan Community Outreach"
           description="During the holy month of Ramadan, we provide iftar meals, essential grains, and support to 1,000 families, ensuring no one goes hungry. Our efforts focus on widows, orphans, and refugees, reflecting the Quranic call to feed the needy (Quran 76:8-9)."
@@ -35,6 +39,7 @@ function App() {
           image="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
           alt="Shave or Braid the Orphan"
         />
+        </div>
       </div>
       <div id="gallery" className="container mx-auto py-8">
         <h2 className="text-3xl font-bold text-center text-teal-800 mb-6">Our Impact in Photos</h2>

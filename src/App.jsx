@@ -1,44 +1,76 @@
-import Header from './components/Header.jsx';
-import Nav from './components/Nav.jsx';
+import HeaderNav from './components/HeaderNav.jsx';
 import HeroCarousel from './components/HeroCarousel.jsx';
 import Program from './components/Program.jsx';
 import GalleryItem from './components/GalleryItem.jsx';
 import NewsItem from './components/NewsItem.jsx';
 import Footer from './components/Footer.jsx';
-import HeaderNav from './components/HeaderNav.jsx';
 
 function App() {
+  const programs = [
+    {
+      title: "Ramadan Community Outreach",
+      description: "During the holy month of Ramadan, we provide iftar meals, essential grains, and support to 1,000 families, ensuring no one goes hungry. Our efforts focus on widows, orphans, and refugees, reflecting the Quranic call to feed the needy (Quran 76:8-9).",
+      donateText: "Donate to Ramadan Outreach",
+      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      alt: "Ramadan Community Outreach",
+    },
+    {
+      title: 'Medwuma Pa "Community Empowerment Outreach"',
+      description: 'Medwuma Pa, meaning "Good Work" in Akan, supports sustainable livelihoods by providing small grants and business training to women in rural communities. We empower them to lead their households and break the cycle of poverty.',
+      donateText: "Support Community Empowerment",
+      image: "https://images.unsplash.com/photo-1529390079861-0edd4c12bf9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      alt: "Medwuma Pa Empowerment",
+    },
+    {
+      title: "Shave or Braid the Orphan",
+      description: "This unique initiative offers free haircuts and braiding services to orphans, fostering dignity and care. By meeting their personal needs, we show love and support, helping them feel valued in their communities.",
+      donateText: "Help an Orphan",
+      image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      alt: "Shave or Braid the Orphan",
+    },
+  ];
+
+  const news = [
+    {
+      title: "Ramadan 2025 Iftar Campaign Reaches 1,000 Families",
+      date: "April 15, 2025",
+      description: "Our Ramadan Community Outreach successfully distributed iftar meals and essential supplies to 1,000 families across rural communities, bringing joy and relief during the holy month.",
+      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      alt: "Ramadan Iftar Campaign",
+    },
+    {
+      title: "Medwuma Pa Empowers 50 Women with New Skills",
+      date: "March 20, 2025",
+      description: "Through our Medwuma Pa program, 50 women completed business training and received grants to start their own ventures, fostering sustainable livelihoods.",
+      image: "https://images.unsplash.com/photo-1529390079861-0edd4c12bf9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      alt: "Medwuma Pa Training",
+    },
+    {
+      title: "Shave or Braid Brings Smiles to 100 Orphans",
+      date: "February 10, 2025",
+      description: "Our Shave or Braid the Orphan initiative provided free haircuts and braiding to 100 children, spreading love and dignity in local communities.",
+      image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      alt: "Shave or Braid Event",
+    },
+  ];
+
   return (
     <div className="bg-gray-100 min-h-screen">
-        <HeaderNav />
+      <HeaderNav />
       <HeroCarousel />
       <div id="programs" className="container mx-auto py-8">
         <h2 className="text-3xl font-bold text-center text-teal-800 mb-6">Our Programs</h2>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-
-        <Program
-          title="Ramadan Community Outreach"
-          description="During the holy month of Ramadan, we provide iftar meals, essential grains, and support to 1,000 families, ensuring no one goes hungry. Our efforts focus on widows, orphans, and refugees, reflecting the Quranic call to feed the needy (Quran 76:8-9)."
-          donateText="Donate to Ramadan Outreach"
-          image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
-          alt="Ramadan Community Outreach"
-        />
-        <Program
-          title='Medwuma Pa "Community Empowerment Outreach"'
-          description='Medwuma Pa, meaning "Good Work" in Akan, supports sustainable livelihoods by providing small grants and business training to women in rural communities. We empower them to lead their households and break the cycle of poverty.'
-          donateText="Support Community Empowerment"
-          image="https://images.unsplash.com/photo-1529390079861-0edd4c12bf9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
-          alt="Medwuma Pa Empowerment"
-        />
-        <Program
-          title="Shave or Braid the Orphan"
-          description="This unique initiative offers free haircuts and braiding services to orphans, fostering dignity and care. By meeting their personal needs, we show love and support, helping them feel valued in their communities."
-          donateText="Help an Orphan"
-          image="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
-          alt="Shave or Braid the Orphan"
-        />
+          {programs.map((program, index) => (
+            <Program
+              key={index}
+              title={program.title}
+              description={program.description}
+              donateText={program.donateText}
+              image={program.image}
+              alt={program.alt}
+            />
+          ))}
         </div>
       </div>
       <div id="gallery" className="container mx-auto py-8">
@@ -71,27 +103,16 @@ function App() {
         <h2 className="text-3xl font-bold text-center text-teal-800 mb-6">Latest News</h2>
         <p className="text-center text-gray-700 mb-6">Stay updated with our recent activities and impact.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <NewsItem
-            title="Ramadan 2025 Iftar Campaign Reaches 1,000 Families"
-            date="April 15, 2025"
-            description="Our Ramadan Community Outreach successfully distributed iftar meals and essential supplies to 1,000 families across rural communities, bringing joy and relief during the holy month."
-            image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
-            alt="Ramadan Iftar Campaign"
-          />
-          <NewsItem
-            title="Medwuma Pa Empowers 50 Women with New Skills"
-            date="March 20, 2025"
-            description="Through our Medwuma Pa program, 50 women completed business training and received grants to start their own ventures, fostering sustainable livelihoods."
-            image="https://images.unsplash.com/photo-1529390079861-0edd4c12bf9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
-            alt="Medwuma Pa Training"
-          />
-          <NewsItem
-            title="Shave or Braid Brings Smiles to 100 Orphans"
-            date="February 10, 2025"
-            description="Our Shave or Braid the Orphan initiative provided free haircuts and braiding to 100 children, spreading love and dignity in local communities."
-            image="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
-            alt="Shave or Braid Event"
-          />
+          {news.map((article, index) => (
+            <NewsItem
+              key={index}
+              title={article.title}
+              date={article.date}
+              description={article.description}
+              image={article.image}
+              alt={article.alt}
+            />
+          ))}
         </div>
       </div>
       <div id="about" className="container mx-auto py-8">

@@ -10,6 +10,7 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedNews, setSelectedNews] = useState(null);
   const [featuredNews, setFeaturedNews] = useState(null);
+  const [selectedGalleryItem, setSelectedGalleryItem] = useState(null);
 
   useEffect(() => {
     // Sort news by date in descending order and set the most recent as featured
@@ -29,6 +30,14 @@ function App() {
 
   const updateFeaturedNews = (newsItem) => {
     setFeaturedNews(newsItem);
+  };
+
+  const openGalleryModal = (item) => {
+    setSelectedGalleryItem(item);
+  };
+
+  const closeGalleryModal = () => {
+    setSelectedGalleryItem(null);
   };
 
   const programs = [
@@ -114,6 +123,39 @@ function App() {
     },
   ];
 
+  const gallery = [
+    {
+      src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      alt: "Ramadan Iftar Distribution",
+      caption: "Distributing iftar meals to families during Ramadan.",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1529390079861-0edd4c12bf9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      alt: "Medwuma Pa Training",
+      caption: "Empowering women with business skills in Medwuma Pa.",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      alt: "Shave or Braid the Orphan",
+      caption: "Bringing smiles to orphans with free haircuts and braiding.",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1532629345-2e0b60e33f08?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      alt: "Community Support",
+      caption: "Delivering essential supplies to rural communities.",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      alt: "Winter Aid Distribution",
+      caption: "Distributing aid to refugee families during winter.",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      alt: "Educational Workshop",
+      caption: "Providing education to rural youth.",
+    },
+  ];
+
   return (
     <div className="bg-gray-100 min-h-screen">
       <HeaderNav />
@@ -137,26 +179,15 @@ function App() {
         <h2 className="text-3xl font-bold text-center text-teal-800 mb-6">Our Impact in Photos</h2>
         <p className="text-center text-gray-700 mb-6">See the difference your donations make in the lives of those we serve.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <GalleryItem
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
-            alt="Ramadan Iftar Distribution"
-            caption="Distributing iftar meals to families during Ramadan."
-          />
-          <GalleryItem
-            src="https://images.unsplash.com/photo-1529390079861-0edd4c12bf9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
-            alt="Medwuma Pa Training"
-            caption="Empowering women with business skills in Medwuma Pa."
-          />
-          <GalleryItem
-            src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
-            alt="Shave or Braid the Orphan"
-            caption="Bringing smiles to orphans with free haircuts and braiding."
-          />
-          <GalleryItem
-            src="https://images.unsplash.com/photo-1532629345-2e0b60e33f08?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
-            alt="Community Support"
-            caption="Delivering essential supplies to rural communities."
-          />
+          {gallery.map((item, index) => (
+            <GalleryItem
+              key={index}
+              src={item.src}
+              alt={item.alt}
+              caption={item.caption}
+              onClick={() => openGalleryModal(item)}
+            />
+          ))}
         </div>
       </div>
       <div id="news" className="container mx-auto py-8 px-4">
@@ -187,20 +218,19 @@ function App() {
           )}
           {/* Other news list */}
           {news.length > 1 && (
-            <div className="space-y-4 max-h-[500px] overflow-y-auto pr-2">
+            <div className="space-y-4 max-h-[100%] overflow-y-hidden pr-2">
               {news.map((item, index) => (
                 item !== featuredNews && (
                   <div
                     key={index}
-                    className="bg-white p-4 rounded-lg shadow-md hover:bg-teal-50 transition animate-fadeInUp cursor-pointer"
+                    className="bg-white p-4 rounded-lg shadow-md hover:bg-teal-50 transition animate-fadeInUp"
                     style={{ animationDelay: `${index * 0.2}s` }}
-                      onClick={() => updateFeaturedNews(item)}
-
                   >
                     <p className="text-xs bg-teal-200 inline-block px-2 py-1 text-teal-800 font-bold mb-1">{item.category}</p>
                     <p className="text-xs mb-1">{item.date}</p>
                     <h4 className="text-sm font-bold text-teal-800">{item.title}</h4>
                     <button
+                      onClick={() => updateFeaturedNews(item)}
                       className="mt-2 text-teal-600 font-semibold text-sm hover:text-teal-500"
                     >
                       → Read now
@@ -231,6 +261,25 @@ function App() {
             <p className="text-xs text-gray-600 mb-2">{selectedNews.date}</p>
             <h3 className="text-xl font-bold text-teal-800 mb-2">{selectedNews.title}</h3>
             <p className="text-gray-700">{selectedNews.description}</p>
+          </div>
+        </div>
+      )}
+      {/* Lightbox for Gallery */}
+      {selectedGalleryItem && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 relative">
+            <button
+              onClick={closeGalleryModal}
+              className="absolute top-2 right-2 text-teal-800 hover:text-teal-600 text-2xl"
+            >
+              ×
+            </button>
+            <img
+              src={selectedGalleryItem.src}
+              alt={selectedGalleryItem.alt}
+              className="w-full h-auto max-h-[80vh] object-contain"
+            />
+            <p className="mt-4 text-center text-teal-800 text-lg">{selectedGalleryItem.caption}</p>
           </div>
         </div>
       )}

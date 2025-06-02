@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import HeaderNav from './components/HeaderNav.jsx';
 import HeroCarousel from './components/HeroCarousel.jsx';
 import Program from './components/Program.jsx';
@@ -9,6 +9,13 @@ import Footer from './components/Footer.jsx';
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedNews, setSelectedNews] = useState(null);
+  const [featuredNews, setFeaturedNews] = useState(null);
+
+  useEffect(() => {
+    // Sort news by date in descending order and set the most recent as featured
+    const sortedNews = [...news].sort((a, b) => new Date(b.date) - new Date(a.date));
+    setFeaturedNews(sortedNews[0]);
+  }, []);
 
   const openModal = (newsItem) => {
     setSelectedNews(newsItem);
@@ -18,6 +25,10 @@ function App() {
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedNews(null);
+  };
+
+  const updateFeaturedNews = (newsItem) => {
+    setFeaturedNews(newsItem);
   };
 
   const programs = [
@@ -78,20 +89,28 @@ function App() {
       category: "Events",
     },
     {
-      title: "Community Support Initiative Launched",
-      date: "January 5, 2025",
-      description: "A new initiative provides essential supplies to rural communities, enhancing support for families in need. This program has already impacted hundreds of lives by delivering critical resources during challenging times.",
-      image: "https://images.unsplash.com/photo-1532629345-2e0b60e33f08?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
-      alt: "Community Support Initiative",
+      title: "Winter Aid Distribution for Refugees",
+      date: "December 15, 2024",
+      description: "We distributed blankets, clothing, and food supplies to over 500 refugee families this winter, helping them stay warm and nourished during the cold months.",
+      image: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      alt: "Winter Aid Distribution",
+      category: "General News",
+    },
+    {
+      title: "Educational Workshop for Rural Youth",
+      date: "November 10, 2024",
+      description: "Our educational workshop provided learning materials and tutoring to 200 rural youth, empowering them with knowledge and skills for a brighter future.",
+      image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      alt: "Educational Workshop",
       category: "Events",
     },
     {
-      title: "Community Support Initiative Launched",
-      date: "January 5, 2025",
-      description: "A new initiative provides essential supplies to rural communities, enhancing support for families in need. This program has already impacted hundreds of lives by delivering critical resources during challenging times.",
-      image: "https://images.unsplash.com/photo-1532629345-2e0b60e33f08?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
-      alt: "Community Support Initiative",
-      category: "Events",
+      title: "Healthcare Camp Serves 300 Families",
+      date: "October 5, 2024",
+      description: "A free healthcare camp offered medical checkups and medicines to 300 families in underserved areas, addressing critical health needs.",
+      image: "https://images.unsplash.com/photo-1550831107-1553da8c8464?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      alt: "Healthcare Camp",
+      category: "General News",
     },
   ];
 
@@ -145,20 +164,20 @@ function App() {
         <p className="text-center text-gray-700 mb-6">Stay updated with our recent activities and impact.</p>
         <div className="grid md:grid-cols-3 gap-6">
           {/* Featured news - span 2 columns */}
-          {news.length > 0 && (
+          {featuredNews && (
             <div className="md:col-span-2 relative bg-gray-100 rounded-lg overflow-hidden shadow-md group">
               <img
-                src={news[0].image}
-                alt={news[0].alt}
-                className="w-full h-72 object-cover transition duration-300 group-hover:scale-105 group-hover:brightness-75"
+                src={featuredNews.image}
+                alt={featuredNews.alt}
+                className="w-full h-[500px] object-cover transition duration-300 group-hover:scale-105 group-hover:brightness-75"
               />
               <div className="absolute bottom-0 bg-black bg-opacity-50 text-white p-6 w-full transition duration-300 group-hover:-translate-y-2">
-                <p className="text-sm bg-teal-200 inline-block px-2 py-1 text-teal-800 font-bold mb-2">{news[0].category}</p>
-                <p className="text-xs mb-1">{news[0].date}</p>
-                <h3 className="text-xl font-bold">{news[0].title}</h3>
-                <p className="mt-2 text-sm">{news[0].description}</p>
+                <p className="text-sm bg-teal-200 inline-block px-2 py-1 text-teal-800 font-bold mb-2">{featuredNews.category}</p>
+                <p className="text-xs mb-1">{featuredNews.date}</p>
+                <h3 className="text-xl font-bold">{featuredNews.title}</h3>
+                <p className="mt-2 text-sm">{featuredNews.description}</p>
                 <button
-                  onClick={() => openModal(news[0])}
+                  onClick={() => openModal(featuredNews)}
                   className="mt-4 text-teal-600 font-semibold hover:text-teal-500"
                 >
                   → Read now
@@ -168,23 +187,26 @@ function App() {
           )}
           {/* Other news list */}
           {news.length > 1 && (
-            <div className="space-y-4">
-              {news.slice(1, 4).map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-4 rounded-lg shadow-md hover:bg-teal-50 transition animate-fadeInUp"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                  <p className="text-xs bg-teal-200 inline-block px-2 py-1 text-teal-800 font-bold mb-1">{item.category}</p>
-                  <p className="text-xs mb-1">{item.date}</p>
-                  <h4 className="text-sm font-bold text-teal-800">{item.title}</h4>
-                  <button
-                    onClick={() => openModal(item)}
-                    className="mt-2 text-teal-600 font-semibold text-sm hover:text-teal-500"
+            <div className="space-y-4 max-h-[500px] overflow-y-auto pr-2">
+              {news.map((item, index) => (
+                item !== featuredNews && (
+                  <div
+                    key={index}
+                    className="bg-white p-4 rounded-lg shadow-md hover:bg-teal-50 transition animate-fadeInUp cursor-pointer"
+                    style={{ animationDelay: `${index * 0.2}s` }}
+                      onClick={() => updateFeaturedNews(item)}
+
                   >
-                    → Read now
-                  </button>
-                </div>
+                    <p className="text-xs bg-teal-200 inline-block px-2 py-1 text-teal-800 font-bold mb-1">{item.category}</p>
+                    <p className="text-xs mb-1">{item.date}</p>
+                    <h4 className="text-sm font-bold text-teal-800">{item.title}</h4>
+                    <button
+                      className="mt-2 text-teal-600 font-semibold text-sm hover:text-teal-500"
+                    >
+                      → Read now
+                    </button>
+                  </div>
+                )
               ))}
             </div>
           )}
@@ -198,7 +220,7 @@ function App() {
               onClick={closeModal}
               className="absolute top-2 right-2 text-teal-800 hover:text-teal-600 text-xl"
             >
-              &times;
+              ×
             </button>
             <img
               src={selectedNews.image}

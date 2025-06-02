@@ -11,6 +11,7 @@ function App() {
   const [selectedNews, setSelectedNews] = useState(null);
   const [featuredNews, setFeaturedNews] = useState(null);
   const [selectedGalleryItem, setSelectedGalleryItem] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     // Sort news by date in descending order and set the most recent as featured
@@ -32,12 +33,26 @@ function App() {
     setFeaturedNews(newsItem);
   };
 
-  const openGalleryModal = (item) => {
+  const openGalleryModal = (item, index = 0) => {
     setSelectedGalleryItem(item);
+    setCurrentIndex(index);
   };
 
   const closeGalleryModal = () => {
     setSelectedGalleryItem(null);
+    setCurrentIndex(0);
+  };
+
+  const nextItem = () => {
+    if (selectedGalleryItem?.items) {
+      setCurrentIndex((prev) => (prev + 1) % selectedGalleryItem.items.length);
+    }
+  };
+
+  const prevItem = () => {
+    if (selectedGalleryItem?.items) {
+      setCurrentIndex((prev) => (prev - 1 + selectedGalleryItem.items.length) % selectedGalleryItem.items.length);
+    }
   };
 
   const programs = [
@@ -125,34 +140,63 @@ function App() {
 
   const gallery = [
     {
+      type: "image",
       src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       alt: "Ramadan Iftar Distribution",
       caption: "Distributing iftar meals to families during Ramadan.",
     },
     {
-      src: "https://images.unsplash.com/photo-1529390079861-0edd4c12bf9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      alt: "Medwuma Pa Training",
-      caption: "Empowering women with business skills in Medwuma Pa.",
+      type: "video",
+      src: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Example YouTube embed URL
+      alt: "Ramadan Iftar Video",
+      caption: "Video of iftar meal distribution.",
     },
     {
-      src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      alt: "Shave or Braid the Orphan",
-      caption: "Bringing smiles to orphans with free haircuts and braiding.",
+      type: "album",
+      src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200", // Thumbnail
+      alt: "Medwuma Pa Album",
+      caption: "Photos and videos from Medwuma Pa training.",
+      items: [
+        {
+          type: "image",
+          src: "https://images.unsplash.com/photo-1529390079861-0edd4c12bf9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "Medwuma Pa Training Photo 1",
+        },
+        {
+          type: "video",
+          src: "https://www.youtube.com/embed/xyz123", // Example YouTube embed URL
+          alt: "Medwuma Pa Training Video",
+        },
+        {
+          type: "image",
+          src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "Medwuma Pa Training Photo 2",
+        },
+      ],
     },
     {
+      type: "image",
       src: "https://images.unsplash.com/photo-1532629345-2e0b60e33f08?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       alt: "Community Support",
       caption: "Delivering essential supplies to rural communities.",
     },
     {
-      src: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      alt: "Winter Aid Distribution",
-      caption: "Distributing aid to refugee families during winter.",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      alt: "Educational Workshop",
-      caption: "Providing education to rural youth.",
+      type: "album",
+      src: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200", // Thumbnail
+      alt: "Winter Aid Album",
+      caption: "Photos and videos from winter aid distribution.",
+      items: [
+        {
+          type: "image",
+          src: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+          alt: "Winter Aid Photo 1",
+        },
+        {
+          type: "video",
+          src: "https://www.youtube.com/embed/abc789", // Example YouTube embed URL
+          alt: "Winter Aid Video",
+        },
+      ],
     },
   ];
 
@@ -182,10 +226,12 @@ function App() {
           {gallery.map((item, index) => (
             <GalleryItem
               key={index}
+              type={item.type}
               src={item.src}
               alt={item.alt}
               caption={item.caption}
-              onClick={() => openGalleryModal(item)}
+              items={item.items}
+              onClick={() => openGalleryModal(item, 0)}
             />
           ))}
         </div>
@@ -274,12 +320,61 @@ function App() {
             >
               ×
             </button>
-            <img
-              src={selectedGalleryItem.src}
-              alt={selectedGalleryItem.alt}
-              className="w-full h-auto max-h-[80vh] object-contain"
-            />
-            <p className="mt-4 text-center text-teal-800 text-lg">{selectedGalleryItem.caption}</p>
+            {selectedGalleryItem.items ? (
+              <>
+                <div className="relative">
+                  {selectedGalleryItem.items[currentIndex].type === "image" ? (
+                    <img
+                      src={selectedGalleryItem.items[currentIndex].src}
+                      alt={selectedGalleryItem.items[currentIndex].alt}
+                      className="w-full h-auto max-h-[80vh] object-contain"
+                    />
+                  ) : (
+                    <iframe
+                      src={selectedGalleryItem.items[currentIndex].src}
+                      title={selectedGalleryItem.items[currentIndex].alt}
+                      className="w-full h-[80vh] object-contain"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  )}
+                </div>
+                <div className="flex justify-between mt-4">
+                  <button
+                    onClick={prevItem}
+                    className="text-teal-800 hover:text-teal-600 text-2xl"
+                  >
+                    ←
+                  </button>
+                  <span className="text-teal-800">
+                    {currentIndex + 1} / {selectedGalleryItem.items.length}
+                  </span>
+                  <button
+                    onClick={nextItem}
+                    className="text-teal-800 hover:text-teal-600 text-2xl"
+                  >
+                    →
+                  </button>
+                </div>
+              </>
+            ) : selectedGalleryItem.type === "image" ? (
+              <img
+                src={selectedGalleryItem.src}
+                alt={selectedGalleryItem.alt}
+                className="w-full h-auto max-h-[80vh] object-contain"
+              />
+            ) : (
+              <iframe
+                src={selectedGalleryItem.src}
+                title={selectedGalleryItem.alt}
+                className="w-full h-[80vh] object-contain"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            )}
+            <p className="mt-4 text-center text-teal-800 text-lg">{selectedGalleryItem.items ? selectedGalleryItem.items[currentIndex].alt : selectedGalleryItem.alt}</p>
           </div>
         </div>
       )}

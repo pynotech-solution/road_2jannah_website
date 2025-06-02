@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import HeaderNav from './components/HeaderNav.jsx';
 import HeroCarousel from './components/HeroCarousel.jsx';
 import Program from './components/Program.jsx';
@@ -6,6 +7,19 @@ import NewsItem from './components/NewsItem.jsx';
 import Footer from './components/Footer.jsx';
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedNews, setSelectedNews] = useState(null);
+
+  const openModal = (newsItem) => {
+    setSelectedNews(newsItem);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedNews(null);
+  };
+
   const programs = [
     {
       title: "Ramadan Community Outreach",
@@ -34,7 +48,7 @@ function App() {
     {
       title: "Ramadan 2025 Iftar Campaign Reaches 1,000 Families",
       date: "April 15, 2025",
-      description: "Our Ramadan Community Outreach successfully distributed iftar meals and essential supplies to 1,000 families across rural communities, bringing joy and relief during the holy month.",
+      description: "Our Ramadan Community Outreach successfully distributed iftar meals and essential supplies to 1,000 families across rural communities, bringing joy and relief during the holy month. This initiative not only provided nourishment but also fostered community spirit and solidarity, reflecting the true essence of Ramadan.",
       image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       alt: "Ramadan Iftar Campaign",
       category: "General News",
@@ -42,7 +56,7 @@ function App() {
     {
       title: "Medwuma Pa Empowers 50 Women with New Skills",
       date: "March 20, 2025",
-      description: "Through our Medwuma Pa program, 50 women completed business training and received grants to start their own ventures, fostering sustainable livelihoods.",
+      description: "Through our Medwuma Pa program, 50 women completed business training and received grants to start their own ventures, fostering sustainable livelihoods. This empowerment initiative has enabled them to support their families and contribute to their communities economically.",
       image: "https://images.unsplash.com/photo-1529390079861-0edd4c12bf9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
       alt: "Medwuma Pa Training",
       category: "Events",
@@ -50,7 +64,7 @@ function App() {
     {
       title: "Shave or Braid Brings Smiles to 100 Orphans",
       date: "February 10, 2025",
-      description: "Our Shave or Braid the Orphan initiative provided free haircuts and braiding to 100 children, spreading love and dignity in local communities.",
+      description: "Our Shave or Braid the Orphan initiative provided free haircuts and braiding to 100 children, spreading love and dignity in local communities. This small act of care helped boost the children’s confidence and made them feel valued and cherished.",
       image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
       alt: "Shave or Braid Event",
       category: "General News",
@@ -58,7 +72,23 @@ function App() {
     {
       title: "Community Support Initiative Launched",
       date: "January 5, 2025",
-      description: "A new initiative provides essential supplies to rural communities, enhancing support for families in need.",
+      description: "A new initiative provides essential supplies to rural communities, enhancing support for families in need. This program has already impacted hundreds of lives by delivering critical resources during challenging times.",
+      image: "https://images.unsplash.com/photo-1532629345-2e0b60e33f08?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      alt: "Community Support Initiative",
+      category: "Events",
+    },
+    {
+      title: "Community Support Initiative Launched",
+      date: "January 5, 2025",
+      description: "A new initiative provides essential supplies to rural communities, enhancing support for families in need. This program has already impacted hundreds of lives by delivering critical resources during challenging times.",
+      image: "https://images.unsplash.com/photo-1532629345-2e0b60e33f08?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      alt: "Community Support Initiative",
+      category: "Events",
+    },
+    {
+      title: "Community Support Initiative Launched",
+      date: "January 5, 2025",
+      description: "A new initiative provides essential supplies to rural communities, enhancing support for families in need. This program has already impacted hundreds of lives by delivering critical resources during challenging times.",
       image: "https://images.unsplash.com/photo-1532629345-2e0b60e33f08?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
       alt: "Community Support Initiative",
       category: "Events",
@@ -116,14 +146,23 @@ function App() {
         <div className="grid md:grid-cols-3 gap-6">
           {/* Featured news - span 2 columns */}
           {news.length > 0 && (
-            <div className="md:col-span-2 relative bg-gray-100 rounded-lg overflow-hidden shadow-md">
-              <img src={news[0].image} alt={news[0].alt} className="w-full h-72 object-cover" />
-              <div className="absolute bottom-0 bg-black bg-opacity-50 text-white p-6 w-full">
+            <div className="md:col-span-2 relative bg-gray-100 rounded-lg overflow-hidden shadow-md group">
+              <img
+                src={news[0].image}
+                alt={news[0].alt}
+                className="w-full h-72 object-cover transition duration-300 group-hover:scale-105 group-hover:brightness-75"
+              />
+              <div className="absolute bottom-0 bg-black bg-opacity-50 text-white p-6 w-full transition duration-300 group-hover:-translate-y-2">
                 <p className="text-sm bg-teal-200 inline-block px-2 py-1 text-teal-800 font-bold mb-2">{news[0].category}</p>
                 <p className="text-xs mb-1">{news[0].date}</p>
                 <h3 className="text-xl font-bold">{news[0].title}</h3>
                 <p className="mt-2 text-sm">{news[0].description}</p>
-                <button className="mt-4 text-teal-600 font-semibold hover:text-teal-500">→ Read now</button>
+                <button
+                  onClick={() => openModal(news[0])}
+                  className="mt-4 text-teal-600 font-semibold hover:text-teal-500"
+                >
+                  → Read now
+                </button>
               </div>
             </div>
           )}
@@ -131,17 +170,48 @@ function App() {
           {news.length > 1 && (
             <div className="space-y-4">
               {news.slice(1, 4).map((item, index) => (
-                <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:bg-teal-50 transition">
+                <div
+                  key={index}
+                  className="bg-white p-4 rounded-lg shadow-md hover:bg-teal-50 transition animate-fadeInUp"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
                   <p className="text-xs bg-teal-200 inline-block px-2 py-1 text-teal-800 font-bold mb-1">{item.category}</p>
                   <p className="text-xs mb-1">{item.date}</p>
                   <h4 className="text-sm font-bold text-teal-800">{item.title}</h4>
-                  <button className="mt-2 text-teal-600 font-semibold text-sm hover:text-teal-500">→ Read now</button>
+                  <button
+                    onClick={() => openModal(item)}
+                    className="mt-2 text-teal-600 font-semibold text-sm hover:text-teal-500"
+                  >
+                    → Read now
+                  </button>
                 </div>
               ))}
             </div>
           )}
         </div>
       </div>
+      {/* Modal for News Details */}
+      {isModalOpen && selectedNews && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 max-w-lg w-full mx-4 relative">
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 text-teal-800 hover:text-teal-600 text-xl"
+            >
+              &times;
+            </button>
+            <img
+              src={selectedNews.image}
+              alt={selectedNews.alt}
+              className="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <p className="text-xs bg-teal-200 inline-block px-2 py-1 text-teal-800 font-bold mb-2">{selectedNews.category}</p>
+            <p className="text-xs text-gray-600 mb-2">{selectedNews.date}</p>
+            <h3 className="text-xl font-bold text-teal-800 mb-2">{selectedNews.title}</h3>
+            <p className="text-gray-700">{selectedNews.description}</p>
+          </div>
+        </div>
+      )}
       <div id="about" className="container mx-auto py-8">
         <h2 className="text-3xl font-bold text-center text-teal-800 mb-6">About Us</h2>
         <p className="text-gray-700 text-center">Road2Jannah Foundation is dedicated to glorifying Allah (SWT) by uplifting vulnerable communities through charity and empowerment. Guided by Islamic values, we focus on orphans, widows, and rural families, providing sustainable support to help them thrive. Our mission aligns with the Hadith: “The best among you are those who bring greatest benefits to others.”</p>

@@ -19,6 +19,26 @@ function App() {
     setFeaturedNews(sortedNews[0]);
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (!selectedGalleryItem || !selectedGalleryItem.items) return;
+
+      if (event.key === 'ArrowRight') {
+        nextItem();
+      } else if (event.key === 'ArrowLeft') {
+        prevItem();
+      }
+    };
+
+    if (selectedGalleryItem) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedGalleryItem, currentIndex]);
+
   const openModal = (newsItem) => {
     setSelectedNews(newsItem);
     setIsModalOpen(true);
@@ -41,6 +61,12 @@ function App() {
   const closeGalleryModal = () => {
     setSelectedGalleryItem(null);
     setCurrentIndex(0);
+  };
+
+  const handleOverlayClick = (event) => {
+    if (event.target === event.currentTarget) {
+      closeGalleryModal();
+    }
   };
 
   const nextItem = () => {
@@ -312,7 +338,10 @@ function App() {
       )}
       {/* Lightbox for Gallery */}
       {selectedGalleryItem && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={handleOverlayClick}
+        >
           <div className="bg-white rounded-lg p-6 max-w-4xl w-full mx-4 relative">
             <button
               onClick={closeGalleryModal}

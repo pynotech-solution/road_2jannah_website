@@ -75,7 +75,7 @@ function About() {
                   alt="Community Hope"
                   className="w-20 h-20 sm:w-32 sm:h-32 object-cover rounded-md shadow-md float-right ml-3 sm:ml-4 mt-1"
                 />
-                <p className="leading-relaxed text-justify sm:first-letter:text-4xl sm:first-letter:font-bold sm:first-letter:text-teal-800 sm:first-letter:float-left sm:first-letter:mr-2">
+                <p className="leading-relaxed text-justify first-letter:text-3xl sm:first-letter:text-4xl first-letter:font-bold first-letter:text-teal-800 first-letter:float-left first-letter:mr-2 sm:first-letter:mr-3">
                   {fullText[0]}
                 </p>
                 <div className="clear-both sm:clear-none"></div>

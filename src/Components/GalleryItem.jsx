@@ -1,6 +1,13 @@
 import { Folder, Play } from 'lucide-react';
 
 function GalleryItem({ type, src, alt, caption, items, onClick }) {
+  const wordLimit = 10;
+  const truncatedCaption = caption
+    ? caption.split(/\s+/).length > wordLimit
+      ? caption.split(/\s+/).slice(0, wordLimit).join(' ') + '...'
+      : caption
+    : '';
+
   return (
     <div
       className="relative cursor-pointer overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
@@ -13,7 +20,7 @@ function GalleryItem({ type, src, alt, caption, items, onClick }) {
       />
       {caption && (
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-teal-800 to-transparent text-white p-4 transition duration-300 hover:from-teal-900">
-          <p className="text-sm font-semibold">{caption}</p>
+          <p className="text-sm font-semibold">{truncatedCaption}</p>
         </div>
       )}
       {type === "album" && items && (

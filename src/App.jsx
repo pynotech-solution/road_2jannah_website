@@ -33,11 +33,20 @@ function App() {
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (!selectedGalleryItem || !selectedGalleryItem.items) return;
-      if (event.key === 'ArrowRight') nextItem();
-      else if (event.key === 'ArrowLeft') prevItem();
+      if (event.key === 'ArrowRight') {
+        nextItem();
+      } else if (event.key === 'ArrowLeft') {
+        prevItem();
+      }
     };
-    if (selectedGalleryItem) window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    if (selectedGalleryItem) {
+      console.log("Adding keyboard event listener for gallery navigation");
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => {
+      console.log("Removing keyboard event listener for gallery navigation");
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, [selectedGalleryItem, currentIndex]);
 
   const openModal = (newsItem) => {
@@ -74,20 +83,38 @@ function App() {
 
   const updateFeaturedNews = (newsItem) => setFeaturedNews(newsItem);
   const openGalleryModal = (item, index = 0) => {
+    console.log("Opening gallery modal with item:", item, "and index:", index);
     setSelectedGalleryItem(item);
     setCurrentIndex(index);
   };
   const closeGalleryModal = () => {
+    console.log("Closing gallery modal");
     setSelectedGalleryItem(null);
     setCurrentIndex(0);
   };
 
   const handleOverlayClick = (event) => {
-    if (event.target === event.currentTarget) closeGalleryModal();
+    if (event.target === event.currentTarget) {
+      console.log("Overlay clicked, closing gallery modal");
+      closeGalleryModal();
+    }
   };
 
-  const nextItem = () => selectedGalleryItem?.items && setCurrentIndex(prev => (prev + 1) % selectedGalleryItem.items.length);
-  const prevItem = () => selectedGalleryItem?.items && setCurrentIndex(prev => (prev - 1 + selectedGalleryItem.items.length) % selectedGalleryItem.items.length);
+  const nextItem = () => {
+    if (selectedGalleryItem?.items) {
+      const newIndex = (currentIndex + 1) % selectedGalleryItem.items.length;
+      console.log("Navigating to next item, new index:", newIndex);
+      setCurrentIndex(newIndex);
+    }
+  };
+
+  const prevItem = () => {
+    if (selectedGalleryItem?.items) {
+      const newIndex = (currentIndex - 1 + selectedGalleryItem.items.length) % selectedGalleryItem.items.length;
+      console.log("Navigating to previous item, new index:", newIndex);
+      setCurrentIndex(newIndex);
+    }
+  };
 
   const programs = [
     { title: "Ramadan Community Outreach", description: "During the holy month of Ramadan, we provide iftar meals, essential grains, and support to 1,000 families, ensuring no one goes hungry...", donateText: "Donate to Ramadan Outreach", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200", alt: "Ramadan Community Outreach" },

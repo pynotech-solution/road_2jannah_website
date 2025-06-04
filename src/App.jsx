@@ -5,7 +5,7 @@ import Program from './components/Program.jsx';
 import GalleryItem from './components/GalleryItem.jsx';
 import NewsItem from './components/NewsItem.jsx';
 import Footer from './components/Footer.jsx';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,6 +14,7 @@ function App() {
   const [selectedGalleryItem, setSelectedGalleryItem] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [copySuccess, setCopySuccess] = useState(false);
   const [copyMoMoSuccess, setCopyMoMoSuccess] = useState(false);
 
@@ -48,6 +49,9 @@ function App() {
     setCopySuccess(false);
     setCopyMoMoSuccess(false);
   };
+
+  const openContactModal = () => setIsContactModalOpen(true);
+  const closeContactModal = () => setIsContactModalOpen(false);
 
   const copyToClipboard = () =>
     navigator.clipboard.writeText("123-456-7890").then(() => {
@@ -283,26 +287,9 @@ function App() {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-md p-8">
-              <h2 className="text-2xl font-bold text-teal-800 mb-6">Send Us a Message</h2>
-              <div className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name *</label>
-                  <input type="text" id="name" className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600" placeholder="Your Name" required />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">Email *</label>
-                  <input type="email" id="email" className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600" placeholder="Your Email" required />
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-gray-700 font-semibold mb-2">Subject</label>
-                  <input type="text" id="subject" className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600" placeholder="Subject" />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message *</label>
-                  <textarea id="message" rows="5" className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600" placeholder="Your Message" required></textarea>
-                </div>
-                <button className="w-full bg-teal-800 text-white py-3 rounded-md hover:bg-teal-700 transition duration-300">Send Message</button>
-              </div>
+              <h2 className="text-2xl font-bold text-teal-800 mb-6">Get in Touch</h2>
+              <p className="text-gray-700 text-lg mb-6">We’d love to hear from you! Reach out to us directly to share your thoughts, inquiries, or feedback.</p>
+              <button onClick={openContactModal} className="bg-teal-800 text-white py-2 px-6 rounded-lg hover:bg-teal-700 transition duration-300">Send Direct Message</button>
             </div>
             <div className="bg-white rounded-lg shadow-md p-8">
               <h2 className="text-2xl font-bold text-teal-800 mb-6">Contact Information</h2>
@@ -320,9 +307,9 @@ function App() {
                   <p className="text-gray-700 text-lg">Address: Accra, Ghana</p>
                 </div>
                 <div className="flex justify-start space-x-6">
-                  <a href="https://facebook.com/road2jannah" target="_blank" className="text-teal-800 hover:scale-105 hover:text-teal-600 transition duration-300">Facebook</a>
-                  <a href="https://twitter.com/road2jannah" target="_blank" className="text-teal-800 hover:scale-105 hover:text-teal-600 transition duration-300">Twitter</a>
-                  <a href="https://instagram.com/road2jannah" target="_blank" className="text-teal-800 hover:scale-105 hover:text-teal-600 transition duration-300">Instagram</a>
+                  <a href="https://facebook.com/road2jannah" target="_blank" rel="noopener noreferrer" className="text-teal-800 hover:scale-105 hover:text-teal-600 transition duration-300">Facebook</a>
+                  <a href="https://twitter.com/road2jannah" target="_blank" rel="noopener noreferrer" className="text-teal-800 hover:scale-105 hover:text-teal-600 transition duration-300">Twitter</a>
+                  <a href="https://instagram.com/road2jannah" target="_blank" rel="noopener noreferrer" className="text-teal-800 hover:scale-105 hover:text-teal-600 transition duration-300">Instagram</a>
                 </div>
               </div>
               <div className="mt-8">
@@ -335,6 +322,33 @@ function App() {
           </div>
         </div>
       </div>
+      {isContactModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-8 max-w-lg w-full mx-4 relative">
+            <button onClick={closeContactModal} className="absolute top-2 right-2 text-teal-800 hover:text-teal-600 text-xl">×</button>
+            <h2 className="text-2xl font-bold text-teal-800 mb-6 text-center">Send Us a Message</h2>
+            <div className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name *</label>
+                <input type="text" id="name" className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600" placeholder="Your Name" required />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">Email *</label>
+                <input type="email" id="email" className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600" placeholder="Your Email" required />
+              </div>
+              <div>
+                <label htmlFor="subject" className="block text-gray-700 font-semibold mb-2">Subject</label>
+                <input type="text" id="subject" className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600" placeholder="Subject" />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message *</label>
+                <textarea id="message" rows="5" className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600" placeholder="Your Message" required></textarea>
+              </div>
+              <button className="w-full bg-teal-800 text-white py-3 rounded-md hover:bg-teal-700 transition duration-300">Send Message</button>
+            </div>
+          </div>
+        </div>
+      )}
       <Footer />
     </div>
   );

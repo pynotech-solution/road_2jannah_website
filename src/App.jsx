@@ -14,6 +14,7 @@ function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
   const [copySuccess, setCopySuccess] = useState(false);
+  const [copyMoMoSuccess, setCopyMoMoSuccess] = useState(false);
 
   useEffect(() => {
     // Sort news by date in descending order and set the most recent as featured
@@ -58,12 +59,22 @@ function App() {
   const closeDonationModal = () => {
     setIsDonationModalOpen(false);
     setCopySuccess(false); // Reset copy success state when closing
+    setCopyMoMoSuccess(false); // Reset MoMo copy success state when closing
   };
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText("123-456-7890").then(() => {
       setCopySuccess(true);
       setTimeout(() => setCopySuccess(false), 2000); // Reset after 2 seconds
+    }).catch(err => {
+      console.error("Failed to copy text: ", err);
+    });
+  };
+
+  const copyMoMoToClipboard = () => {
+    navigator.clipboard.writeText("0555-123-456").then(() => {
+      setCopyMoMoSuccess(true);
+      setTimeout(() => setCopyMoMoSuccess(false), 2000); // Reset after 2 seconds
     }).catch(err => {
       console.error("Failed to copy text: ", err);
     });
@@ -534,8 +545,11 @@ function App() {
               Please make your donation to the following accounts:
             </p>
             <div className="bg-teal-50 p-4 rounded-md mt-4 text-center">
+              <p className="text-gray-700 text-lg">Bank: EcoBank Ghana</p>
+
               <p className="text-gray-700 text-lg font-semibold">Bank Account Number: 123-456-7890</p>
-              
+              <p className="text-gray-700 text-lg">Branch: Accra Main Branch</p>
+              <p className="text-gray-700 text-lg">Account Name: Road2Jannah Foundation</p>
               <button
                 onClick={copyToClipboard}
                 className="mt-2 bg-teal-800 text-white py-1 px-3 rounded hover:bg-teal-700 focus:outline-none"
@@ -543,9 +557,19 @@ function App() {
                 {copySuccess ? 'Copied!' : 'Copy to Clipboard'}
               </button>
             </div>
+            <div className="bg-teal-50 p-4 rounded-md mt-4 text-center">
+              <p className="text-gray-700 text-lg font-semibold">MoMo Account Number: 0555-123-456</p>
+              <p className="text-gray-700 text-lg">Network: MTN</p>
+              <p className="text-gray-700 text-lg">Account Name: Road2Jannah Foundation</p>
+              <button
+                onClick={copyMoMoToClipboard}
+                className="mt-2 bg-teal-800 text-white py-1 px-3 rounded hover:bg-teal-700 focus:outline-none"
+              >
+                {copyMoMoSuccess ? 'Copied!' : 'Copy to Clipboard'}
+              </button>
+            </div>
             <div className="mt-4 text-center">
               <p className="text-gray-700 text-lg">SWIFT Code: ECOCGHAC</p>
-              <p className="text-gray-700 text-lg">MoMo Account: 0555-123-456</p>
             </div>
             <p className="text-gray-600 text-sm mt-4 text-center">
               Thank you for your support! Your contribution will help us continue our mission.

@@ -12,6 +12,7 @@ function App() {
   const [featuredNews, setFeaturedNews] = useState(null);
   const [selectedGalleryItem, setSelectedGalleryItem] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
 
   useEffect(() => {
     // Sort news by date in descending order and set the most recent as featured
@@ -47,6 +48,14 @@ function App() {
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedNews(null);
+  };
+
+  const openDonationModal = () => {
+    setIsDonationModalOpen(true);
+  };
+
+  const closeDonationModal = () => {
+    setIsDonationModalOpen(false);
   };
 
   const updateFeaturedNews = (newsItem) => {
@@ -481,7 +490,12 @@ function App() {
               Your generous contributions help us provide food, empowerment, and care to those in need. Join us in fulfilling the spirit of Sadaqah and Fidyah, making a lasting impact.
             </p>
             <div className="text-center">
-              <a href="https://www.example.com/donate" className="bg-teal-800 text-white py-2 px-6 rounded-lg hover:bg-teal-700">Make a Donation</a>
+              <button
+                onClick={openDonationModal}
+                className="bg-teal-800 text-white py-2 px-6 rounded-lg hover:bg-teal-700"
+              >
+                Make a Donation
+              </button>
             </div>
           </div>
           <div>
@@ -493,6 +507,30 @@ function App() {
           </div>
         </div>
       </div>
+      {/* Modal for Donation Details */}
+      {isDonationModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 max-w-lg w-full mx-4 relative">
+            <button
+              onClick={closeDonationModal}
+              className="absolute top-2 right-2 text-teal-800 hover:text-teal-600 text-xl"
+            >
+              ×
+            </button>
+            <h3 className="text-2xl font-bold text-teal-800 mb-4 text-center">Donation Details</h3>
+            <div className="border-t border-teal-800 w-16 mx-auto mb-4"></div>
+            <p className="text-gray-700 text-lg text-center">
+              Please make your donation to the following account:
+            </p>
+            <div className="bg-teal-50 p-4 rounded-md mt-4 text-center">
+              <p className="text-gray-700 text-lg font-semibold">Account Number: 123-456-7890</p>
+            </div>
+            <p className="text-gray-600 text-sm mt-4 text-center">
+              Thank you for your support! Your contribution will help us continue our mission.
+            </p>
+          </div>
+        </div>
+      )}
       <div id="contact" className="container mx-auto py-8">
         <h2 className="text-3xl font-bold text-center text-teal-800 mb-6">Contact Us</h2>
         <p className="text-center text-gray-700">Email: info@road2jannah.org</p>

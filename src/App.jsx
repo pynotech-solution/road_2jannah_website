@@ -141,15 +141,95 @@ useEffect(() => {
     { title: "Shave or Braid the Orphan", description: "This unique initiative offers free haircuts and braiding services to orphans...", donateText: "Help an Orphan", image: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/496940432_9621165381253308_5638857211374510766_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHoD6FckslT8lnzbi9AlpdBjpzEvfjxzXiOnMS9-PHNeMh4K_3HXwUiu7SNAf2XaDR_-ElfTLd6ffp_xc6OGC-u&_nc_ohc=v6mAellPu4oQ7kNvwEWUC50&_nc_oc=AdlYDHKJpvdvgQgvbaXiD5FLqy0D6KCKAWAwRc9rG5cjcWBQITkgi7yFmFYVZ7Qx6kk&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=wFid_3-U3Cs8IUV9XcBCQw&oh=00_AfKM96Z0s_tvuUY0ubBn5ifew1dnVLoIlbGKiGVkLRXbnQ&oe=684669C4", alt: "Shave or Braid the Orphan" },
   ];
 
-  const news = [
-    { title: "Ramadan 2025 Iftar Campaign Reaches 1,000 Families", date: "April 15, 2025", description: "Our Ramadan Community Outreach successfully distributed...", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400", alt: "Ramadan Iftar Campaign", category: "General News" },
-    { title: "Medwuma Pa Empowers 50 Women with New Skills", date: "March 20, 2025", description: "Through our Medwuma Pa program, 50 women completed...", image: "https://images.unsplash.com/photo-1529390079861-0edd4c12bf9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200", alt: "Medwuma Pa Training", category: "Events" },
-    { title: "Shave or Braid Brings Smiles to 100 Orphans", date: "February 10, 2025", description: "Our Shave or Braid the Orphan initiative provided...", image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200", alt: "Shave or Braid Event", category: "General News" },
-    { title: "Community Support Initiative Launched", date: "January 5, 2025", description: "A new initiative provides essential supplies...", image: "https://images.unsplash.com/photo-1532629345-2e0b60e33f08?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200", alt: "Community Support Initiative", category: "Events" },
-    { title: "Winter Aid Distribution for Refugees", date: "December 15, 2024", description: "We distributed blankets, clothing, and food supplies...", image: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200", alt: "Winter Aid Distribution", category: "General News" },
-    { title: "Educational Workshop for Rural Youth", date: "November 10, 2024", description: "Our educational workshop provided learning materials...", image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200", alt: "Educational Workshop", category: "Events" },
-    { title: "Healthcare Camp Serves 300 Families", date: "October 5, 2024", description: "A free healthcare camp offered medical checkups...", image: "https://images.unsplash.com/photo-1550831107-1553da8c8464?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200", alt: "Healthcare Camp", category: "General News" },
-  ];
+const news = [
+  {
+    title: "Ramadan 2025 Iftar Campaign Reaches 1,000 Families",
+    date: "April 15, 2025",
+    description: "Our Ramadan Community Outreach successfully distributed iftar meals to 1,000 families across multiple regions, providing essential support during the holy month.",
+    images: [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      "https://images.unsplash.com/photo-1559620137-2411d66675eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    ],
+    alts: ["Ramadan Iftar Campaign 1", "Ramadan Iftar Campaign 2"],
+    category: "General News",
+  },
+  {
+    title: "Medwuma Pa Empowers 50 Women with New Skills",
+    date: "March 20, 2025",
+    description: "R2J Pays Courtesy Call To RCO'24 Stakeholders 
+The courtesy call which saw Road 2 Jannah Foundation led by it's Executive Director/Founder,  presented Citation to stakeholders of the just ended Ramadan Community Outreach Phase 2 Project.This gesture was to appreciate their support and be enlightened more in the humanitarian sector.
+The foundation first visited Dawadawa Jollof Delight @Adenta where conversations about empowerment took the center stage.The CEO of Dawadawa Jollof Delight, Rabiatu Atule Akamim observed from her findings on gender equality in the zongo communities that 
+Representation of Muslim women in decision making is almost nonexistent and some Muslim women are very timid at decision making table and has therefore charged the group to facilitate a sensitization program that will see to empower the Moslem Women to be vocal at decision making table.
+The group then moved to cantonments where they joined a moslem congregation, a prayer led by Imam of National Police Mosque Chief Supt. of Police Imam Hussein Abdul Rahim Hussein in Jumah prayers.
+Imam Hussein Abdul Rahim Hussein and his deputy Imam Abass Abdul-Karim then engaged the foundation in a close door meeting after prayers where he invoke the blessings of Almighty Allah and spirit of unity in the group.
+Imam Hussein Abdul Rahim Hussein asked the foundation to take a critical look in and around the communities their membership is based and make an impact of changing lives.
+On his part, Imam Abass Abdul-Karim mentioned about sustainability of NGO's due to lack of structural absence in their modules of operandi and advice the group to employ the act of sustainability and keep up the good work.
+A Citation was then presented to Imam Hussein Abdul Rahim Hussein to honour his role in positive change in soceity through his impactful sermons.
+Baina Tv, the official media partner for the foundation in it's operations also received a citation for supporting the course with it's platforms to reach higher heights.
+The last to be awarded citation was the proprietor of Rahma Orphanage Home Sheikh Yusif Musah for dedicating his life for the vulnerable kids in society.",
+    images: [
+      "https://images.unsplash.com/photo-1529390079861-0edd4c12bf9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      "https://images.unsplash.com/photo-1573164713988-29078a3d76a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+    ],
+    alts: ["Medwuma Pa Training 1", "Medwuma Pa Training 2"],
+    category: "Events",
+  },
+  {
+    title: "Shave or Braid Brings Smiles to 100 Orphans",
+    date: "February 10, 2025",
+    description: "Our Shave or Braid the Orphan initiative provided free haircuts and braiding services to 100 orphans, spreading joy.",
+    images: [
+      "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      "https://images.unsplash.com/photo-1596495578066-16a7b2d87683?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+    ],
+    alts: ["Shave or Braid Event 1", "Shave or Braid Event 2"],
+    category: "General News",
+  },
+  {
+    title: "Community Support Initiative Launched",
+    date: "January 5, 2025",
+    description: "A new initiative provides essential supplies to rural communities, improving living conditions.",
+    images: [
+      "https://images.unsplash.com/photo-1532629345-2e0b60e33f08?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+    ],
+    alts: ["Community Support Initiative 1", "Community Support Initiative 2"],
+    category: "Events",
+  },
+  {
+    title: "Winter Aid Distribution for Refugees",
+    date: "December 15, 2024",
+    description: "We distributed blankets, clothing, and food supplies to refugees facing harsh winter conditions.",
+    images: [
+      "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      "https://images.unsplash.com/photo-1604187351577-c8ca09b27e07?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+    ],
+    alts: ["Winter Aid Distribution 1", "Winter Aid Distribution 2"],
+    category: "General News",
+  },
+  {
+    title: "Educational Workshop for Rural Youth",
+    date: "November 10, 2024",
+    description: "Our educational workshop provided learning materials and training to rural youth, empowering them for a better future.",
+    images: [
+      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+    ],
+    alts: ["Educational Workshop 1", "Educational Workshop 2"],
+    category: "Events",
+  },
+  {
+    title: "Healthcare Camp Serves 300 Families",
+    date: "October 5, 2024",
+    description: "A free healthcare camp offered medical checkups and treatments to 300 families in underserved areas.",
+    images: [
+      "https://images.unsplash.com/photo-1550831107-1553da8c8464?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      "https://images.unsplash.com/photo-1576765608622-067f23d13753?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+    ],
+    alts: ["Healthcare Camp 1", "Healthcare Camp 2"],
+    category: "General News",
+  },
+];
 
   const gallery = [
     { type: "image",
@@ -181,10 +261,22 @@ useEffect(() => {
                 ]
                },
 
-    { type: "image",
+    { type: "album",
        src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494151275_9504517752918072_820146410886278808_n.jpg?stp=dst-jpg_p526x395_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeE1rCVTlFTq_YXdWhbXF7gzifpQWrOOiQaJ-lBas46JBhX5jOT4PtEewwT0WD0IfiNS_ZIqpwN0T7GloMnSo7qk&_nc_ohc=mKJAMeRr_wIQ7kNvwG9aAkb&_nc_oc=Adk9izQ3J-JB1ODgFQpi0TFLdjJXq9pW06F-wrb5dPSpt-0RnkP01PzazJgq3yrLHWc&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=dowWGy-xWCg29b1Mdn8y-g&oh=00_AfL7kVh2udav217hQrnAptpZuiWrbh7Ch3sDZ8lgPEb6Rw&oe=68466226",
         alt: "The annual Ramadan Community Outreach PHASE 1 Project was a success courtesy your support, PHASE 2 Project hits us again with special request from the list of locations on the flyer.Help us in our quest to feed, support and maintain some selected Communities in Ghana.Send your donations to Account Name : Road 2 Jannah Foundation  Momo No: 0242524634 Merchant No : 0598555082  Cheques & Bank Transactions : Road 2 Jannah Foundation LBG Account No : 600024209865  Branch : SG Ghana, Lapaz Contact for further details 0242524634 / 0243457868 You And I Can Make A Change 🙇🏾‍♂️ Thank you", 
-        caption: "The annual Ramadan Community Outreach PHASE 1 Project was a success courtesy your support" },
+        caption: "The annual Ramadan Community Outreach PHASE 1 Project was a success courtesy your support",
+       items: [
+          {
+             type: "image",
+              src: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+               alt: "Winter Aid Photo 1"
+               }, 
+            { 
+              type: "video", 
+              src: "https://www.youtube.com/embed/abc789",
+               alt: "Winter Aid Video" 
+            }
+          ]  },
 
     { type: "album", 
       src: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",

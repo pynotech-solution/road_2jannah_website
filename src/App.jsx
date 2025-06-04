@@ -152,11 +152,57 @@ useEffect(() => {
   ];
 
   const gallery = [
-    { type: "image", src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400", alt: "Ramadan Iftar Distribution", caption: "Distributing iftar meals to families during Ramadan." },
-    { type: "video", src: "https://www.youtube.com/embed/dQw4w9WgXcQ", alt: "Ramadan Iftar Video", caption: "Video of iftar meal distribution." },
-    { type: "album", src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200", alt: "Medwuma Pa Album", caption: "Photos and videos from Medwuma Pa training.", items: [{ type: "image", src: "https://images.unsplash.com/photo-1529390079861-0edd4c12bf9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400", alt: "Medwuma Pa Training Photo 1" }, { type: "video", src: "https://www.youtube.com/embed/xyz123", alt: "Medwuma Pa Training Video" }, { type: "image", src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400", alt: "Medwuma Pa Training Photo 2" }] },
-    { type: "image", src: "https://images.unsplash.com/photo-1532629345-2e0b60e33f08?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400", alt: "Community Support", caption: "Delivering essential supplies to rural communities." },
-    { type: "album", src: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200", alt: "Winter Aid Album", caption: "Photos and videos from winter aid distribution.", items: [{ type: "image", src: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400", alt: "Winter Aid Photo 1" }, { type: "video", src: "https://www.youtube.com/embed/abc789", alt: "Winter Aid Video" }] },
+    { type: "image",
+       src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        alt: "Ramadan Iftar Distribution", caption: "Distributing iftar meals to families during Ramadan." },
+
+    { type: "video",
+       src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        alt: "Ramadan Iftar Video",
+         caption: "Video of iftar meal distribution." },
+
+    { type: "album",
+       src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+        alt: "Medwuma Pa Album",
+         caption: "Photos and videos from Medwuma Pa training.",
+          items:
+           [
+            { type: "image", src: "https://images.unsplash.com/photo-1529390079861-0edd4c12bf9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+             alt: "Medwuma Pa Training Photo 1" 
+            },
+            { type: "video", 
+                src: "https://www.youtube.com/embed/xyz123",
+                 alt: "Medwuma Pa Training Video"
+              }, 
+
+              { type: "image",
+                 src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+                  alt: "Medwuma Pa Training Photo 2" }
+                ]
+               },
+
+    { type: "image",
+       src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494151275_9504517752918072_820146410886278808_n.jpg?stp=dst-jpg_p526x395_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeE1rCVTlFTq_YXdWhbXF7gzifpQWrOOiQaJ-lBas46JBhX5jOT4PtEewwT0WD0IfiNS_ZIqpwN0T7GloMnSo7qk&_nc_ohc=mKJAMeRr_wIQ7kNvwG9aAkb&_nc_oc=Adk9izQ3J-JB1ODgFQpi0TFLdjJXq9pW06F-wrb5dPSpt-0RnkP01PzazJgq3yrLHWc&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=dowWGy-xWCg29b1Mdn8y-g&oh=00_AfL7kVh2udav217hQrnAptpZuiWrbh7Ch3sDZ8lgPEb6Rw&oe=68466226",
+        alt: "The annual Ramadan Community Outreach PHASE 1 Project was a success courtesy your support, PHASE 2 Project hits us again with special request from the list of locations on the flyer.Help us in our quest to feed, support and maintain some selected Communities in Ghana.Send your donations to Account Name : Road 2 Jannah Foundation  Momo No: 0242524634 Merchant No : 0598555082  Cheques & Bank Transactions : Road 2 Jannah Foundation LBG Account No : 600024209865  Branch : SG Ghana, Lapaz Contact for further details 0242524634 / 0243457868 You And I Can Make A Change 🙇🏾‍♂️ Thank you", 
+        caption: "The annual Ramadan Community Outreach PHASE 1 Project was a success courtesy your support" },
+
+    { type: "album", 
+      src: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+       alt: "Winter Aid Album", 
+       caption: "Photos and videos from winter aid distribution.",
+        items: [
+          {
+             type: "image",
+              src: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+               alt: "Winter Aid Photo 1"
+               }, 
+            { 
+              type: "video", 
+              src: "https://www.youtube.com/embed/abc789",
+               alt: "Winter Aid Video" 
+            }
+          ] 
+        },
   ];
 
   return (

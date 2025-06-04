@@ -69,15 +69,16 @@ function About() {
                 About Road2Jannah Foundation
               </h3>
               <div className="border-t-2 border-teal-800 w-20 sm:w-24 mx-auto mb-6 sm:mb-8"></div>
-              <div className="mb-4 sm:mb-6 flex items-start">
+              <div className="mb-4 sm:mb-6">
                 <img
                   src="https://images.unsplash.com/photo-1516321310762-4794370e6a87?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
                   alt="Community Hope"
-                  className="w-24 h-24 sm:w-32 sm:h-32 object-cover rounded-md shadow-md float-right ml-3 sm:ml-4 mt-1"
+                  className="w-20 h-20 sm:w-32 sm:h-32 object-cover rounded-md shadow-md float-right ml-3 sm:ml-4 mt-1"
                 />
                 <p className="leading-relaxed text-justify sm:first-letter:text-4xl sm:first-letter:font-bold sm:first-letter:text-teal-800 sm:first-letter:float-left sm:first-letter:mr-2">
                   {fullText[0]}
                 </p>
+                <div className="clear-both sm:clear-none"></div>
               </div>
               <div className="my-6 sm:my-8">
                 <img
@@ -89,18 +90,17 @@ function About() {
                   Empowering through outreach and kindness
                 </p>
               </div>
-              <p className="leading-relaxed text-justify mb-4 sm:mb-6">
-                {fullText[1]}
-              </p>
-              <div className="mb-4 sm:mb-6 flex items-start">
+              <div className="mb-4 sm:mb-6">
+                <p className="leading-relaxed text-justify mb-4 sm:mb-0">{fullText[1]}</p>
                 <img
                   src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
                   alt="Community Unity"
-                  className="w-24 h-24 sm:w-32 sm:h-32 object-cover rounded-md shadow-md float-left mr-3 sm:mr-4 mt-1"
+                  className="w-20 h-20 sm:w-32 sm:h-32 object-cover rounded-md shadow-md float-left mr-3 sm:mr-4 mt-1"
                 />
                 <p className="leading-relaxed text-justify">
                   {fullText[2]}
                 </p>
+                <div className="clear-both sm:clear-none"></div>
               </div>
             </div>
           </div>

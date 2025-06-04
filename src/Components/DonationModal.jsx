@@ -1,9 +1,15 @@
 function DonationModal({ isDonationModalOpen, closeDonationModal, copyToClipboard, copyMoMoToClipboard, copySuccess, copyMoMoSuccess }) {
   if (!isDonationModalOpen) return null;
 
+  const handleOverlayClick = (event) => {
+    if (event.target === event.currentTarget) {
+      closeDonationModal();
+    }
+  };
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg p-6 max-w-lg w-full mx-4 relative">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={handleOverlayClick}>
+      <div className="bg-white rounded-lg p-6 max-w-lg w-full mx-4 relative" onClick={(e) => e.stopPropagation()}>
         <button onClick={closeDonationModal} className="absolute top-2 right-2 text-teal-800 hover:text-teal-600 hover:scale-110 transition duration-300 text-xl">×</button>
         <h3 className="text-2xl font-bold text-teal-800 mb-4 text-center">Donation Details</h3>
         <div className="border-t border-teal-800 w-16 mx-auto mb-4"></div>

@@ -1,9 +1,15 @@
 function ContactModal({ isContactModalOpen, closeContactModal }) {
   if (!isContactModalOpen) return null;
 
+  const handleOverlayClick = (event) => {
+    if (event.target === event.currentTarget) {
+      closeContactModal();
+    }
+  };
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg p-4 sm:p-6 md:p-8 max-w-[90%] sm:max-w-lg w-full mx-2 sm:mx-4 relative">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={handleOverlayClick}>
+      <div className="bg-white rounded-lg p-4 sm:p-6 md:p-8 max-w-[90%] sm:max-w-lg w-full mx-2 sm:mx-4 relative" onClick={(e) => e.stopPropagation()}>
         <button onClick={closeContactModal} className="absolute top-2 right-2 text-teal-800 hover:text-teal-600 text-xl">×</button>
         <h2 className="text-xl sm:text-2xl font-bold text-teal-800 mb-4 sm:mb-6 text-center">Send Us a Message</h2>
         <div className="space-y-4">

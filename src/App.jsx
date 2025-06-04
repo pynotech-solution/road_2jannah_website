@@ -13,6 +13,7 @@ import ContactModal from './components/ContactModal.jsx';
 import DonationModal from './components/DonationModal.jsx';
 import GalleryModal from './components/GalleryModal.jsx';
 import NewsModal from './components/NewsModal.jsx';
+import QuoteSection from './components/QuoteSection.jsx';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -158,6 +159,7 @@ function App() {
       />
       <About />
       <Focus />
+      <QuoteSection />
       <Donate openDonationModal={openDonationModal} />
       <DonationModal
         isDonationModalOpen={isDonationModalOpen}

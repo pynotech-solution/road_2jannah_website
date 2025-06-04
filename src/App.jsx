@@ -473,10 +473,24 @@ function App() {
         </div>
       </div>
       <div id="donate" className="container mx-auto py-8">
-        <h2 className="text-3xl font-bold text-center text-teal-800 mb-6">Donate Now</h2>
-        <p className="text-gray-700 text-center mb-6">Your generous contributions help us provide food, empowerment, and care to those in need. Join us in fulfilling the spirit of Sadaqah and Fidyah, making a lasting impact.</p>
-        <div className="text-center">
-          <a href="https://www.example.com/donate" className="bg-teal-800 text-white py-2 px-6 rounded-lg hover:bg-teal-700">Make a Donation</a>
+        <h2 className="text-3xl font-bold text-teal-800 text-center mb-4">Donate Now</h2>
+        <div className="border-t border-teal-800 w-16 mx-auto mb-6"></div>
+        <div className="grid md:grid-cols-2 gap-6 items-center">
+          <div className="p-6 bg-white rounded-lg shadow-md text-center">
+            <p className="text-gray-700 text-lg leading-relaxed mb-6">
+              Your generous contributions help us provide food, empowerment, and care to those in need. Join us in fulfilling the spirit of Sadaqah and Fidyah, making a lasting impact.
+            </p>
+            <div className="text-center">
+              <a href="https://www.example.com/donate" className="bg-teal-800 text-white py-2 px-6 rounded-lg hover:bg-teal-700">Make a Donation</a>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+              alt="Donate Now Community Support"
+              className="w-full h-96 object-cover rounded-lg"
+            />
+          </div>
         </div>
       </div>
       <div id="contact" className="container mx-auto py-8">

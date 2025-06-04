@@ -408,11 +408,11 @@ function App() {
         </div>
       )}
       <div id="about" className="container mx-auto py-8">
-        <h2 className="text-3xl font-bold text-teal-800 mb-4">About Us</h2>
-        <div className="border-t border-teal-800 w-16 mb-6"></div>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="p-6 bg-white rounded-lg shadow-md">
-            <p className="text-gray-700">
+        <h2 className="text-3xl font-bold text-teal-800 text-center mb-4">About Us</h2>
+        <div className="border-t border-teal-800 w-16 mx-auto mb-6"></div>
+        <div className="grid md:grid-cols-2 gap-6 items-center">
+          <div className="p-6 bg-white rounded-lg shadow-md text-center">
+            <p className="text-gray-700 text-lg leading-relaxed">
               Road2Jannah Foundation is dedicated to glorifying Allah (SWT) by uplifting vulnerable communities through charity and empowerment. Guided by Islamic values, we focus on orphans, widows, and rural families, providing sustainable support to help them thrive. Our mission aligns with the Hadith: “The best among you are those who bring greatest benefits to others,” driving us to serve with compassion and create lasting impact.
             </p>
           </div>

@@ -116,6 +116,24 @@ function App() {
       setCurrentIndex(newIndex);
     }
   };
+  const quotes = [
+  { quote: "The best among you are those who bring the most benefit to the rest of mankind.", attribution: "Prophet Muhammad (Peace Be Upon Him)" },
+  { quote: "Give charity without delay, for it stands in the way of calamity.", attribution: "Prophet Muhammad (Peace Be Upon Him)" },
+  { quote: "Kindness is a mark of faith, and whoever is not kind has no faith.", attribution: "Prophet Muhammad (Peace Be Upon Him)" },
+  { quote: "The best charity is that given in Ramadan.", attribution: "Prophet Muhammad (Peace Be Upon Him)" },
+  { quote: "A good word is a charity.", attribution: "Prophet Muhammad (Peace Be Upon Him)" },
+];
+
+const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % quotes.length);
+  }, 5000); // Change quote every 5 seconds
+  return () => clearInterval(interval);
+}, [quotes.length]);
+
+// In the return statement:
 
   const programs = [
     { title: "Ramadan Community Outreach", description: "During the holy month of Ramadan, we provide iftar meals, essential grains, and support to 1,000 families, ensuring no one goes hungry...", donateText: "Donate to Ramadan Outreach", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200", alt: "Ramadan Community Outreach" },
@@ -159,7 +177,7 @@ function App() {
       />
       <About />
       <Focus />
-      <QuoteSection />
+<QuoteSection quote={quotes[currentQuoteIndex].quote} attribution={quotes[currentQuoteIndex].attribution} />
       <Donate openDonationModal={openDonationModal} />
       <DonationModal
         isDonationModalOpen={isDonationModalOpen}

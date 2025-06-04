@@ -1,16 +1,12 @@
-import Program from './Program.jsx';
-
-function Programs({ programs }) {
+function Program({ title, description, donateText, image, alt }) {
   return (
-    <div id="programs" className="container mx-auto py-8">
-      <h2 className="text-3xl font-bold text-center text-teal-800 mb-6">Our Programs</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {programs.map((program, index) => (
-          <Program key={index} title={program.title} description={program.description} donateText={program.donateText} image={program.image} alt={program.alt} />
-        ))}
-      </div>
+    <div className="bg-white p-6 rounded-lg shadow-md mb-4">
+      <img src={image} alt={alt} className="w-full h-48 object-cover rounded-lg mb-4" />
+      <h3 className="text-2xl font-semibold text-teal-800 mb-2">{title}</h3>
+      <p className="text-gray-700">{description}</p>
+      <a href="#donate" className="bg-teal-800 text-white py-2 px-4 rounded-lg mt-4 inline-block hover:bg-teal-700">{donateText}</a>
     </div>
   );
 }
 
-export default Programs;
+export default Program;

@@ -545,8 +545,6 @@ function App() {
               Please make your donation to the following accounts:
             </p>
             <div className="bg-teal-50 p-4 rounded-md mt-4 text-center">
-              <p className="text-gray-700 text-lg">Bank: EcoBank Ghana</p>
-
               <p className="text-gray-700 text-lg font-semibold">Bank Account Number: 123-456-7890</p>
               <p className="text-gray-700 text-lg">Branch: Accra Main Branch</p>
               <p className="text-gray-700 text-lg">Account Name: Road2Jannah Foundation</p>
@@ -569,6 +567,7 @@ function App() {
               </button>
             </div>
             <div className="mt-4 text-center">
+              <p className="text-gray-700 text-lg">Bank: EcoBank Ghana</p>
               <p className="text-gray-700 text-lg">SWIFT Code: ECOCGHAC</p>
             </div>
             <p className="text-gray-600 text-sm mt-4 text-center">
@@ -577,14 +576,23 @@ function App() {
           </div>
         </div>
       )}
-      <div id="contact" className="container mx-auto py-8">
-        <h2 className="text-3xl font-bold text-center text-teal-800 mb-6">Contact Us</h2>
-        <p className="text-center text-gray-700">Email: info@road2jannah.org</p>
-        <p className="text-center text-gray-700">Phone: +233 241 814 030</p>
-        <div className="flex justify-center space-x-4 mt-4">
-          <a href="https://facebook.com/road2jannah" target="_blank" className="text-teal-800 hover:underline">Facebook</a>
-          <a href="https://twitter.com/road2jannah" target="_blank" className="text-teal-800 hover:underline">Twitter</a>
-          <a href="https://instagram.com/road2jannah" target="_blank" className="text-teal-800 hover:underline">Instagram</a>
+      <div id="contact" className="container mx-auto py-8 px-4">
+        <h2 className="text-3xl font-bold text-center text-teal-800 mb-4">Contact Us</h2>
+        <div className="border-t border-teal-800 w-16 mx-auto mb-6"></div>
+        <div className="bg-white rounded-lg shadow-md p-6 text-center max-w-md mx-auto">
+          <div className="space-y-2">
+            <p className="text-gray-700 text-lg hover:text-teal-600 transition duration-300">
+              Email: <a href="mailto:info@road2jannah.org" className="text-teal-800 hover:text-teal-600">info@road2jannah.org</a>
+            </p>
+            <p className="text-gray-700 text-lg hover:text-teal-600 transition duration-300">
+              Phone: <a href="tel:+233241814030" className="text-teal-800 hover:text-teal-600">+233 241 814 030</a>
+            </p>
+          </div>
+          <div className="flex justify-center space-x-6 mt-6">
+            <a href="https://facebook.com/road2jannah" target="_blank" className="text-teal-800 no-underline hover:scale-105 hover:text-teal-600 transition duration-300">Facebook</a>
+            <a href="https://twitter.com/road2jannah" target="_blank" className="text-teal-800 no-underline hover:scale-105 hover:text-teal-600 transition duration-300">Twitter</a>
+            <a href="https://instagram.com/road2jannah" target="_blank" className="text-teal-800 no-underline hover:scale-105 hover:text-teal-600 transition duration-300">Instagram</a>
+          </div>
         </div>
       </div>
       <Footer />

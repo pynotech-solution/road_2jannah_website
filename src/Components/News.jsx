@@ -17,6 +17,29 @@ function News({ featuredNews, news, openModal, updateFeaturedNews }) {
     ));
   };
 
+  const renderFeaturedMedia = (mediaItem) => {
+    if (mediaItem.type === "image") {
+      return (
+        <img
+          src={mediaItem.src}
+          alt={mediaItem.alt}
+          className="w-full h-[500px] object-cover object-top transition duration-300 group-hover:scale-105 group-hover:brightness-75"
+        />
+      );
+    } else if (mediaItem.type === "video") {
+      return (
+        <video
+          src={mediaItem.src}
+          className="w-full h-[500px] object-cover object-top transition duration-300 group-hover:scale-105 group-hover:brightness-75"
+          muted
+          autoPlay
+          loop
+        />
+      );
+    }
+    return null;
+  };
+
   return (
     <div id="news" className="container mx-auto py-8 px-4">
       <h2 className="text-3xl font-bold text-center text-teal-800 mb-6">Latest News</h2>
@@ -24,11 +47,7 @@ function News({ featuredNews, news, openModal, updateFeaturedNews }) {
       <div className="grid md:grid-cols-3 gap-6 h-[500px]">
         {featuredNews && (
           <div className="md:col-span-2 relative bg-gray-100 rounded-lg overflow-hidden shadow-md group">
-            <img
-              src={featuredNews.images[0]}
-              alt={featuredNews.alts[0]}
-              className="w-full h-[500px] object-cover object-top transition duration-300 group-hover:scale-105 group-hover:brightness-75"
-            />
+            {renderFeaturedMedia(featuredNews.media[0])}
             <div className="absolute bottom-0 bg-black bg-opacity-50 text-white p-6 w-full transition duration-300 group-hover:-translate-y-2">
               <p className="text-sm bg-teal-200 inline-block px-2 py-1 text-teal-800 font-bold mb-2">{featuredNews.category}</p>
               <p className="text-xs mb-1">{featuredNews.date}</p>

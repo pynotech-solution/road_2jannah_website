@@ -23,14 +23,20 @@ function GalleryModal({ selectedGalleryItem, currentIndex, closeGalleryModal, ha
               {currentItem.type === "image" ? (
                 <img src={currentItem.src} alt={currentItem.alt} className="w-full h-auto max-h-[50vh] sm:max-h-[60vh] object-contain" />
               ) : (
-                <iframe
-                  src={currentItem.src}
-                  title={currentItem.alt}
-                  className="w-full h-[40vh] sm:h-[50vh] object-contain"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                <>
+                  <iframe
+                    src={currentItem.src}
+                    title={currentItem.alt}
+                    className="w-full h-[40vh] sm:h-[50vh] object-contain"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+
+                  
+                
+                 
+                </>
               )}
             </div>
             {selectedGalleryItem.items && (

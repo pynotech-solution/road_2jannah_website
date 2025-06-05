@@ -214,48 +214,32 @@ const news = [
     title: "The annual Ramadan Community Outreach PHASE 1 Project was a success courtesy your support",
     date: "February 10, 2025",
     description: "The annual Ramadan Community Outreach PHASE 1 Project was a success courtesy your support, PHASE 2 Project hits us again with special request from the list of locations on the flyer.Help us in our quest to feed, support and maintain some selected Communities in Ghana.Send your donations to Account Name : Road 2 Jannah Foundation  Momo No: 0242524634  Merchant No : 0598555082  Cheques & Bank Transactions : Road 2 Jannah Foundation LBG Account No : 600024209865 Branch : SG Ghana, Lapaz Contact for further details 0242524634 / 0243457868 You And I Can Make A Change 🙇🏾‍♂️ Thank you",
-    images: [
-      "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494152552_9504517902918057_5715987183796554615_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFuihgAcgcZrI8AOKDSPcBVuTgCgCQps_q5OAKAJCmz-uoexvlpJ1Hk7TUoVrz6ef_CzPswE8i0Ji7obYL9rt3j&_nc_ohc=xjfNmfMmCUcQ7kNvwEVGtJa&_nc_oc=AdlQ03tyWeV-Pp6kyWSZ7NsM7xcNcoxvGkmJwF0b5l4FVzCXsVHe5f6ZytdYs9BbnOc&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=P1fovSpVCTg0lAlQsT62vQ&oh=00_AfOvkvrRrliv4ao_l-MHTSrG9C-jWCnsswNMncrvC_D4VA&oe=6846BAB7",
+    media: [
+      {type: "image", src:"https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494152552_9504517902918057_5715987183796554615_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFuihgAcgcZrI8AOKDSPcBVuTgCgCQps_q5OAKAJCmz-uoexvlpJ1Hk7TUoVrz6ef_CzPswE8i0Ji7obYL9rt3j&_nc_ohc=xjfNmfMmCUcQ7kNvwEVGtJa&_nc_oc=AdlQ03tyWeV-Pp6kyWSZ7NsM7xcNcoxvGkmJwF0b5l4FVzCXsVHe5f6ZytdYs9BbnOc&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=P1fovSpVCTg0lAlQsT62vQ&oh=00_AfOvkvrRrliv4ao_l-MHTSrG9C-jWCnsswNMncrvC_D4VA&oe=6846BAB7"},
 
-      "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494207187_9504517676251413_1910426553169373340_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHtYQrXMmkGigaYSIUpy8Tl6zmbAVFEe6vrOZsBUUR7q-eUQcjq2cJ3KZc9GAru1Bu9_cUVQNz-0Fd1iG06f2cm&_nc_ohc=c0s7ztd8DWUQ7kNvwEquGAt&_nc_oc=Adl8xoRXZC9_yj4s8X0Ij_aQvkgTeXYtw6dsqKS8r_ZtKBIWSJreXTgh2P050rrKTJ8&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=WQrLfpe05bqhakhQNd1krw&oh=00_AfNCfDPYch4nw12uMZM6y7ZD7tO-_EW12TJyC2CsRmTycg&oe=6846AC87",
-      "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494151275_9504517752918072_820146410886278808_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeE1rCVTlFTq_YXdWhbXF7gzifpQWrOOiQaJ-lBas46JBhX5jOT4PtEewwT0WD0IfiNS_ZIqpwN0T7GloMnSo7qk&_nc_ohc=mKJAMeRr_wIQ7kNvwEjMYyh&_nc_oc=AdmFVtuRD7J9YT6VZ9pgmuLJG2pp5jXbc5fqoC4gV6ivwzoU_ojjP7M_LljVPsr7Xi0&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=Ld3Opx2AlKk0PojVyDR0Vg&oh=00_AfM5DQqt2Qs5RAlkQQrkfalvGbYD-Nx6gRVuiIFntJwu8w&oe=6846D2A6",
-      "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494153344_9504517542918093_8368326108722311213_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFv2aPtqSaMJBMAISLRFeaKRHMN1bfh6sdEcw3Vt-Hqx69zzF7lpUjnKFuSDfAOZQ53OYo4H_pWxRWHORlnR7zK&_nc_ohc=L9TpVfXE-FsQ7kNvwFTqdck&_nc_oc=Adk2Uaazy-P_YknFHs9pKWOq0S8S0uVPjXcGDspv8q_jQzDDNuhYigniq2VLWdd3yi0&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=_tml48nXHMY3I-iJu1GOIA&oh=00_AfP6Ft0eWVPo5JbWLleFg3sbcRY5hwJ8sXnkLx_MG4NBZw&oe=6846C4C9",
-      "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494682138_9504517709584743_3642770257766948984_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeGdR9rIRiz7wCNFZ24H4MhP6rjMNI7R1FXquMw0jtHUVaanIdJjup_TbWR7f-IkGtjDempaGoEjU5ewCkwHwWxB&_nc_ohc=Y2LdEtuJTYkQ7kNvwGCmrgs&_nc_oc=AdmgKy6FnfWaGqCaU7iTdLYZCDcme4NuZM8LwSDIKEIEu_Ks_McFHYgcQlJD-Vf-mQc&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=MOdFSZ8ANDGozYUkXq0QmQ&oh=00_AfPF8cbDqOJz-xfAZqoYr1_BFnnAvYwZgHB7r2rNTKBIUw&oe=6846B178",
-      "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494372307_9504517802918067_2073955733735018555_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEdNPUBfbjY5RR3UQjpvFyf85sSW1pwAH7zmxJbWnAAfvPHke5Ky9kwJlimf7S-Y8zBIEFDkqeNgZ3mIk6uzshw&_nc_ohc=bqFQ3rdOLgsQ7kNvwEMFleT&_nc_oc=AdkxBLZj0sZQZuz6OUBAWAGIwEFKkKbdcfsaWOExz1QYXIwaQs_gTABNeNBQmHDrt4g&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=lKURGCXlMWCMZACtLq3Gyw&oh=00_AfMPZVf25djMHJCsbyH21oWOhDo7FMlBU5krFgtRUPzGqQ&oe=6846A9A9",
-      "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494151055_9504517472918100_4966092305428778640_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEZyLQUzukX9CeYJoAzrihl2vmy0GxvUN3a-bLQbG9Q3VUp2ER1YqOnQ3f27T0sBhx4D3en9ut7cdp7UEdCSsMI&_nc_ohc=DPEM76tMSdgQ7kNvwHNfspQ&_nc_oc=Adk8c45vgI3W5bv0OnJXrPRp63CWMJ4VwNYpAFTaFxliTCqzibDdq-__s1HVN-D2q0s&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=la3Ij_-RkPc9fX0PViuUSg&oh=00_AfNTv8RDowHweZYqdQlKnlrh4PkA5VAIFUBboOo-wa2-SA&oe=6846BCDC",
-      "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494182312_9504517552918092_4653512446013559411_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFbLzJw1nSI6MfhDHgGeibkvr01ea2T7Sm-vTV5rZPtKQpwFTvn74vO_A7wVsXSQTjwI6QDPo63-SGtrqmisjf2&_nc_ohc=k3sY4lH69YMQ7kNvwEOw9di&_nc_oc=AdlJUgK4KPHotax2_0tdG8Dtxo3gpY8vg6CK38wOlDi_bTvU4eSARJW8ovJzZEF3IXE&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=YQiqEHfJKj6Uj1CuBHuYLQ&oh=00_AfPbjp0HOxm1ykDa9h0dlgwv-GYaSZQSgPkl0HD4NEg_BA&oe=6846A1B2",
-      "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/495000103_9504517696251411_4418932899074781686_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFnHxc0TOverVSKV0I2XPDjafFyXGybfeNp8XJcbJt941cNnlijAp1ACXQaIXGnpi9TIIIXetcYVjH6iEqtlKMH&_nc_ohc=gQH85Oi9nyoQ7kNvwHQYpRT&_nc_oc=AdmrUH99yZP7V4do5-dpITc8_3FI-FBQK2aplMrfstTeTmEkS8dWBC-rD69Q0xnaSF4&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=oK8kzNfD6MTq2V2xJYtWsw&oh=00_AfMTFAAEXJ5wcYdURF8BqEiqISktdmgbESZK8z7yrfplWQ&oe=6846D00F",
-      "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494444581_9504517486251432_4470417429204014653_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFGIeWpTKEJmRNBxi3vuzl2xErCyxjl7cDESsLLGOXtwM4d14wQ_WIp2H0gQGb95k6ZHLLm7XC0t-jEBLGNoch0&_nc_ohc=Cr94obzth80Q7kNvwFdRI5X&_nc_oc=AdmMQe9ygseIIWE80_TQlUp9k82xce1ZfeCCKRsKq2KY1L1HecjPBE5SZo0h0fE4CwI&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=uTRU0-UukltuBmD0SawAXA&oh=00_AfOFpNasf7xP2BICAWsc9b6vZvLeiFXdPAJ7JJWsBsn64g&oe=6846C084",
-      "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494425888_9504517689584745_5125167910705400125_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeH54HjcNF3AFD-XwO6PH4kfII4--3eXPccgjj77d5c9x53Kj2xFu2CqZbnuEMdupsgIEGWRlCI3MQR8IpquNW9S&_nc_ohc=Fysqxg0Sh0AQ7kNvwFDb_EM&_nc_oc=AdmsXKiG8Tqg4cuSblMdmh5O7nTGJsIM17d5ecJVbuviaNs6Ft6oaWfxaBf5uIMR0C0&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=_r0sYi34MFJ2VelTzYQlIg&oh=00_AfPkIosOtuuO7tUT5gTpxhS0GbTDiJP-FVCMTWHxhBwlkQ&oe=6846C287",
+      {type: "image", src:"https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494207187_9504517676251413_1910426553169373340_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHtYQrXMmkGigaYSIUpy8Tl6zmbAVFEe6vrOZsBUUR7q-eUQcjq2cJ3KZc9GAru1Bu9_cUVQNz-0Fd1iG06f2cm&_nc_ohc=c0s7ztd8DWUQ7kNvwEquGAt&_nc_oc=Adl8xoRXZC9_yj4s8X0Ij_aQvkgTeXYtw6dsqKS8r_ZtKBIWSJreXTgh2P050rrKTJ8&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=WQrLfpe05bqhakhQNd1krw&oh=00_AfNCfDPYch4nw12uMZM6y7ZD7tO-_EW12TJyC2CsRmTycg&oe=6846AC87"},
 
+      {type: "image", src:"https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494151275_9504517752918072_820146410886278808_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeE1rCVTlFTq_YXdWhbXF7gzifpQWrOOiQaJ-lBas46JBhX5jOT4PtEewwT0WD0IfiNS_ZIqpwN0T7GloMnSo7qk&_nc_ohc=mKJAMeRr_wIQ7kNvwEjMYyh&_nc_oc=AdmFVtuRD7J9YT6VZ9pgmuLJG2pp5jXbc5fqoC4gV6ivwzoU_ojjP7M_LljVPsr7Xi0&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=Ld3Opx2AlKk0PojVyDR0Vg&oh=00_AfM5DQqt2Qs5RAlkQQrkfalvGbYD-Nx6gRVuiIFntJwu8w&oe=6846D2A6"},
+
+   {   type: "image", src:"https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494153344_9504517542918093_8368326108722311213_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFv2aPtqSaMJBMAISLRFeaKRHMN1bfh6sdEcw3Vt-Hqx69zzF7lpUjnKFuSDfAOZQ53OYo4H_pWxRWHORlnR7zK&_nc_ohc=L9TpVfXE-FsQ7kNvwFTqdck&_nc_oc=Adk2Uaazy-P_YknFHs9pKWOq0S8S0uVPjXcGDspv8q_jQzDDNuhYigniq2VLWdd3yi0&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=_tml48nXHMY3I-iJu1GOIA&oh=00_AfP6Ft0eWVPo5JbWLleFg3sbcRY5hwJ8sXnkLx_MG4NBZw&oe=6846C4C9"},
+
+      {type: "image", src:"https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494682138_9504517709584743_3642770257766948984_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeGdR9rIRiz7wCNFZ24H4MhP6rjMNI7R1FXquMw0jtHUVaanIdJjup_TbWR7f-IkGtjDempaGoEjU5ewCkwHwWxB&_nc_ohc=Y2LdEtuJTYkQ7kNvwGCmrgs&_nc_oc=AdmgKy6FnfWaGqCaU7iTdLYZCDcme4NuZM8LwSDIKEIEu_Ks_McFHYgcQlJD-Vf-mQc&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=MOdFSZ8ANDGozYUkXq0QmQ&oh=00_AfPF8cbDqOJz-xfAZqoYr1_BFnnAvYwZgHB7r2rNTKBIUw&oe=6846B178"},
+
+      {type: "image", src:"https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494372307_9504517802918067_2073955733735018555_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEdNPUBfbjY5RR3UQjpvFyf85sSW1pwAH7zmxJbWnAAfvPHke5Ky9kwJlimf7S-Y8zBIEFDkqeNgZ3mIk6uzshw&_nc_ohc=bqFQ3rdOLgsQ7kNvwEMFleT&_nc_oc=AdkxBLZj0sZQZuz6OUBAWAGIwEFKkKbdcfsaWOExz1QYXIwaQs_gTABNeNBQmHDrt4g&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=lKURGCXlMWCMZACtLq3Gyw&oh=00_AfMPZVf25djMHJCsbyH21oWOhDo7FMlBU5krFgtRUPzGqQ&oe=6846A9A9"},
+
+      {type: "image", src:"https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494151055_9504517472918100_4966092305428778640_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEZyLQUzukX9CeYJoAzrihl2vmy0GxvUN3a-bLQbG9Q3VUp2ER1YqOnQ3f27T0sBhx4D3en9ut7cdp7UEdCSsMI&_nc_ohc=DPEM76tMSdgQ7kNvwHNfspQ&_nc_oc=Adk8c45vgI3W5bv0OnJXrPRp63CWMJ4VwNYpAFTaFxliTCqzibDdq-__s1HVN-D2q0s&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=la3Ij_-RkPc9fX0PViuUSg&oh=00_AfNTv8RDowHweZYqdQlKnlrh4PkA5VAIFUBboOo-wa2-SA&oe=6846BCDC"},
+
+      {type: "image", src:"https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494182312_9504517552918092_4653512446013559411_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFbLzJw1nSI6MfhDHgGeibkvr01ea2T7Sm-vTV5rZPtKQpwFTvn74vO_A7wVsXSQTjwI6QDPo63-SGtrqmisjf2&_nc_ohc=k3sY4lH69YMQ7kNvwEOw9di&_nc_oc=AdlJUgK4KPHotax2_0tdG8Dtxo3gpY8vg6CK38wOlDi_bTvU4eSARJW8ovJzZEF3IXE&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=YQiqEHfJKj6Uj1CuBHuYLQ&oh=00_AfPbjp0HOxm1ykDa9h0dlgwv-GYaSZQSgPkl0HD4NEg_BA&oe=6846A1B2"},
+
+      {type: "image", src:"https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/495000103_9504517696251411_4418932899074781686_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFnHxc0TOverVSKV0I2XPDjafFyXGybfeNp8XJcbJt941cNnlijAp1ACXQaIXGnpi9TIIIXetcYVjH6iEqtlKMH&_nc_ohc=gQH85Oi9nyoQ7kNvwHQYpRT&_nc_oc=AdmrUH99yZP7V4do5-dpITc8_3FI-FBQK2aplMrfstTeTmEkS8dWBC-rD69Q0xnaSF4&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=oK8kzNfD6MTq2V2xJYtWsw&oh=00_AfMTFAAEXJ5wcYdURF8BqEiqISktdmgbESZK8z7yrfplWQ&oe=6846D00F"},
     ],
     alts: ["Community Support Initiative Launched" ],
     category: "General News",
   },
 
   
-  {
-    title: "Community Support Initiative Launched",
-    date: "January 5, 2025",
-    description: "A new initiative provides essential supplies to rural communities, improving living conditions.",
-    images: [
-      "https://images.unsplash.com/photo-1532629345-2e0b60e33f08?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
-    ],
-    alts: ["Community Support Initiative 1", "Community Support Initiative 2"],
-    category: "Events",
-  },
-  {
-    title: "Winter Aid Distribution for Refugees",
-    date: "December 15, 2024",
-    description: "We distributed blankets, clothing, and food supplies to refugees facing harsh winter conditions.",
-    images: [
-      "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
-      "https://images.unsplash.com/photo-1604187351577-c8ca09b27e07?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
-    ],
-    alts: ["Winter Aid Distribution 1", "Winter Aid Distribution 2"],
-    category: "General News",
-  },
+
+ 
   {
     title: "Support Let's Complete Ansarul Islam School Building Project The foundation ",
     date: "November 10, 2024",
@@ -287,46 +271,164 @@ media: [
     alts: ["Educational Support Initiative Launched"],
     category: "Events",
   },
-  {
-    title: "Healthcare Camp Serves 300 Families",
-    date: "October 5, 2024",
-    description: "A free healthcare camp offered medical checkups and treatments to 300 families in underserved areas. gug guugg igg guggug uggg jvj vjv vjjv vjv vnv",
-    images: [
-      "https://images.unsplash.com/photo-1550831107-1553da8c8464?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
-      "https://images.unsplash.com/photo-1576765608622-067f23d13753?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
-    ],
-    alts: ["Healthcare Camp 1", "Healthcare Camp 2"],
-    category: "General News",
-  },
+  
 ];
 
   const gallery = [
     { type: "image",
-       src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-        alt: "Ramadan Iftar Distribution", caption: "Distributing iftar meals to families during Ramadan." },
+       src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/496940432_9621165381253308_5638857211374510766_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHoD6FckslT8lnzbi9AlpdBjpzEvfjxzXiOnMS9-PHNeMh4K_3HXwUiu7SNAf2XaDR_-ElfTLd6ffp_xc6OGC-u&_nc_ohc=v6mAellPu4oQ7kNvwGECHJm&_nc_oc=AdmYrrfDSg88vKwtaP7Nj0Yb2Ej3vKQc_7wU-nb1BjdiCCcHUGSS-h9roBh8Ks--QbA&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=ox7ZhqW_IttcmguMQDLHiA&oh=00_AfPUjuOfwBn_75z9uZt6r7mi06jYwyhXNYkgrNwEsel7Mw&oe=6847F384",
+        alt: "support the transformation agenda of our education sector through outreach.", caption: "support the transformation agenda of our education sector through outreach." },
 
     { type: "video",
-       src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        alt: "Ramadan Iftar Video",
-         caption: "Video of iftar meal distribution." },
+       src: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fweb.facebook.com%2Freel%2F1407430334023708%2F&show_text=false&width=267&t=0",
+
+      
+        alt: "Christian Atsu Education Complex*  orphanage Video",
+         caption: "The annual *Phase 2 Community Outreach* is here again." },
+
+    { type: "video",
+       src: "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2Fhstvlivegh%2Fvideos%2F232057133267234%2F&show_text=false&width=560&t=0",
+
+    
+        alt: "",
+         caption: "Ramadan altar." },
 
     { type: "album",
-       src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
-        alt: "Medwuma Pa Album",
-         caption: "Photos and videos from Medwuma Pa training.",
+       src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494590239_9497682393601608_5993532363464042678_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFG8JzjyICw8Yt2BJxuiySutbIkGp5DjUm1siQankONSRnRBXl9dHwhckmKXmnQsE29jWe1xzEjWjXVKO6sfYtB&_nc_ohc=zHe-vSZ_mk8Q7kNvwEdxQLT&_nc_oc=AdnSuTYUwUs8OxBdcKxmCWevKR8yO9MA7qEk1YJ3zU6cqr5KTypb1t41jpLGtibwcgs&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=Puj5gcSpNfXpgJHc1R3hlg&oh=00_AfN0XBO563ONKP5tmx-Qmk3IIDfF4tr7njmMGFDwYicnFg&oe=6847CEA3",
+        alt: "RNFOCUS ON HEALTHY MORNING LIVE ON HSTV || 21/03/2024",
+         caption: "RNFOCUS ON HEALTHY MORNING LIVE ON HSTV || 21/03/2024",
           items:
            [
-            { type: "image", src: "https://images.unsplash.com/photo-1529390079861-0edd4c12bf9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-             alt: "Medwuma Pa Training Photo 1" 
-            },
+            
             { type: "video", 
-                src: "https://www.youtube.com/embed/xyz123",
-                 alt: "Medwuma Pa Training Video"
+                src: "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2Fhstvlivegh%2Fvideos%2F232057133267234%2F&show_text=false&width=560&t=0",
+                 alt: ""
               }, 
 
-              { type: "image",
-                 src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-                  alt: "Medwuma Pa Training Photo 2" }
+          
+           
+                ]
+               },
+    { type: "album",
+       src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494135333_9503102626392918_2278131271513998804_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFV31yFYOSEr4uDC_Nptrq6zSBa5RQEvS3NIFrlFAS9LSHtonfRoxCXQoCKiMxfIF4-kqwlYjp6u792dXl2RbdM&_nc_ohc=NlBf2EUE480Q7kNvwHm5sjI&_nc_oc=Adm32OMzOCSvgTqBKMPzibLKgzGANMkkMShodCIUXc20SWxEynxE12jR9QJYo6QIbv4&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=tQ1gRnfb5KdX9Bn7oumyOQ&oh=00_AfNxMzHyz-Ei1gsUQDqI9ZmUlM3KREr4YkD-I9P5gLPcOA&oe=6847E0F1",
+        alt: "Medwuma Pa Album",
+         caption: "The Road 2 Jannah Foundation from New Bakpa made a stop at *Anyamam* in the Ada West District to donate to the affected tidal waves victims rendered homeless seeking shelter in churches and schools as part of the communities to reach out to.",
+          items:
+           [
+            
+            { type: "image", 
+                src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494135333_9503102626392918_2278131271513998804_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFV31yFYOSEr4uDC_Nptrq6zSBa5RQEvS3NIFrlFAS9LSHtonfRoxCXQoCKiMxfIF4-kqwlYjp6u792dXl2RbdM&_nc_ohc=NlBf2EUE480Q7kNvwHm5sjI&_nc_oc=Adm32OMzOCSvgTqBKMPzibLKgzGANMkkMShodCIUXc20SWxEynxE12jR9QJYo6QIbv4&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=tQ1gRnfb5KdX9Bn7oumyOQ&oh=00_AfNxMzHyz-Ei1gsUQDqI9ZmUlM3KREr4YkD-I9P5gLPcOA&oe=6847E0F1",
+                 alt: ""
+              }, 
+            { type: "image", 
+                src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494753965_9503102479726266_7784063683569608253_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHvq9MS_um_5hePj7FocWfXXv9gDSEDNDpe_2ANIQM0Og5Ilc0XWIk1GYg0t-PP6axUM8UL_fyFczetjnecJNY8&_nc_ohc=qNh6YWfZyj4Q7kNvwF7lDny&_nc_oc=Adl710XNV-wBWmdEdgCRTjYctRdtoXJKzViL2u6TfAh5QBZnZYlm_ImvHm--XpdilTY&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=V7zisK85aubh6TqmbCr8MA&oh=00_AfPFjiZCvhraOt6q2ZGheYdm3DqAOz4e9J2w8Nbh2CbUFg&oe=6847F47E",
+                 alt: ""
+              }, 
+            { type: "image", 
+                src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/495016068_9503102423059605_6915978106904892275_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFGVgwMP_Dl1n0HBcK7bftZTCSDmstyEsZMJIOay3ISxjDcac2WXRAZsSugpqVeCvw0xgNYHtujn1uKQ4PdlCi_&_nc_ohc=MkknYNEqg7MQ7kNvwGitWuJ&_nc_oc=AdkNcLTk4wMkO9SV_w8RefyXajOztPD7lY9kdEk0CCpT2oZZnShi05LWCb3eqc_LPJM&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=zM1dQt3-eyRdjybAPTz4Kg&oh=00_AfM4SgRXYC5Kx5XW3tuZ0rEIoHhqFfYYY8q0CK0noP6wOQ&oe=6847F017",
+                 alt: ""
+              }, 
+
+            { type: "image", 
+                src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494517444_9503102629726251_5712526822170111483_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHLsxnDmqvXHi6Z73xKaQ4qXLFSKJFwVXJcsVIokXBVcn6EJPBObWzEBAIW1ysHJ_2hgJpceD1j1VJ37gt_s0q0&_nc_ohc=OgcKpFoqYHQQ7kNvwGyOVLV&_nc_oc=AdkZEvHMgIUAaqqLAnd77IZxUHWP9SX9Jwo6tCS8R-4WWKf_-58hoyFFIetphjJxPbc&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=9hxJu52d5IEZy-93Nbv3lw&oh=00_AfNlX5J5QqVkKUzKKYpxG28VooIXEC8SVHqh_2g13lOmtw&oe=6847E056",
+                 alt: ""
+              }, 
+            { type: "image", 
+                src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/495009617_9503102596392921_8259024072094532516_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEkemfI62AKTtNHPevqvhDQes5uwdCRWGp6zm7B0JFYaqttlm3KI0ZTvnyKUhlkrR47N5kKcgOFqqY143Wt8CBY&_nc_ohc=ONkTmH0os_0Q7kNvwEzKK7j&_nc_oc=AdlVBpy1R6rLH3wXWSpNr_vrtH468GDyfCD_28WR9FK82Xews-Vq6oIzlSATN6S-8PU&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=ocXkqWClJtEtNoV7X0YqtQ&oh=00_AfPaUy3bebeXva5hxT56GlfEKLH5xnpFRI_rjBs1LscXIA&oe=68480442",
+                 alt: ""
+              }, 
+            { type: "image", 
+                src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494283129_9503102446392936_8118175293162152504_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeGFKmbqf9jifL6iYReBYt0zSCDOYFWl6l9IIM5gVaXqX8mW7Vnl-Yq1t1CBrBfW-oIg2e4ug42N8t1i5p6VV1jr&_nc_ohc=lsL78b1zbw4Q7kNvwG31HA1&_nc_oc=AdmW7ndsZSqpsgEZy0KNum6ff7-6i-Xk9GMIa7A_mFUI7Gm_Yz_iEdsdWPaQuE5b4f8&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=mIw4ZXitKaJNthnAGETp7w&oh=00_AfMVQ801mYYtv01spknJggXUZWtwJkYpvlG2tDw7YhBOVw&oe=68480505",
+                 alt: ""
+              }, 
+            { type: "image", 
+                src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494169659_9503102486392932_2462335850931146697_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFwcReRJ0hvlpFuuxH60-TaY5yX2fabPUdjnJfZ9ps9R0kArxdvXV9zfF3aKpKtM2uE4nilCrWekfFILdNZTz6F&_nc_ohc=kF1xrquhjn0Q7kNvwHbiGbg&_nc_oc=AdkA1DdPj2mN-4CdAZ1BMBdsPzj0qAVd9Pzy6FVnZXwkClcjw4LNmS0nQzGYE3TKTlo&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=BBsGW97DtW-INPreSZ5TnQ&oh=00_AfNQpxi4mP_l12p-YKQUEJlY4pkoo7lF0uesxxRXB0keLg&oe=684803D3",
+                 alt: ""
+              }, 
+
+            
+           
+                ]
+               },
+
+
+
+
+
+    { type: "album",
+       src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494393000_9503124649724049_4257617064385671764_n.jpg?stp=dst-jpg_p526x395_tt6&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeG1LWE-_rud0uW5tmbZQm18cR2dX2gc4cxxHZ1faBzhzGLmuStPoX6MzT3UnzL1xTJ2RsPpZmqe1jKYOQwzFLAZ&_nc_ohc=qspJ79CzEXQQ7kNvwET18Ci&_nc_oc=AdkLrmvRTzXsUB5c1DeXTdmj6MBoizFyfbf7Bb7SIjcf_Re24U71f-JEmY12w-7j0ws&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=YvqLTxNofLslaaQ1D8QiNg&oh=00_AfMmlDFFUTAyCbiHFwWcpr6dxwfq6orVmUlwzExfXbOWEA&oe=6847FF36",
+        alt: "National Chief Imam of Ghana and Executive Director Global of Road 2 Jannah Foundation a Happy Birthday",
+         caption: "Road 2 Jannah Foundation is wishing His Eminence the National Chief Imam of Ghana and Executive Director Global of Road 2 Jannah Foundation a Happy Birthday..",
+          items:
+           [
+            
+            { type: "image", 
+                src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494393000_9503124649724049_4257617064385671764_n.jpg?stp=dst-jpg_p526x395_tt6&_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeG1LWE-_rud0uW5tmbZQm18cR2dX2gc4cxxHZ1faBzhzGLmuStPoX6MzT3UnzL1xTJ2RsPpZmqe1jKYOQwzFLAZ&_nc_ohc=qspJ79CzEXQQ7kNvwET18Ci&_nc_oc=AdkLrmvRTzXsUB5c1DeXTdmj6MBoizFyfbf7Bb7SIjcf_Re24U71f-JEmY12w-7j0ws&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=YvqLTxNofLslaaQ1D8QiNg&oh=00_AfMmlDFFUTAyCbiHFwWcpr6dxwfq6orVmUlwzExfXbOWEA&oe=6847FF36",
+                 alt: ""
+              }, 
+
+            { type: "image", 
+                src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494923658_9503124796390701_1455003858732376690_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFVKCj55XrCGm-CAztFYbB-eJr0dTjV0QB4mvR1ONXRAAczu5bAqe-pzDoKgvEVZhiDOjmKHZ-Tun8aDcKoPEtG&_nc_ohc=kHsPXZBFY2kQ7kNvwHlN9Jl&_nc_oc=Admp3VnH6RzEnEXTTzkLOm-JolNshpYGn5DF63iaPZQojz1FCp0tDo6cOzscFfM2Ob0&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=zGOww6ze3F2qnJ-iFoLkKQ&oh=00_AfPCYZuOawDrOrvOtTGlE4EHVT1JLrfyyYwA4MA51ifYxA&oe=6847D7AE",
+                 alt: ""
+              }, 
+            { type: "image", 
+                src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494343087_9503124803057367_5043718598226346655_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFbClTfdYd8p4PvR03yZxq-b8G8ce9Sjfdvwbxx71KN99Vm2kPpLxjHp1sq5GsGVrDgyDSFEVTxe8FDfUYHh8WW&_nc_ohc=27cjzTFqHakQ7kNvwHfAO4c&_nc_oc=Adlz_QWueJK57geFzUXBtt4co2V3bgs2cwXx3D62etehDjSuF6C5n8uaXM6AZ5DxRLA&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=4ydJuSmtXOaZ5QDlebIGrw&oh=00_AfNxp756L4iON55_9On7-wUjYopiZJgsN1aEtY8dTijvtw&oe=6847E300",
+                 alt: ""
+              }, 
+            { type: "image", 
+                src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494277390_9503124593057388_8768275341482599845_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHya2lf3bqYhlqlYfT2VHwAg9LwzkKiGsCD0vDOQqIawE-4hlmgSuqjcQX9K8XGNS65t8U9LNg3TASZ8Ms_bW53&_nc_ohc=OdAs8qYQRQQQ7kNvwGMBIxQ&_nc_oc=AdmEq8QGys1dtBv7pGP5wXsDpx8ixUHQQgTgSFhvIPylvjzdWJjEoerf1m4fcibiY1s&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=bQge8qIgSxpc2sL1bFMdOQ&oh=00_AfNtsPToz8ja7RuIoP_t8uGPXekzJEgoZ_HK1lka45O00g&oe=6847F14C",
+                 alt: ""
+              }, 
+            { type: "image", 
+                src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494579419_9503124783057369_1815019043885138402_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeGa8z5H_MCRdkY92Nv_IkyuJ8bn4SvNNB4nxufhK800HpHZ1Qygr54ccbvk6G211h3dgVY-iR7A7zxHGj0ecbmK&_nc_ohc=HzevkixXh9wQ7kNvwG4VnYl&_nc_oc=Adk1bC-wIc1SE2mJ-VPqsqN8buihSBCvMcgsulro4Ta7Dgqmbi5B6ge_TMO3Cq_-sEk&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=rXBXEZQlHgwmHTH1gzAF1Q&oh=00_AfNnxIH1HNP7Jz0sQBeThzqUVeUMVfr6sNdaknmDQ-49wQ&oe=6847EBE1",
+                 alt: ""
+              }, 
+            { type: "image", 
+                src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494574496_9503124919724022_2209823206993986920_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHjvjLrZ8-yR-HscXKr5KzWE9K7HzqB1AQT0rsfOoHUBIT5UWze6DinSuJCW-n2S07-GgIzxzGvof_pupv5lnYi&_nc_ohc=wrofENbLMNYQ7kNvwEvnR_6&_nc_oc=Adl59VNhwVSfRu28DyPEETups7blnH0KVl2cNntczeU1E792ls62tvA34YqjsFBk-0U&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=aUko_-PzxvsPT8cb9SbJYQ&oh=00_AfMdvGivvz9mgqeEGNO3DacypPHklHgpXqxZXBYCx5qc0w&oe=6847D3EB",
+                 alt: ""
+              }, 
+            { type: "image", 
+                src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/495051417_9503124703057377_2138629540715372558_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEwC23J2GpeDJQq741iKwRg4fsdFAAG8xXh-x0UAAbzFfXLOANSZXx6pirwXRQMwMEBPU08mCyPVqp8736Phhuf&_nc_ohc=1e_IyxkaM6cQ7kNvwF6A23k&_nc_oc=Adm0iL2N-wNRLF2Kt5WyH-qNA7zuJGsweCum4c2Zs9FOlFs-0LBZrybbLTqx7WVrsAQ&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=PlzwKG-O2Ku_zkf8KC8EOw&oh=00_AfM-hTMnkRyJox-NciJnctMsMFVxbwjaj8vyVz3GrIi78A&oe=6847F7BA",
+                 alt: ""
+              }, 
+            { type: "image", 
+                src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494446410_9503124599724054_3146919772661986344_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFmKXxtMURUu2Fy414ayYlDtilRJnOUogG2KVEmc5SiAdCLP8tk69b5zgom-6Rh45fNgDuAm44W_QrvpWKart6r&_nc_ohc=-s4dKdf1TDMQ7kNvwEkfPD7&_nc_oc=AdnPd6rxXZnG94nsKuLYkjfeHzz2p-KnlHWLfwsqeUiVtsS6kwr8YKJlfCzz9_WnwJE&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=J3QXGbdGfstVnmWWea51AQ&oh=00_AfOWfi9c4DZKN7Uf7f26XimF1aX36vpFXjWndVxeveZGug&oe=6847F9EB",
+                 alt: ""
+              }, 
+
+           
+                ]
+               },
+
+    { type: "album",
+       src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494181434_9504489126254268_2442689685172552270_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHZZNi2xQzoKqQDY0vT_oy2Qg6McvMfHYRCDoxy8x8dhD96ZmApZcO0qyw62AszL-10Gv-WvETYflqpH8_-neW1&_nc_ohc=GXjZUVmo5_8Q7kNvwHzTYri&_nc_oc=AdlfL40Wf2QhpMWKJ3tIjbryBwOZhfy6AdBxTzT6aVdirjGHWDgoc6TPeMIWWxlasGg&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=RVnuFwyyamL5eWUNLImtuw&oh=00_AfPhwmnFJGZwVLPe9Tc_CJ0494B4oGFZv041_kEHv8UvAA&oe=6847D609",
+        alt: "Support Let's Complete Ansarul Islam School Building Project",
+         caption: "Support Let's Complete Ansarul Islam School Building Project",
+          items:
+           [
+            
+            { type: "image", 
+                src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494181434_9504489126254268_2442689685172552270_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHZZNi2xQzoKqQDY0vT_oy2Qg6McvMfHYRCDoxy8x8dhD96ZmApZcO0qyw62AszL-10Gv-WvETYflqpH8_-neW1&_nc_ohc=GXjZUVmo5_8Q7kNvwHzTYri&_nc_oc=AdlfL40Wf2QhpMWKJ3tIjbryBwOZhfy6AdBxTzT6aVdirjGHWDgoc6TPeMIWWxlasGg&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=Kr66OPmPgUmYWZrldwDvXQ&oh=00_AfMR8uUrVR6Q9mcN7wJaDRHKWxhE-_4e-ABc5QHYdVltnw&oe=6847D609",
+                 alt: ""
+              }, 
+
+            { type: "video", 
+                src: "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2Fkamaru.abdulai%2Fvideos%2F7604774999630027%2F%3Fidorvanity%3D546447259795391&show_text=false&width=560&t=0",
+                 alt: ""
+              }, 
+            { type: "video", 
+                src: "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2Fkamaru.abdulai%2Fvideos%2F1117871999463009%2F%3Fidorvanity%3D546447259795391&show_text=false&width=560&t=0",
+                 alt: "Medwuma Pa Training Video"
+              }, 
+            { type: "image", 
+                src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494199261_9504489379587576_7779029495125618099_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEk9UePhqQCJLW9cUqVCARYdpC3LolWRo92kLcuiVZGj20Scwi-NNFG3oSSxFijWbWMULKLmppa_Ba5Ja5Cyyxv&_nc_ohc=8xegiGeIOEAQ7kNvwEc2BYz&_nc_oc=Adnw_y4-KpxIW_vicg8YdujQWrIU4PjbsruWREawVipddGvIuAym_LC1ke5SEbIrhIg&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=BFz07AW4P13B7x7sh--C_A&oh=00_AfN9BOctQFhLgE17QZiHUhHm00AjG_qb1oHOA-zIIU9ifw&oe=6847D974",
+                 alt: ""
+              }, 
+            { type: "video", 
+                src: "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2Fkamaru.abdulai%2Fvideos%2F460003833171642%2F%3Fidorvanity%3D546447259795391&show_text=false&width=560&t=0",
+                 alt: "Medwuma Pa Training Video"
+              }, 
+           
                 ]
                },
 
@@ -337,31 +439,85 @@ media: [
        items: [
           {
              type: "image",
-              src: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-               alt: "Winter Aid Photo 1"
+              src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494151275_9504517752918072_820146410886278808_n.jpg?stp=dst-jpg_p526x395_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeE1rCVTlFTq_YXdWhbXF7gzifpQWrOOiQaJ-lBas46JBhX5jOT4PtEewwT0WD0IfiNS_ZIqpwN0T7GloMnSo7qk&_nc_ohc=mKJAMeRr_wIQ7kNvwHx6pzm&_nc_oc=AdmnOiCihJ9Dkj_OW8wziUiDYbWXlRfUKFH4bnNza1RXn-xEUwR0bfUiwn1A9dHfi9I&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=3soGMgF9wR7GZ-IEsXVKJQ&oh=00_AfP-rm1b6w2UhI_-j7TQR11TR3gEjV_X6Z5dA8rdGfUxJw&oe=6847EBE6",
+               alt: ""
                }, 
-            { 
-              type: "video", 
-              src: "https://www.youtube.com/embed/abc789",
-               alt: "Winter Aid Video" 
-            }
+          {
+             type: "image",
+              src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494153344_9504517542918093_8368326108722311213_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFv2aPtqSaMJBMAISLRFeaKRHMN1bfh6sdEcw3Vt-Hqx69zzF7lpUjnKFuSDfAOZQ53OYo4H_pWxRWHORlnR7zK&_nc_ohc=L9TpVfXE-FsQ7kNvwG0jvhi&_nc_oc=AdnVE0XvRp4lLbF7fldfBGoCXBjIfVfXlnjbsjULugj1QNrxjFl5gypoVEHl1nzqDAE&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=mthSSjMutJKTnwYBMdTn9A&oh=00_AfN77IcddcYc1cdxeqP8G9ntHWk23htTfKsr8xPGd42E4A&oe=6847DE09",
+               alt: ""
+               }, 
+          {
+             type: "image",
+              src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494682138_9504517709584743_3642770257766948984_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeGdR9rIRiz7wCNFZ24H4MhP6rjMNI7R1FXquMw0jtHUVaanIdJjup_TbWR7f-IkGtjDempaGoEjU5ewCkwHwWxB&_nc_ohc=Y2LdEtuJTYkQ7kNvwHYEOvm&_nc_oc=Adkj1LHIDma1hLBjQJEm4dMScwmE437EgN2z-H_zKXTaA_fV6s-02Ki7WOqfplnelgA&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=BqXNMfEFngwS0dshxyRsdg&oh=00_AfO3jb6641UzKUs_9qrXy3nCc0BFKIy7lN_MDYf7OIHg6g&oe=6847CAB8",
+               alt: ""
+               }, 
+          {
+             type: "image",
+              src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494372307_9504517802918067_2073955733735018555_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEdNPUBfbjY5RR3UQjpvFyf85sSW1pwAH7zmxJbWnAAfvPHke5Ky9kwJlimf7S-Y8zBIEFDkqeNgZ3mIk6uzshw&_nc_ohc=bqFQ3rdOLgsQ7kNvwH4xPdp&_nc_oc=AdkNsJEmjodcp7PRTqSfer7aXWqWMKpOYls2sqXRpJu59CmEkGvAwVZVlp13dP3iCKc&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=JPcdtrgu0TYQ8TDUHs6IzQ&oh=00_AfOLH5QeaZQaWskSMIaHeg3AjJdzgnbK-WYwrg-zPjrUeA&oe=6847FB29",
+               alt: ""
+               }, 
+          {
+             type: "image",
+              src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494151055_9504517472918100_4966092305428778640_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEZyLQUzukX9CeYJoAzrihl2vmy0GxvUN3a-bLQbG9Q3VUp2ER1YqOnQ3f27T0sBhx4D3en9ut7cdp7UEdCSsMI&_nc_ohc=DPEM76tMSdgQ7kNvwG1RWAz&_nc_oc=AdkTwpsS4R9TVyPjFHEK7JaNWBPvpQXwRTEVyL9Hux_DBIfsmRP_wUaTDvZmRMxPeJg&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=vGqMQvL9a0_NbkWfgC5sFg&oh=00_AfNIs0l5XA6bk-KQi6n3Ey2VT6vjz2ld8wz5sKWsU4He3w&oe=6847D61C",
+               alt: ""
+               }, 
+          {
+             type: "image",
+              src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494182312_9504517552918092_4653512446013559411_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFbLzJw1nSI6MfhDHgGeibkvr01ea2T7Sm-vTV5rZPtKQpwFTvn74vO_A7wVsXSQTjwI6QDPo63-SGtrqmisjf2&_nc_ohc=4fWoqcUa8KIQ7kNvwHkvQFj&_nc_oc=Admwg0NHgjp3jfDUwaacSFka9t005M1MQKu6r2spM_IDBL5o9D7dAJIh3X6vMD6RsH4&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=RHc8xl0g1VN74kXweFgz1Q&oh=00_AfPhWUDg2L940TVwQS_OAK6eoZkCFXqp3Z4sX-10k0XRGg&oe=6847F332",
+               alt: ""
+               }, 
+          {
+             type: "image",
+              src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/495000103_9504517696251411_4418932899074781686_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFnHxc0TOverVSKV0I2XPDjafFyXGybfeNp8XJcbJt941cNnlijAp1ACXQaIXGnpi9TIIIXetcYVjH6iEqtlKMH&_nc_ohc=czkRzQq0E0gQ7kNvwHkaIP_&_nc_oc=AdkoXpH4TxDcvNiMv5Pgo2fuQpfFOG7IufXZvKQsQDNY3Ln8dEgDzRfpEWH3fi-aq04&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=ILhumfSV5REWUzDMUmBqBw&oh=00_AfOD1TNVW1uZwV0ZA7Kld9YLU6XS9geqgb02dcXDCFPSJg&oe=6847E94F",
+               alt: ""
+               }, 
+          {
+             type: "image",
+              src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494444581_9504517486251432_4470417429204014653_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFGIeWpTKEJmRNBxi3vuzl2xErCyxjl7cDESsLLGOXtwM4d14wQ_WIp2H0gQGb95k6ZHLLm7XC0t-jEBLGNoch0&_nc_ohc=Cr94obzth80Q7kNvwGFR8x5&_nc_oc=AdmU8zy8rKQ5cTyfP_J4mTS5y-uZWsS_gR-macYxSofzAIPx3sQ81gdW1wZTM_3tM98&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=tN_6lPGaloo-6wQyX6i49A&oh=00_AfO07Qnz_FqJNkGR8F7tDOXcNhhCzYHELXwci7yLGxpVUg&oe=6847D9C4",
+               alt: ""
+               }, 
+          {
+             type: "image",
+              src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494425888_9504517689584745_5125167910705400125_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeH54HjcNF3AFD-XwO6PH4kfII4--3eXPccgjj77d5c9x53Kj2xFu2CqZbnuEMdupsgIEGWRlCI3MQR8IpquNW9S&_nc_ohc=Fysqxg0Sh0AQ7kNvwGowLaI&_nc_oc=Adl3ebgiEERzZoqwDpyllStEyCeH3sLguKeFDa9RNJb74ArLbBQ6X1LJR04rDVveCi4&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=m88ZF4Q8-j1_I57abocZfw&oh=00_AfNHoBE34p96RFgb6V-_-80NXoGHmgBr9v_cyE1z2l1aBA&oe=6847DBC7",
+               alt: ""
+               }, 
+            
           ]  },
 
     { type: "album", 
-      src: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200",
+      src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/495461016_9592896200746893_7163327202326270463_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHhPgraJFCg8gPcLCfc_79ZrYIEbAC8kHatggRsALyQdrnPcqJDMRrGKk6CV_tuAKW0hkuAotkrJ5RUZnHnLIhU&_nc_ohc=BEbRsoQdpm8Q7kNvwHIq55h&_nc_oc=AdlbVZUD6nhPpJGAnUL4x3dcs-NFrBkPmTINqTtrYq4DDVqPkkOE6u3ebGSh8604Bgw&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=ox7ZhqW_IttcmguMQDLHiA&oh=00_AfO81rohruCoM2zcUbjLA9IueJc54CnMZW7QUf2By7mTNA&oe=6847F505",
        alt: "Winter Aid Album", 
-       caption: "Photos and videos from winter aid distribution.",
+       caption: "R2J Pays Courtesy Call To RCO'24 Stakeholders ",
         items: [
           {
              type: "image",
-              src: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-               alt: "Winter Aid Photo 1"
+              src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/495461016_9592896200746893_7163327202326270463_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHhPgraJFCg8gPcLCfc_79ZrYIEbAC8kHatggRsALyQdrnPcqJDMRrGKk6CV_tuAKW0hkuAotkrJ5RUZnHnLIhU&_nc_ohc=BEbRsoQdpm8Q7kNvwHIq55h&_nc_oc=AdlbVZUD6nhPpJGAnUL4x3dcs-NFrBkPmTINqTtrYq4DDVqPkkOE6u3ebGSh8604Bgw&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=ox7ZhqW_IttcmguMQDLHiA&oh=00_AfO81rohruCoM2zcUbjLA9IueJc54CnMZW7QUf2By7mTNA&oe=6847F505",
+               alt: ""
                }, 
-            { 
-              type: "video", 
-              src: "https://www.youtube.com/embed/abc789",
-               alt: "Winter Aid Video" 
-            }
+          {
+             type: "image",
+              src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/495856015_9593036517399528_7973012033177796404_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeF9s2HMXtQ5tqrvQFcoHW3tzhbswQxN6qPOFuzBDE3qoyzUY_d6775ztpyZHxx0f8LCKFBx9Aunq93tnfCDHEpP&_nc_ohc=EC8M9Zh8TQsQ7kNvwEHjhT5&_nc_oc=AdkxjhnQPihLxeOfuiD7zaB_rEqPpdl38NCwQnPYQ88hGfDILsM_eiYDa4ThKAwNhUo&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=ox7ZhqW_IttcmguMQDLHiA&oh=00_AfPoTkmlL3UGlNN0V05UAJdu_UOMy8GupOcKcYE7TQpzVw&oe=6847F5D7",
+               alt: ""
+               }, 
+          {
+             type: "image",
+              src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/495806469_9593036530732860_6681287673732612863_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeE8Mxe8zuoTvWCYVq9X5aVc59QOXlfT3Ezn1A5eV9PcTHUqJW8CbbYyKvbQC7dbClwtDE94aC3hp5riPzL-b1Mp&_nc_ohc=tJgrP_SOklgQ7kNvwF1xLcO&_nc_oc=AdnbkVln28ET6pN-cRUIgA7Ud4Ph3UjmaWHLbT-Q0bfvV-zXNUC1TrqBH9IazeNa_ds&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=ox7ZhqW_IttcmguMQDLHiA&oh=00_AfOCqMfFE16-0Isbo_yPlI9zh6Bxjo0IPZBAYr7rvyMVuw&oe=6847E40D",
+               alt: ""
+               }, 
+          {
+             type: "image",
+              src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/495805064_9593036577399522_5771634513842279882_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeGv55-pnqtp2Wk21L5lIBqr1-OHQuHVO0HX44dC4dU7Qa2Nf0vU_ZIw9_VvwPK0Ik0X5ppZHwbJZIjJBaDQhhRz&_nc_ohc=fO4p5qA7dncQ7kNvwH5hTOX&_nc_oc=Adl1KLCYGYlfScBDXbJWJhfzlANthzHju78h5LLu9kDpvTUOXfTuV_o5qXC-DIRWJ5w&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=9IneI8tVDebmyoJUrF2y6Q&oh=00_AfMSEOWLbcf7v6LlhrWrFqVNxNTFb__lW0PuJGPBfHgFFA&oe=6847E741",
+               alt: ""
+               }, 
+          
+          {
+             type: "image",
+              src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/496254434_9593036554066191_1275625130246270772_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEGktLm3r1jLtFraVbgzP0rcx-KM9PLiaxzH4oz08uJrOM9S1GJ_ux7Dn6h8ccySfwVD3J5Lghzp5QEhaU4H70x&_nc_ohc=ElO7RdO7mF8Q7kNvwEd9tkc&_nc_oc=AdkmEv6p_Qozit5TVTecy2BW_bhtUfBwu6zJg-T_BAmNdx1UaNHvyNMG9c_u0VP7qE0&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=O4EVqpgOSYJJBphDEXviaw&oh=00_AfN6LbKSybMpg5NN-sJVvqbibrhU8gUgHEX8cJaJXbGl0A&oe=6847D455",
+               alt: ""
+               }, 
+          
+      
           ] 
         },
   ];

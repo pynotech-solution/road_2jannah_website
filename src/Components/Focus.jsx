@@ -12,14 +12,14 @@ function Focus() {
           </div>
         </div>
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200" alt="Community Help" className="w-full h-48 object-cover" />
+          <img src="https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494290154_9503102483059599_5640946761098217650_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeG8UNtaX5DCxY9Z1J0vC4afqx8p5vcZ61mrHynm9xnrWVCiBVlM2kdIRSawY2eyEsJtFDIVDCjHZHq41skQ6K8f&_nc_ohc=1UPJXUGzS-8Q7kNvwFW9_eL&_nc_oc=AdkRq4_qGT9GWQOOO3QteZEGLKYjrNeilGles6-iw7Pb1UOhJVDCHnEjIOy5EuRwKKE&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=NSf14QiGKhInTJn-A33uBw&oh=00_AfPVN1JjeIKmubrjsgKYhZDMS5uY6Gdbc-HJatj2u9VLxg&oe=6847D372" alt="Community Help" className="w-full h-48 object-cover" />
           <div className="p-4">
             <h3 className="text-lg font-bold text-teal-800 mb-2">Community Help</h3>
             <p className="text-gray-700 text-sm">We support community initiatives with resources and volunteer efforts...</p>
           </div>
         </div>
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="https://web.facebook.com/photo/?fbid=7737309449638920&set=pcb.1137495754023869&__cft__[0]=AZUTuED-hYkAPWIG0FOt5Bo0rnXMYVCvz98k64szSyIvKbxlnbFM_KPaq3OEvLHWupDql6I7FpxyF-t7iY_GUN05aBA3Qb3GPPNnXK_03mMRGLhPrfq1bMTnWYAgXqF3BnTEL6zZi4XoCHUAmlFs5bwZGhDup8FVKDjTwCi9jmNTCFu5qm660w4loG8u8gmXB5W1XDNl3zYAzLajnHyaJrHB&__tn__=*b0H-R" alt="Economic Empowerment" className="w-full h-48 object-cover" />
+          <img src="https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/495461016_9592896200746893_7163327202326270463_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHhPgraJFCg8gPcLCfc_79ZrYIEbAC8kHatggRsALyQdrnPcqJDMRrGKk6CV_tuAKW0hkuAotkrJ5RUZnHnLIhU&_nc_ohc=BEbRsoQdpm8Q7kNvwHIq55h&_nc_oc=AdlbVZUD6nhPpJGAnUL4x3dcs-NFrBkPmTINqTtrYq4DDVqPkkOE6u3ebGSh8604Bgw&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=ox7ZhqW_IttcmguMQDLHiA&oh=00_AfO81rohruCoM2zcUbjLA9IueJc54CnMZW7QUf2By7mTNA&oe=6847F505" alt="Economic Empowerment" className="w-full h-48 object-cover" />
           <div className="p-4">
             <h3 className="text-lg font-bold text-teal-800 mb-2">Economic Empowerment</h3>
             <p className="text-gray-700 text-sm">Through programs like Medwuma Pa, we provide grants and training...</p>

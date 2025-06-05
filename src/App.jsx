@@ -14,6 +14,7 @@ import DonationModal from './components/DonationModal.jsx';
 import GalleryModal from './components/GalleryModal.jsx';
 import NewsModal from './components/NewsModal.jsx';
 import QuoteSection from './components/QuoteSection.jsx';
+import FAQ from './components/FAQ.jsx';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -552,6 +553,8 @@ media: [
       />
       <Contact openContactModal={openContactModal} />
       <ContactModal isContactModalOpen={isContactModalOpen} closeContactModal={closeContactModal} />
+
+      <FAQ />
       <Footer />
     </div>
   );

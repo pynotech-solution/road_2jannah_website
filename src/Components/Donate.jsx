@@ -5,7 +5,9 @@ function Donate({ openDonationModal }) {
       <div className="border-t border-teal-800 w-16 mx-auto mb-6"></div>
       <div className="grid md:grid-cols-2 gap-6 items-center">
         <div className="p-6 bg-white rounded-lg shadow-md text-center">
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">Your generous contributions help us provide food, empowerment, and care...</p>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            Your generous contributions help us deliver iftar meals to over 1,000 families during Ramadan, empower rural youth with educational resources, and provide healthcare camps for underserved communities, ensuring care and support reach those in need.
+          </p>
           <div className="text-center">
             <button onClick={openDonationModal} className="bg-teal-800 text-white py-2 px-6 rounded-lg hover:bg-teal-700">Make a Donation</button>
           </div>

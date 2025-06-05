@@ -1,47 +1,57 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 
-function NewsModal({ isModalOpen, selectedNews, closeModal }) {
-  if (!isModalOpen || !selectedNews) return null;
+function GalleryModal({ selectedGalleryItem, currentIndex, closeGalleryModal, handleOverlayClick, nextItem, prevItem }) {
+  if (!selectedGalleryItem) return null;
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  useEffect(() => {
+    console.log("GalleryModal mounted with selectedGalleryItem:", selectedGalleryItem, "currentIndex:", currentIndex);
+    return () => console.log("GalleryModal unmounted");
+  }, [selectedGalleryItem, currentIndex]);
 
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % selectedNews.images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + selectedNews.images.length) % selectedNews.images.length);
-  };
+  const currentItem = selectedGalleryItem.items ? selectedGalleryItem.items[currentIndex] : selectedGalleryItem;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg p-6 max-w-lg w-full mx-4 relative max-h-[90vh] overflow-y-auto">
-        <button onClick={closeModal} className="absolute top-2 right-2 text-teal-800 hover:text-teal-600 text-xl">×</button>
-        <div className="relative">
-          <img
-            src={selectedNews.images[currentImageIndex]}
-            alt={selectedNews.alts[currentImageIndex]}
-            className="w-full h-48 object-cover rounded-lg mb-4"
-          />
-          {selectedNews.images.length > 1 && (
-            <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-2">
-              <button onClick={prevImage} className="text-white hover:text-teal-200 text-2xl bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center">←</button>
-              <button onClick={nextImage} className="text-white hover:text-teal-200 text-2xl bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center">→</button>
+    <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" onClick={handleOverlayClick}>
+      <div
+        className="bg-white rounded-lg p-4 sm:p-6 max-w-[90vw] sm:max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto relative flex flex-col"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button onClick={closeGalleryModal} className="absolute top-2 right-2 text-teal-800 hover:text-teal-600 text-xl sm:text-2xl">×</button>
+        {currentItem ? (
+          <>
+            <div className="relative flex-shrink-0 min-h-0">
+              {currentItem.type === "image" ? (
+                <img src={currentItem.src} alt={currentItem.alt} className="w-full h-auto max-h-[50vh] sm:max-h-[60vh] object-contain" />
+              ) : (
+                <iframe
+                  src={currentItem.src}
+                  title={currentItem.alt}
+                  className="w-full h-[40vh] sm:h-[50vh] object-contain"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              )}
             </div>
-          )}
-          {selectedNews.images.length > 1 && (
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white bg-black bg-opacity-50 px-2 py-1 rounded">
-              {currentImageIndex + 1} / {selectedNews.images.length}
+            {selectedGalleryItem.items && (
+              <div className="flex justify-between mt-4 flex-shrink-0">
+                <button onClick={prevItem} className="text-teal-800 hover:text-teal-600 text-xl sm:text-2xl">←</button>
+                <span className="text-teal-800">{currentIndex + 1} / {selectedGalleryItem.items.length}</span>
+                <button onClick={nextItem} className="text-teal-800 hover:text-teal-600 text-xl sm:text-2xl">→</button>
+              </div>
+            )}
+            <div className="mt-4 flex-shrink-0 text-center">
+              <p className="text-teal-800 text-base sm:text-lg px-2">
+                {currentItem?.alt || "No caption"}
+              </p>
             </div>
-          )}
-        </div>
-        <p className="text-xs bg-teal-200 inline-block px-2 py-1 text-teal-800 font-bold mb-2">{selectedNews.category}</p>
-        <p className="text-xs text-gray-600 mb-2">{selectedNews.date}</p>
-        <h3 className="text-xl font-bold text-teal-800 mb-2">{selectedNews.title}</h3>
-        <p className="text-gray-700">{selectedNews.description}</p>
+          </>
+        ) : (
+          <p className="text-teal-800 text-center">No content available</p>
+        )}
       </div>
     </div>
   );
 }
 
-export default NewsModal;
+export default GalleryModal;

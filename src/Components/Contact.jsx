@@ -29,7 +29,13 @@ function Contact({ openContactModal }) {
             <div className="flex items-start">
               <Phone className="w-6 h-6 text-teal-800 mr-3 mt-1" />
               <p className="text-gray-700 text-lg">
-                Phone: <a href="tel:+233241814030" className="text-teal-800 hover:text-teal-600 transition duration-300">+233 241 814 030</a>
+                Phone: <a href="tel:+233242524634" className="text-teal-800 hover:text-teal-600 transition duration-300">+233 242 524 634</a>
+              </p>
+            </div>
+            <div className="flex items-start">
+              <Phone className="w-6 h-6 text-teal-800 mr-3 mt-1" />
+              <p className="text-gray-700 text-lg">
+                Phone: <a href="tel:+233243457868" className="text-teal-800 hover:text-teal-600 transition duration-300">+233 243 457 868</a>
               </p>
             </div>
             <div className="flex items-start">
@@ -38,7 +44,7 @@ function Contact({ openContactModal }) {
             </div>
             <div className="flex items-center justify-center space-x-6">
               <a
-                href="https://facebook.com/road2jannah"
+                href="https://web.facebook.com/share/g/1AfLiVRSXB/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group text-teal-800 hover:text-teal-600 transition duration-300 hover:scale-110 flex items-center"
@@ -56,7 +62,7 @@ function Contact({ openContactModal }) {
                 Twitter
               </a>
               <a
-                href="https://instagram.com/road2jannah"
+                href="https://www.instagram.com/r2joutreach22?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group text-teal-800 hover:text-teal-600 transition duration-300 hover:scale-110 flex items-center"

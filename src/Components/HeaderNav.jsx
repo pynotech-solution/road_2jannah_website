@@ -37,9 +37,20 @@ function HeaderNav() {
               onClick={(e) => handleNavClick(e, 'programs')}
               className="block py-2 sm:py-0 hover:text-teal-200"
             >
-              Programs
+              Home
             </a>
           </li>
+
+             <li>
+            <a
+              href="#about"
+              onClick={(e) => handleNavClick(e, 'about')}
+              className="block py-2 sm:py-0 hover:text-teal-200"
+            >
+              About
+            </a>
+          </li>
+          
           <li>
             <a
               href="#gallery"
@@ -58,24 +69,8 @@ function HeaderNav() {
               News
             </a>
           </li>
-          <li>
-            <a
-              href="#about"
-              onClick={(e) => handleNavClick(e, 'about')}
-              className="block py-2 sm:py-0 hover:text-teal-200"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#focus"
-              onClick={(e) => handleNavClick(e, 'focus')}
-              className="block py-2 sm:py-0 hover:text-teal-200"
-            >
-              Focus
-            </a>
-          </li>
+       
+          
           <li>
             <a
               href="#donate"
@@ -83,6 +78,15 @@ function HeaderNav() {
               className="block py-2 sm:py-0 hover:text-teal-200"
             >
               Donate
+            </a>
+          </li>
+          <li>
+            <a
+              href="#faq"
+              onClick={(e) => handleNavClick(e, 'faq')}
+              className="block py-2 sm:py-0 hover:text-teal-200"
+            >
+              FAQ
             </a>
           </li>
           <li>

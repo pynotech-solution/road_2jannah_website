@@ -527,6 +527,8 @@ media: [
     <div className="bg-gray-100 min-h-screen">
       <HeaderNav />
       <HeroCarousel />
+        <About />
+      <Focus />
       <Programs programs={programs} />
       <Gallery gallery={gallery} openGalleryModal={openGalleryModal} />
       <News featuredNews={featuredNews} news={news} openModal={openModal} updateFeaturedNews={updateFeaturedNews} />
@@ -539,8 +541,7 @@ media: [
         nextItem={nextItem}
         prevItem={prevItem}
       />
-      <About />
-      <Focus />
+    
 <QuoteSection quote={quotes[currentQuoteIndex].quote} attribution={quotes[currentQuoteIndex].attribution} />
       <Donate openDonationModal={openDonationModal} />
       <DonationModal

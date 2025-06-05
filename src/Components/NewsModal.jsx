@@ -49,6 +49,19 @@ function NewsModal({ isModalOpen, selectedNews, closeModal }) {
           onClick={openFullMediaModal}
         />
       );
+    } else if (mediaItem.type === "facebook-video") {
+      return (
+        <iframe
+          src={`https://www.facebook.com/plugins/video.php?height=314&href=${(mediaItem.src)}&show_text=false&width=560&t=0`}
+
+          
+          className={`w-full ${isFullScreen ? "h-[80vh]" : "h-48"} rounded-lg mb-4`}
+          allowFullScreen
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        ></iframe>
+
+        
+      );
     }
     return null;
   };
@@ -103,7 +116,7 @@ function NewsModal({ isModalOpen, selectedNews, closeModal }) {
               <X />
             </button>
             {renderMedia(selectedNews.media[currentMediaIndex], true)}
-            {selectedNews.media.length > 1 && (
+            {selectedNews.media.length > 1 && selectedNews.media[currentMediaIndex].type !== "facebook-video" && (
               <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-4">
                 <button
                   onClick={prevMedia}
@@ -119,7 +132,7 @@ function NewsModal({ isModalOpen, selectedNews, closeModal }) {
                 </button>
               </div>
             )}
-            {selectedNews.media.length > 1 && (
+            {selectedNews.media.length > 1 && selectedNews.media[currentMediaIndex].type !== "facebook-video" && (
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white bg-black bg-opacity-50 px-2 py-1 rounded">
                 {currentMediaIndex + 1} / {selectedNews.media.length}
               </div>

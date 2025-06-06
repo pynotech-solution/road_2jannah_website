@@ -1,9 +1,9 @@
 function News_Con({ featuredNews, news, openModal, updateFeaturedNews }) {
-  // Function to truncate description to 20 words
-  const truncateDescription = (text) => {
+  // Function to truncate description to a specified number of words
+  const truncateDescription = (text, wordLimit) => {
     const words = text.split(' ');
-    if (words.length > 20) {
-      return words.slice(0, 20).join(' ') + '...';
+    if (words.length > wordLimit) {
+      return words.slice(0, wordLimit).join(' ') + '...';
     }
     return text;
   };
@@ -48,18 +48,37 @@ function News_Con({ featuredNews, news, openModal, updateFeaturedNews }) {
         {featuredNews && (
           <div className="md:col-span-2 relative bg-gray-100 rounded-lg overflow-hidden shadow-md group">
             {renderFeaturedMedia(featuredNews.media[0])}
-            <div className="absolute bottom-0 bg-black bg-opacity-50 text-white p-6 w-full transition duration-300 group-hover:-translate-y-2">
-              <p className="text-sm bg-teal-200 inline-block px-2 py-1 text-teal-800 font-bold mb-2">{featuredNews.category}</p>
-              <p className="text-xs mb-1">{featuredNews.date}</p>
-              <h3 className="text-xl font-bold">{featuredNews.title}</h3>
-              {featuredNews.description.split(' ').length > 20 ? (
-                splitDescription(truncateDescription(featuredNews.description))
-              ) : (
-                <p className="mt-2 text-sm">{featuredNews.description}</p>
-              )}
+
+            <p className="md:hidden absolute top-0 text-[.6rem] sm:text-sm bg-teal-200 inline-block px-2 py-1 text-teal-800 font-bold mb-2 z-50">
+              {featuredNews.category}
+            </p>
+
+            <div className="absolute h-[40%] bottom-0 bg-black bg-opacity-70 text-white sm:p-6 px-3 w-full transition duration-300 group-hover:-translate-y-2">
+              <div>
+                <p className="hidden text-[.6rem] sm:text-sm bg-teal-200 md:inline-block px-2 py-1 text-teal-800 font-bold mb-2 w-auto">
+                  {featuredNews.category}
+                </p>
+              </div>
+              <p className="text-[.6rem] sm:text-xs mb-1">{featuredNews.date}</p>
+              <h3 className="text-[.6rem] sm:text-[1rem] font-bold">{featuredNews.title}</h3>
+              {/* Truncate to 10 words on sm and below, 20 words on md and above */}
+              <div className="block md:hidden">
+                {featuredNews.description.split(' ').length > 10 ? (
+                  splitDescription(truncateDescription(featuredNews.description, 10))
+                ) : (
+                  <p className="mt-2 text-[.1rem] sm:text-sm">{featuredNews.description}</p>
+                )}
+              </div>
+              <div className="hidden md:block">
+                {featuredNews.description.split(' ').length > 20 ? (
+                  splitDescription(truncateDescription(featuredNews.description, 20))
+                ) : (
+                  <p className="mt-2 text-[.1rem] sm:text-sm">{featuredNews.description}</p>
+                )}
+              </div>
               <button
                 onClick={() => openModal(featuredNews)}
-                className="mt-4 text-teal-600 font-semibold hover:text-teal-500"
+                className="mt-0 text-[.7rem] sm:text-lg sm:mt-4 text-teal-600 font-semibold hover:text-teal-500"
               >
                 → Read More
               </button>
@@ -94,4 +113,4 @@ function News_Con({ featuredNews, news, openModal, updateFeaturedNews }) {
   );
 }
 
-export default News_Con
+export default News_Con;

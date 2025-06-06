@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Nav from './components/HeaderNav.jsx';
+import Nav from './components/Nav.jsx';
 import HeroCarousel from './components/HeroCarousel.jsx';
 import Programs from './components/Programs.jsx';
 import Gallery from './components/Gallery.jsx';

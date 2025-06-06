@@ -528,31 +528,23 @@ media: [
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      <NavCon />
       <Nav_Con />
 
-      <HeroCarousel />
       <HeroCarousel_Con />
 
-        <About />
         <About_Con />
 
-      <Focus />
       <Focus_Con />
 
-      <Programs programs={programs} />
-      <Programs_Con />
+      <Programs_Con programs={programs} />
 
-      <Gallery gallery={gallery} openGalleryModal={openGalleryModal} />
-      <Gallery_Con />
+      <Gallery_Con gallery={gallery} openGalleryModal={openGalleryModal} />
 
-      <News featuredNews={featuredNews} news={news} openModal={openModal} updateFeaturedNews={updateFeaturedNews} />
-      <News_Con />
+      <News_Con featuredNews={featuredNews} news={news} openModal={openModal} updateFeaturedNews={updateFeaturedNews} />
 
-      <NewsModal isModalOpen={isModalOpen} selectedNews={selectedNews} closeModal={closeModal} />
-      <NewsModal_Con />
+      <NewsModal_Con isModalOpen={isModalOpen} selectedNews={selectedNews} closeModal={closeModal} />
 
-      <GalleryModal
+      <GalleryModal_Con
         selectedGalleryItem={selectedGalleryItem}
         currentIndex={currentIndex}
         closeGalleryModal={closeGalleryModal}
@@ -560,15 +552,12 @@ media: [
         nextItem={nextItem}
         prevItem={prevItem}
       />
-      <GalleryModal_Con />
         
-    <QuoteSection quote={quotes[currentQuoteIndex].quote} attribution={quotes[currentQuoteIndex].attribution} />
-    <QuoteSection_Con />
+    <QuoteSection_Con quote={quotes[currentQuoteIndex].quote} attribution={quotes[currentQuoteIndex].attribution} />
 
-        <Donate openDonationModal={openDonationModal} />
-        <Donate_Con />
+        <Donate_Con openDonationModal={openDonationModal} />
         
-      <DonationModal
+      <DonationModal_Con
         isDonationModalOpen={isDonationModalOpen}
         closeDonationModal={closeDonationModal}
         copyToClipboard={copyToClipboard}
@@ -576,18 +565,13 @@ media: [
         copySuccess={copySuccess}
         copyMoMoSuccess={copyMoMoSuccess}
       />
-      <DonationModal_Con />
 
-      <Contact openContactModal={openContactModal} />
-      <Contact_Con />
+      <Contact_Con openContactModal={openContactModal} />
 
-      <ContactModal isContactModalOpen={isContactModalOpen} closeContactModal={closeContactModal} />
-      <ContactModal_Con />
+      <ContactModal_Con isContactModalOpen={isContactModalOpen} closeContactModal={closeContactModal} />
 
-      <FAQ />
       <FAQ_Con />
 
-      <Footer />
       <Footer_Con />
     </div>
   );

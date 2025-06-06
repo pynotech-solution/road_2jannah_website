@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/road2jannah-foundation/', // Matches repository name
+  base: './', // Use relative paths for Firebase Hosting
 });

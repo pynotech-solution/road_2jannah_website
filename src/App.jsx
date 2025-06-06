@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Nav from './components/Nav.jsx';
 import HeroCarousel from './components/HeroCarousel.jsx';
 import Programs from './components/Programs.jsx';
 import Gallery from './components/Gallery.jsx';
@@ -15,6 +14,7 @@ import GalleryModal from './components/GalleryModal.jsx';
 import NewsModal from './components/NewsModal.jsx';
 import QuoteSection from './components/QuoteSection.jsx';
 import FAQ from './components/FAQ.jsx';
+import Nav from './components/Nav.jsx';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -525,7 +525,8 @@ media: [
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      <Nav />
+    <Nav />
+      
       <HeroCarousel />
         <About />
       <Focus />

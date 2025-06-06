@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
-function HeaderNav() {
+function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -123,4 +123,4 @@ function HeaderNav() {
   );
 }
 
-export default HeaderNav;
+export default Nav;

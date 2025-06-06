@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Nav from './components/Nav';
-import HeroCarousel from './components/HeroCarousel.jsx';
 import Programs from './components/Programs.jsx';
+import HeroCarousel from './components/HeroCarousel.jsx';
 import Gallery from './components/Gallery.jsx';
 import News from './components/News.jsx';
 import About from './components/About.jsx';

@@ -1,20 +1,21 @@
 import { useState, useEffect } from 'react';
-import NavCon from './components/Nav.jsx';
-import Programs from './components/Programs.jsx';
-import HeroCarousel from './components/HeroCarousel.jsx';
-import Gallery from './components/Gallery.jsx';
-import News from './components/News.jsx';
-import About from './components/About.jsx';
-import Focus from './components/Focus.jsx';
-import Donate from './components/Donate.jsx';
-import Contact from './components/Contact.jsx';
-import Footer from './components/Footer.jsx';
-import ContactModal from './components/ContactModal.jsx';
-import DonationModal from './components/DonationModal.jsx';
-import GalleryModal from './components/GalleryModal.jsx';
-import NewsModal from './components/NewsModal.jsx';
-import QuoteSection from './components/QuoteSection.jsx';
-import FAQ from './components/FAQ.jsx';
+import Nav_Con from './components/Nav_Con';
+import HeroCarousel_Con from './components/HeroCarousel_Con';
+import About_Con from './components/About_Con';
+import Focus_Con from './components/Focus_Con';
+import Programs_Con from './components/Programs_Con';
+import Gallery_Con from './components/Gallery_Con';
+import News_Con from './components/News_Con';
+import NewsModal_Con from './components/NewsModal_Con';
+import GalleryModal_Con from './components/GalleryModal_Con';
+import QuoteSection_Con from './components/QuoteSection_Con';
+import Donate_Con from './components/Donate_Con';
+import DonationModal_Con from './components/DonationModal_Con';
+import Contact_Con from './components/Contact_Con';
+import ContactModal_Con from './components/ContactModal_Con';
+import FAQ_Con from './components/FAQ_Con';
+import Footer_Con from './components/Footer_Con';
+
 
 
 
@@ -528,13 +529,29 @@ media: [
   return (
     <div className="bg-gray-100 min-h-screen">
       <NavCon />
+      <Nav_Con />
+
       <HeroCarousel />
+      <HeroCarousel_Con />
+
         <About />
+        <About_Con />
+
       <Focus />
+      <Focus_Con />
+
       <Programs programs={programs} />
+      <Programs_Con />
+
       <Gallery gallery={gallery} openGalleryModal={openGalleryModal} />
+      <Gallery_Con />
+
       <News featuredNews={featuredNews} news={news} openModal={openModal} updateFeaturedNews={updateFeaturedNews} />
+      <News_Con />
+
       <NewsModal isModalOpen={isModalOpen} selectedNews={selectedNews} closeModal={closeModal} />
+      <NewsModal_Con />
+
       <GalleryModal
         selectedGalleryItem={selectedGalleryItem}
         currentIndex={currentIndex}
@@ -543,9 +560,14 @@ media: [
         nextItem={nextItem}
         prevItem={prevItem}
       />
-    
-<QuoteSection quote={quotes[currentQuoteIndex].quote} attribution={quotes[currentQuoteIndex].attribution} />
-      <Donate openDonationModal={openDonationModal} />
+      <GalleryModal_Con />
+        
+    <QuoteSection quote={quotes[currentQuoteIndex].quote} attribution={quotes[currentQuoteIndex].attribution} />
+    <QuoteSection_Con />
+
+        <Donate openDonationModal={openDonationModal} />
+        <Donate_Con />
+        
       <DonationModal
         isDonationModalOpen={isDonationModalOpen}
         closeDonationModal={closeDonationModal}
@@ -554,11 +576,19 @@ media: [
         copySuccess={copySuccess}
         copyMoMoSuccess={copyMoMoSuccess}
       />
+      <DonationModal_Con />
+
       <Contact openContactModal={openContactModal} />
+      <Contact_Con />
+
       <ContactModal isContactModalOpen={isContactModalOpen} closeContactModal={closeContactModal} />
+      <ContactModal_Con />
 
       <FAQ />
+      <FAQ_Con />
+
       <Footer />
+      <Footer_Con />
     </div>
   );
 }

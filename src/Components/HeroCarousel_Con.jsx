@@ -56,8 +56,8 @@ function HeroCarousel_Con() {
           }}
         >
           <div className="flex flex-col items-center justify-center h-full text-white bg-black bg-opacity-50">
-            <h2 className="text-3xl font-semibold mb-4">{slide.title}</h2>
-            <p className="text-xl mb-6">{slide.description}</p>
+            <h2 className="text-[1.3rem] md:text-3xl font-semibold mb-4 text-center">{slide.title}</h2>
+            <p className="sm:text-xl font-semibold text-center mb-6">{slide.description}</p>
             <a
               href="#donate"
               className="bg-teal-800 text-white py-2 px-6 rounded-lg hover:bg-teal-700"
@@ -69,13 +69,13 @@ function HeroCarousel_Con() {
       ))}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-teal-800 text-white p-2 rounded-full hover:bg-teal-700"
+        className="absolute left-4 top-[80%] transform -translate-y-[80%] bg-teal-800 text-white p-2 rounded-full hover:bg-teal-700"
       >
         ←
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-teal-800 text-white p-2 rounded-full hover:bg-teal-700"
+        className="absolute right-4 top-[80%] transform -translate-y-1/2 bg-teal-800 text-white p-2 rounded-full hover:bg-teal-700"
       >
         →
       </button>

@@ -14,7 +14,7 @@ import GalleryModal from './components/GalleryModal.jsx';
 import NewsModal from './components/NewsModal.jsx';
 import QuoteSection from './components/QuoteSection.jsx';
 import FAQ from './components/FAQ.jsx';
-import NavCon from './components/Nav';
+import NavCon from './components/Nav.jsx';
 
 
 

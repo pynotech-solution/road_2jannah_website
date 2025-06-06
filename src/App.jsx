@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import NavCon from './components/Nav.jsx';
 import Programs from './components/Programs.jsx';
 import HeroCarousel from './components/HeroCarousel.jsx';
 import Gallery from './components/Gallery.jsx';
@@ -14,7 +15,6 @@ import GalleryModal from './components/GalleryModal.jsx';
 import NewsModal from './components/NewsModal.jsx';
 import QuoteSection from './components/QuoteSection.jsx';
 import FAQ from './components/FAQ.jsx';
-import NavCon from './components/Nav.jsx';
 
 
 

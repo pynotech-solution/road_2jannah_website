@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucide-react'
 function Contact_Con({ openContactModal }) {
   return (
     <div id="contact" className="py-12">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto sm:px-4 px-0">
         <div className="relative bg-cover bg-center h-64 mb-8 mx-auto" style={{ backgroundImage: 'url("https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/472206263_8807425239293997_4094478365450783416_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=110&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeFgYvaMkYwsdtWa3NtNCa2UEYhCQPwVae0RiEJA_BVp7W2KnehFDQ-xDrdjeeJYwmeTeIUkk1kh6XXtX6kQj77A&_nc_ohc=YIIHG1fnkR8Q7kNvwFjn1az&_nc_oc=AdnRXB9S43YGY7OpYAL9jkFSc4SyPyoT7YYdol86kKdhWjYQPn_B499xmUSCKG27w5s&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=fxU3XFUpd-XqW7yN0oDf6Q&oh=00_AfPTBbFkXAPBO0jqhDX2t7_TLPloJDHJVlVYKclQgiFfEQ&oe=6847E339")' }}>
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <h1 className="text-4xl font-bold text-white">Contact Us</h1>

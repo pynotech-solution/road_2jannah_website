@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
-function NewsModal({ isModalOpen, selectedNews, closeModal }) {
+function NewsModal_Con({ isModalOpen, selectedNews, closeModal }) {
   if (!isModalOpen || !selectedNews) return null;
 
   const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
@@ -144,4 +144,4 @@ function NewsModal({ isModalOpen, selectedNews, closeModal }) {
   );
 }
 
-export default NewsModal;
+export default NewsModal_Con

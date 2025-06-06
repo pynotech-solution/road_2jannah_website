@@ -1,6 +1,6 @@
 import { Folder, Play } from 'lucide-react';
 
-function GalleryItem({ type, src, alt, caption, items, onClick }) {
+function GalleryItem_Con({ type, src, alt, caption, items, onClick }) {
   const wordLimit = 10;
   const truncatedCaption = caption
     ? caption.split(/\s+/).length > wordLimit
@@ -37,4 +37,4 @@ function GalleryItem({ type, src, alt, caption, items, onClick }) {
   );
 }
 
-export default GalleryItem;
+export default GalleryItem_Con

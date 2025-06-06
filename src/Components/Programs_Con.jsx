@@ -1,4 +1,3 @@
-import Program from './Program.jsx';
 import Program_Con from './Program_Con.jsx';
 
 function Programs_Con({ programs }) {

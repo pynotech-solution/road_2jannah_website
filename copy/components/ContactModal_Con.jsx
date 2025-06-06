@@ -1,4 +1,4 @@
-function ContactModal({ isContactModalOpen, closeContactModal }) {
+function ContactModal_Con({ isContactModalOpen, closeContactModal }) {
   if (!isContactModalOpen) return null;
 
   const handleOverlayClick = (event) => {
@@ -36,4 +36,4 @@ function ContactModal({ isContactModalOpen, closeContactModal }) {
   );
 }
 
-export default ContactModal;
+export default ContactModal_Con

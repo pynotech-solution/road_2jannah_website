@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function About() {
+function About_Con() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const fullText = [
@@ -110,4 +110,4 @@ function About() {
   );
 }
 
-export default About;
+export default About_Con

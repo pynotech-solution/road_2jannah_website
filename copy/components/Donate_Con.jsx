@@ -1,4 +1,4 @@
-function Donate({ openDonationModal }) {
+function Donate_Con({ openDonationModal }) {
   return (
     <div id="donate" className="container mx-auto py-8">
       <h2 className="text-3xl font-bold text-center text-teal-800 mb-4">Donate Now</h2>
@@ -20,4 +20,4 @@ function Donate({ openDonationModal }) {
   );
 }
 
-export default Donate;
+export default Donate_Con

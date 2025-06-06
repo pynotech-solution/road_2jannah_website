@@ -1,4 +1,4 @@
-function DonationModal({ isDonationModalOpen, closeDonationModal, copyToClipboard, copyMoMoToClipboard, copySuccess, copyMoMoSuccess }) {
+function DonationModal_Con({ isDonationModalOpen, closeDonationModal, copyToClipboard, copyMoMoToClipboard, copySuccess, copyMoMoSuccess }) {
   if (!isDonationModalOpen) return null;
 
   const handleOverlayClick = (event) => {
@@ -37,4 +37,4 @@ function DonationModal({ isDonationModalOpen, closeDonationModal, copyToClipboar
   );
 }
 
-export default DonationModal;
+export default DonationModal_Con

@@ -1,4 +1,3 @@
-import GalleryItem from './GalleryItem.jsx';
 import GalleryItem_Con from './GalleryItem_Con.jsx';
 
 function Gallery_Con({ gallery, openGalleryModal }) {

@@ -1,4 +1,4 @@
-function Focus() {
+function Focus_Con() {
   return (
     <div id="focus" className="container mx-auto py-8">
       <h2 className="text-3xl font-bold text-center text-teal-800 mb-4">Our Focus</h2>
@@ -30,4 +30,4 @@ function Focus() {
   );
 }
 
-export default Focus;
+export default Focus_Con

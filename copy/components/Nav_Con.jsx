@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
-function NavCon() {
+function Nav_Con() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -124,4 +124,4 @@ function NavCon() {
   );
 }
 
-export default NavCon;
+export default Nav_Con

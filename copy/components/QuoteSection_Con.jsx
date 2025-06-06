@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 
-function QuoteSection({ quote, attribution }) {
+function QuoteSection_Con({ quote, attribution }) {
   return (
     <div id="quote" className="py-12 bg-gradient-to-b from-teal-100 to-white text-center">
       <div className="container mx-auto px-4">
@@ -35,4 +35,4 @@ function QuoteSection({ quote, attribution }) {
   );
 }
 
-export default QuoteSection;
+export default QuoteSection_Con

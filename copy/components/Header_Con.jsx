@@ -1,4 +1,4 @@
-function Header() {
+function Header_Con() {
   return (
     <header className="bg-teal-800 text-white text-center py-6">
       <h1 className="text-4xl font-bold">Road2Jannah Foundation</h1>
@@ -7,4 +7,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Header_Con

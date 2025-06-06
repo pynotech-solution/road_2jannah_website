@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Nav from './Nav';
 
-function HeroCarousel() {
+function HeroCarousel_Con() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -95,4 +95,4 @@ function HeroCarousel() {
   );
 }
 
-export default HeroCarousel;
+export default HeroCarousel_Con

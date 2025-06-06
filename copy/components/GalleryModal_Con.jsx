@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-function GalleryModal({ selectedGalleryItem, currentIndex, closeGalleryModal, handleOverlayClick, nextItem, prevItem }) {
+function GalleryModal_Con({ selectedGalleryItem, currentIndex, closeGalleryModal, handleOverlayClick, nextItem, prevItem }) {
   if (!selectedGalleryItem) return null;
 
   useEffect(() => {
@@ -60,4 +60,4 @@ function GalleryModal({ selectedGalleryItem, currentIndex, closeGalleryModal, ha
   );
 }
 
-export default GalleryModal;
+export default GalleryModal_Con

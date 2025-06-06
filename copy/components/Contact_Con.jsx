@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
 
-function Contact({ openContactModal }) {
+function Contact_Con({ openContactModal }) {
   return (
     <div id="contact" className="py-12">
       <div className="container mx-auto px-4">
@@ -78,4 +78,4 @@ function Contact({ openContactModal }) {
   );
 }
 
-export default Contact;
+export default Contact_Con

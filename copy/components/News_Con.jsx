@@ -1,4 +1,4 @@
-function News({ featuredNews, news, openModal, updateFeaturedNews }) {
+function News_Con({ featuredNews, news, openModal, updateFeaturedNews }) {
   // Function to truncate description to 20 words
   const truncateDescription = (text) => {
     const words = text.split(' ');
@@ -94,4 +94,4 @@ function News({ featuredNews, news, openModal, updateFeaturedNews }) {
   );
 }
 
-export default News;
+export default News_Con

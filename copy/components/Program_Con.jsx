@@ -1,4 +1,4 @@
-function Program({ title, description, donateText, image, alt }) {
+function  Program_Con({ title, description, donateText, image, alt }) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md mb-4">
       <img src={image} alt={alt} className="w-full h-48 object-cover rounded-lg mb-4" />
@@ -9,4 +9,4 @@ function Program({ title, description, donateText, image, alt }) {
   );
 }
 
-export default Program;
+export default Program_Con

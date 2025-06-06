@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Nav from './Nav';
 
 function HeroCarousel_Con() {
   const [currentSlide, setCurrentSlide] = useState(0);

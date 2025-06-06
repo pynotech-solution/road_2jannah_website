@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
-function FAQ() {
+function FAQ_Con() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -57,4 +57,4 @@ function FAQ() {
   );
 }
 
-export default FAQ;
+export default FAQ_Con

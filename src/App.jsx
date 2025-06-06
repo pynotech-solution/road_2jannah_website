@@ -1,20 +1,8 @@
 import { useState, useEffect } from 'react';
-import HeroCarousel from './components/HeroCarousel.jsx';
-import Programs from './components/Programs.jsx';
-import Gallery from './components/Gallery.jsx';
-import News from './components/News.jsx';
-import About from './components/About.jsx';
-import Focus from './components/Focus.jsx';
-import Donate from './components/Donate.jsx';
-import Contact from './components/Contact.jsx';
-import Footer from './components/Footer.jsx';
-import ContactModal from './components/ContactModal.jsx';
-import DonationModal from './components/DonationModal.jsx';
-import GalleryModal from './components/GalleryModal.jsx';
-import NewsModal from './components/NewsModal.jsx';
-import QuoteSection from './components/QuoteSection.jsx';
-import FAQ from './components/FAQ.jsx';
-import Nav from './components/Nav.jsx';
+import Nav from './components/Nav';
+import HeroCarousel from './components/HeroCarousel';
+import About from './components/About';
+
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -525,8 +513,7 @@ media: [
 
   return (
     <div className="bg-gray-100 min-h-screen">
-    <Nav />
-      
+      <Nav />
       <HeroCarousel />
         <About />
       <Focus />

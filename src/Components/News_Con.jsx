@@ -11,7 +11,7 @@ function News_Con({ featuredNews, news, openModal, updateFeaturedNews }) {
   // Function to split description into paragraphs
   const splitDescription = (text) => {
     return text.split('. ').map((para, index) => (
-      <p key={index} className="text-sm mb-1">
+      <p key={index} className="text-[0.5rem] md:text-sm mb-1">
         {para.trim()}.
       </p>
     ));
@@ -53,32 +53,47 @@ function News_Con({ featuredNews, news, openModal, updateFeaturedNews }) {
               {featuredNews.category}
             </p>
 
-            <div className="absolute h-[40%] bottom-0 bg-black bg-opacity-70 text-white sm:p-6 px-3 w-full transition duration-300 group-hover:-translate-y-2">
+            <div className="absolute h-[40%] bottom-0 bg-black bg-opacity-70 text-white  px-3 w-full transition duration-300 group-hover:-translate-y-2">
               <div>
                 <p className="hidden text-[.6rem] sm:text-sm bg-teal-200 md:inline-block px-2 py-1 text-teal-800 font-bold mb-2 w-auto">
                   {featuredNews.category}
                 </p>
               </div>
               <p className="text-[.6rem] sm:text-xs mb-1">{featuredNews.date}</p>
-              <h3 className="text-[.6rem] sm:text-[1rem] font-bold">{featuredNews.title}</h3>
-              {/* Truncate to 10 words on sm and below, 20 words on md and above */}
+              {/* Truncate title on md and below to 9 words, on md and above to 10 words */}
               <div className="block md:hidden">
-                {featuredNews.description.split(' ').length > 10 ? (
-                  splitDescription(truncateDescription(featuredNews.description, 10))
+                <h3 className="text-[.7rem] sm:text-[1rem] font-bold">
+                  {featuredNews.title.split(' ').length > 9
+                    ? truncateDescription(featuredNews.title, 9)
+                    : featuredNews.title}
+                </h3>
+              </div>
+              <div className="hidden md:block">
+                <h3 className="text-[.7rem] sm:text-[.8rem] lg:text-lg font-bold">
+                  {featuredNews.title.split(' ').length > 10
+                    ? truncateDescription(featuredNews.title, 10)
+                    : featuredNews.title}
+                </h3>
+              </div>
+
+              {/* Truncate to 9 words on md and below, 20 words on md and above */}
+              <div className="block md:hidden">
+                {featuredNews.description.split(' ').length > 9 ? (
+                  splitDescription(truncateDescription(featuredNews.description, 9))
                 ) : (
-                  <p className="mt-2 text-[.1rem] sm:text-sm">{featuredNews.description}</p>
+                  <p className="mt-2 text-[0.6rem]">{featuredNews.description}</p>
                 )}
               </div>
               <div className="hidden md:block">
                 {featuredNews.description.split(' ').length > 20 ? (
                   splitDescription(truncateDescription(featuredNews.description, 20))
                 ) : (
-                  <p className="mt-2 text-[.1rem] sm:text-sm">{featuredNews.description}</p>
+                  <p className="mt-2 text-sm">{featuredNews.description}</p>
                 )}
               </div>
               <button
                 onClick={() => openModal(featuredNews)}
-                className="mt-0 text-[.7rem] sm:text-lg sm:mt-4 text-teal-600 font-semibold hover:text-teal-500"
+                className="mt-0 text-[.7rem] lg:text-lg lg:mt-4 text-teal-600 font-semibold hover:text-teal-500"
               >
                 → Read More
               </button>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import HeaderNav from './components/HeaderNav.jsx';
+import Nav from './components/HeaderNav.jsx';
 import HeroCarousel from './components/HeroCarousel.jsx';
 import Programs from './components/Programs.jsx';
 import Gallery from './components/Gallery.jsx';
@@ -525,7 +525,7 @@ media: [
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      <HeaderNav />
+      <Nav />
       <HeroCarousel />
         <About />
       <Focus />

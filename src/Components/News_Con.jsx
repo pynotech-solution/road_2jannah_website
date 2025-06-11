@@ -17,83 +17,83 @@ function News_Con({ featuredNews, news, openModal, updateFeaturedNews }) {
     ));
   };
 
-  // const renderFeaturedMedia = (mediaItem) => {
-  //   if (mediaItem.type === "image") {
-  //     return (
-  //       <img
-  //         src={mediaItem.src}
-  //         alt={mediaItem.alt}
-  //         className="w-full h-[500px] object-cover object-top transition duration-300 group-hover:scale-105 group-hover:brightness-75"
-  //       />
-  //     );
-  //   } else if (mediaItem.type === "video") {
-  //     return (
-  //       <video
-  //         src={mediaItem.src}
-  //         className="w-full h-[500px] object-cover object-top transition duration-300 group-hover:scale-105 group-hover:brightness-75"
-  //         muted
-  //         autoPlay
-  //         loop
-  //       />
-  //     );
-  //   }
-  //   return null;
-  // };
-
-
   const renderFeaturedMedia = (mediaItem) => {
-  if (mediaItem.type === "image") {
-    return (
-      <img
-        src={mediaItem.src}
-        alt={mediaItem.alt}
-        className="w-full h-[500px] object-cover object-top transition duration-300 group-hover:scale-105 group-hover:brightness-75"
-        onError={(e) => {
-          e.target.src = "https://via.placeholder.com/500"; // Fallback image if loading fails
-          console.error("Image failed to load:", mediaItem.src);
-        }}
-      />
-    );
-  } else if (mediaItem.type === "video") {
-    return (
-      <video
-        src={mediaItem.src}
-        className="w-full h-[500px] object-cover object-top transition duration-300 group-hover:scale-105 group-hover:brightness-75"
-        muted
-        autoPlay
-        loop
-        onError={(e) => console.error("Video failed to load:", mediaItem.src)}
-      />
-    );
-  } else if (mediaItem.type === "facebook-video") {
-    return (
-      <iframe
-        src={mediaItem.src}
-        width="560"
-        height="314"
-        frameBorder="0"
-        allow="autoplay; encrypted-media"
-        allowFullScreen
-        className="w-full h-[500px] object-cover"
-        title={mediaItem.alt}
-      />
-    );
-  } else if (mediaItem.type === "album") {
-    // For albums, render the first image as a placeholder
-    return (
-      <img
-        src={mediaItem.src}
-        alt={mediaItem.alt}
-        className="w-full h-[500px] object-cover object-top transition duration-300 group-hover:scale-105 group-hover:brightness-75"
-        onError={(e) => {
-          e.target.src = "https://via.placeholder.com/500";
-          console.error("Album image failed to load:", mediaItem.src);
-        }}
-      />
-    );
-  }
-  return null;
-};
+    if (mediaItem.type === "image") {
+      return (
+        <img
+          src={mediaItem.src}
+          alt={mediaItem.alt}
+          className="w-full h-[500px] object-cover object-top transition duration-300 group-hover:scale-105 group-hover:brightness-75"
+        />
+      );
+    } else if (mediaItem.type === "video") {
+      return (
+        <video
+          src={mediaItem.src}
+          className="w-full h-[500px] object-cover object-top transition duration-300 group-hover:scale-105 group-hover:brightness-75"
+          muted
+          autoPlay
+          loop
+        />
+      );
+    }
+    return null;
+  };
+
+
+//   const renderFeaturedMedia = (mediaItem) => {
+//   if (mediaItem.type === "image") {
+//     return (
+//       <img
+//         src={mediaItem.src}
+//         alt={mediaItem.alt}
+//         className="w-full h-[500px] object-cover object-top transition duration-300 group-hover:scale-105 group-hover:brightness-75"
+//         onError={(e) => {
+//           e.target.src = "https://via.placeholder.com/500"; // Fallback image if loading fails
+//           console.error("Image failed to load:", mediaItem.src);
+//         }}
+//       />
+//     );
+//   } else if (mediaItem.type === "video") {
+//     return (
+//       <video
+//         src={mediaItem.src}
+//         className="w-full h-[500px] object-cover object-top transition duration-300 group-hover:scale-105 group-hover:brightness-75"
+//         muted
+//         autoPlay
+//         loop
+//         onError={(e) => console.error("Video failed to load:", mediaItem.src)}
+//       />
+//     );
+//   } else if (mediaItem.type === "facebook-video") {
+//     return (
+//       <iframe
+//         src={mediaItem.src}
+//         width="560"
+//         height="314"
+//         frameBorder="0"
+//         allow="autoplay; encrypted-media"
+//         allowFullScreen
+//         className="w-full h-[500px] object-cover"
+//         title={mediaItem.alt}
+//       />
+//     );
+//   } else if (mediaItem.type === "album") {
+//     // For albums, render the first image as a placeholder
+//     return (
+//       <img
+//         src={mediaItem.src}
+//         alt={mediaItem.alt}
+//         className="w-full h-[500px] object-cover object-top transition duration-300 group-hover:scale-105 group-hover:brightness-75"
+//         onError={(e) => {
+//           e.target.src = "https://via.placeholder.com/500";
+//           console.error("Album image failed to load:", mediaItem.src);
+//         }}
+//       />
+//     );
+//   }
+//   return null;
+// };
 
   return (
     <div id="news" className="container mx-auto py-8 px-4">

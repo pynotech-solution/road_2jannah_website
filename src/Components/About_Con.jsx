@@ -40,6 +40,39 @@ function About_Con() {
             />
           </div>
         </div>
+        {/* Mission, Vision, and Core Values Section */}
+                     <div className="mt-8">
+  <h4 className="text-xl sm:text-2xl font-serif font-bold text-teal-800 mb-4">Our Mission & Vision</h4>
+  <div className="border-t-2 border-teal-800 w-20 sm:w-24 mx-auto mb-6"></div>
+  <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+    <div className="p-4 bg-gray-50 rounded-lg shadow-inner">
+      <img
+        src="https://i.ibb.co/kVt7Ksw6/image.png"
+        alt="Mission Support"
+        className="w-full h-32 object-cover rounded-t-lg mb-2"
+        onError={(e) => {
+          e.target.src = "https://via.placeholder.com/300";
+          console.error("Mission image failed to load:", e.target.src);
+        }}
+      />
+      <h5 className="text-lg font-semibold text-teal-700 mb-2">Mission Statement</h5>
+      <p className="text-gray-700">Our Mission is to prevent and alleviate the increasing rate of vulnerability in society.</p>
+    </div>
+    <div className="p-4 bg-gray-50 rounded-lg shadow-inner">
+      <img
+        src="https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494218817_9489761007727080_5164433794427945810_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=102&ccb=1-7&_nc_sid=536f4a&_nc_eui2=AeHWgBj_ScLPZtAkKgXgS2I3u1t0bWHnKMS7W3RtYecoxKhy8B7NdHswEjMMyNSnW3QVU9PavISHGDd9rMWnza4B&_nc_ohc=PTgVcLdEKssQ7kNvwGqfwf2&_nc_oc=AdlDp9Bt_R3sUI8fdq88AlHH6vWuuEVe8Tvf_uI0-czlRnE2uZDtx8Z3S3x42m61hLg&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=t5-iizum22jx2vJcDWN_lA&oh=00_AfK59DMvisB6cS5mc2X7As_fXGDwxaa0yQQlznm-tU_AMQ&oe=684656BC"
+        alt="Vision Outreach"
+        className="w-full h-32 object-cover rounded-t-lg mb-2"
+        onError={(e) => {
+          e.target.src = "https://via.placeholder.com/300";
+          console.error("Vision image failed to load:", e.target.src);
+        }}
+      />
+      <h5 className="text-lg font-semibold text-teal-700 mb-2">Vision Statement</h5>
+      <p className="text-gray-700">Our Vision is to make the community a place of hope and transform lives through community outreach programmes.</p>
+    </div>
+  </div>
+</div>
       </section>
 
       {isModalOpen && (
@@ -93,7 +126,7 @@ function About_Con() {
               <div className="mb-4 sm:mb-6">
                 <p className="leading-relaxed text-justify mb-4 sm:mb-0">{fullText[1]}</p>
                 <img
-                  src="https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494218817_9489761007727080_5164433794427945810_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=102&ccb=1-7&_nc_sid=536f4a&_nc_eui2=AeHWgBj_ScLPZtAkKgXgS2I3u1t0bWHnKMS7W3RtYecoxKhy8B7NdHswEjMMyNSnW3QVU9PavISHGDd9rMWnza4B&_nc_ohc=PTgVcLdEKssQ7kNvwGqfwf2&_nc_oc=AdlDp9Bt_R3sUI8fdq88AlHH6vWuuEVe8Tvf_uI0-czlRnE2uZDtx8Z3S3x42m61hLg&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=t5-iizum22jx2vJcDWN_lA&oh=00_AfK59DMvisB6cS5mc2X7As_fXGDwxaa0yQQlznm-tU_AMQ&oe=684656BC"
+                  src="https://ibb.co/kVb9JjRQ"
                   alt="Community Unity"
                   className="w-20 h-20 sm:w-32 sm:h-32 object-cover rounded-md shadow-md float-left mr-3 sm:mr-4 mt-1"
                 />
@@ -102,6 +135,39 @@ function About_Con() {
                 </p>
                 <div className="clear-both sm:clear-none"></div>
               </div>
+              {/* Mission, Vision, and Core Values in Modal */}
+              <div className="mt-8">
+  <h4 className="text-xl sm:text-2xl font-serif font-bold text-teal-800 mb-4">Our Mission & Vision</h4>
+  <div className="border-t-2 border-teal-800 w-20 sm:w-24 mx-auto mb-6"></div>
+  <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+    <div className="p-4 bg-gray-50 rounded-lg shadow-inner">
+      <img
+        src="https://i.ibb.co/kVt7Ksw6/image.png"
+        alt="Mission Support"
+        className="w-full h-32 object-cover rounded-t-lg mb-2"
+        onError={(e) => {
+          e.target.src = "https://via.placeholder.com/300";
+          console.error("Mission image failed to load:", e.target.src);
+        }}
+      />
+      <h5 className="text-lg font-semibold text-teal-700 mb-2">Mission Statement</h5>
+      <p className="text-gray-700">Our Mission is to prevent and alleviate the increasing rate of vulnerability in society.</p>
+    </div>
+    <div className="p-4 bg-gray-50 rounded-lg shadow-inner">
+      <img
+        src="https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494218817_9489761007727080_5164433794427945810_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=102&ccb=1-7&_nc_sid=536f4a&_nc_eui2=AeHWgBj_ScLPZtAkKgXgS2I3u1t0bWHnKMS7W3RtYecoxKhy8B7NdHswEjMMyNSnW3QVU9PavISHGDd9rMWnza4B&_nc_ohc=PTgVcLdEKssQ7kNvwGqfwf2&_nc_oc=AdlDp9Bt_R3sUI8fdq88AlHH6vWuuEVe8Tvf_uI0-czlRnE2uZDtx8Z3S3x42m61hLg&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=t5-iizum22jx2vJcDWN_lA&oh=00_AfK59DMvisB6cS5mc2X7As_fXGDwxaa0yQQlznm-tU_AMQ&oe=684656BC"
+        alt="Vision Outreach"
+        className="w-full h-32 object-cover rounded-t-lg mb-2"
+        onError={(e) => {
+          e.target.src = "https://via.placeholder.com/300";
+          console.error("Vision image failed to load:", e.target.src);
+        }}
+      />
+      <h5 className="text-lg font-semibold text-teal-700 mb-2">Vision Statement</h5>
+      <p className="text-gray-700">Our Vision is to make the community a place of hope and transform lives through community outreach programmes.</p>
+    </div>
+  </div>
+</div>
             </div>
           </div>
         </div>
@@ -110,4 +176,4 @@ function About_Con() {
   );
 }
 
-export default About_Con
+export default About_Con;

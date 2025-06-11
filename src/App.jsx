@@ -15,6 +15,7 @@ import Contact_Con from './components/Contact_Con';
 import ContactModal_Con from './components/ContactModal_Con';
 import FAQ_Con from './components/FAQ_Con';
 import Footer_Con from './components/Footer_Con';
+import MissionVision from './components/MissionVision';
 
 
 
@@ -534,9 +535,12 @@ media: [
 
         <About_Con />
 
+
       <Focus_Con />
 
       <Programs_Con programs={programs} />
+
+      <MissionVision />
 
       <Gallery_Con gallery={gallery} openGalleryModal={openGalleryModal} />
 

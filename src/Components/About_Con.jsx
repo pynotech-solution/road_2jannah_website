@@ -156,27 +156,7 @@ function About_Con() {
               </div>
             </div>
           </div>
-          <div id="support-reasons" className="py-12 bg-gradient-to-b from-teal-100 to-white text-center">
-            <div className="container mx-auto px-4">
-              <h4 className="text-xl sm:text-2xl font-serif font-bold text-teal-800 mb-4">Why Support Road 2 Jannah Foundation</h4>
-              <div className="border-t-2 border-teal-800 w-20 sm:w-24 mx-auto mb-6"></div>
-              <div className="max-w-3xl mx-auto">
-                {supportReasons.map((reason, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.2 }}
-                    className="bg-white bg-opacity-90 rounded-lg p-4 sm:p-6 shadow-lg mb-4 last:mb-0"
-                  >
-                    <p className="text-lg sm:text-xl font-semibold text-teal-800 leading-relaxed">
-                      #{index + 1} {reason}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
+         
         </div>
       </section>
 

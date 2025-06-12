@@ -16,6 +16,7 @@ import ContactModal_Con from './components/ContactModal_Con';
 import FAQ_Con from './components/FAQ_Con';
 import Footer_Con from './components/Footer_Con';
 import MissionVision from './components/MissionVision';
+import SupportReasons from './components/SupportReasons';
 
 
 
@@ -558,6 +559,10 @@ media: [
       />
         
     <QuoteSection_Con quote={quotes[currentQuoteIndex].quote} attribution={quotes[currentQuoteIndex].attribution} />
+
+
+
+    <SupportReasons />
 
         <Donate_Con openDonationModal={openDonationModal} />
         

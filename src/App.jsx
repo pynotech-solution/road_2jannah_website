@@ -490,7 +490,7 @@ media: [
           ]  },
 
     { type: "album", 
-      src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/495461016_9592896200746893_7163327202326270463_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHhPgraJFCg8gPcLCfc_79ZrYIEbAC8kHatggRsALyQdrnPcqJDMRrGKk6CV_tuAKW0hkuAotkrJ5RUZnHnLIhU&_nc_ohc=BEbRsoQdpm8Q7kNvwHIq55h&_nc_oc=AdlbVZUD6nhPpJGAnUL4x3dcs-NFrBkPmTINqTtrYq4DDVqPkkOE6u3ebGSh8604Bgw&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=ox7ZhqW_IttcmguMQDLHiA&oh=00_AfO81rohruCoM2zcUbjLA9IueJc54CnMZW7QUf2By7mTNA&oe=6847F505",
+      src: "https://i.ibb.co/0ytTZLn6/image.png",
        alt: "Winter Aid Album", 
        caption: "R2J Pays Courtesy Call To RCO'24 Stakeholders ",
         items: [

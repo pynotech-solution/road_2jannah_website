@@ -42,6 +42,14 @@ function About_Con() {
     { title: "Empowering", description: "We create an environment for individuals to make confident decisions to help build a better community." },
   ];
 
+  const supportReasons = [
+    "Road 2 Jannah is your local partner in community development",
+    "Road 2 Jannah brings you closer to the community",
+    "Road 2 Jannah provides you with an exhaustive community outreach in the entire country",
+    "Road 2 Jannah Foundation is the best platform for the vulnerable communities",
+    "Road 2 Jannah Foundation is a true reflection of the vulnerable communities",
+  ];
+
   return (
     <article id="about" className="container mx-auto py-8 sm:py-12 px-4 ma-w-5xl">
       <header className="text-center mb-6 sm:mb-8">
@@ -73,7 +81,7 @@ function About_Con() {
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
             <div className="p-4 bg-gray-50 rounded-lg shadow-inner">
               <img
-                src="https://i.ibb.co/V0s1Vczp/image.png"
+                src="https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494152552_9504517902918057_5715987183796554615_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFuihgAcgcZrI8AOKDSPcBVuTgCgCQps_q5OAKAJCmz-uoexvlpJ1Hk7TUoVrz6ef_CzPswE8i0Ji7obYL9rt3j&_nc_ohc=xjfNmfMmCUcQ7kNvwEhqBbj&_nc_oc=AdmHoZu8ze2rMe_KBZw5X0kBcPlOIc0V3nbAiaeijoH6ri5zaaL0wxhViUMEUKx_zJE&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=dowWGy-xWCg29b1Mdn8y-g&oh=00_AfKqMDqJQ7DOPwe7z-CYXRznhz367NBjRTtkIALK0aYH1w&oe=68464A37"
                 alt="Mission Support"
                 className="w-full h-32 object-cover rounded-t-lg mb-2"
                 onError={(e) => {
@@ -86,7 +94,7 @@ function About_Con() {
             </div>
             <div className="p-4 bg-gray-50 rounded-lg shadow-inner">
               <img
-                src="https://i.ibb.co/V0s1Vczp/image.png"
+                src="https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494218817_9489761007727080_5164433794427945810_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=102&ccb=1-7&_nc_sid=536f4a&_nc_eui2=AeHWgBj_ScLPZtAkKgXgS2I3u1t0bWHnKMS7W3RtYecoxKhy8B7NdHswEjMMyNSnW3QVU9PavISHGDd9rMWnza4B&_nc_ohc=PTgVcLdEKssQ7kNvwGqfwf2&_nc_oc=AdlDp9Bt_R3sUI8fdq88AlHH6vWuuEVe8Tvf_uI0-czlRnE2uZDtx8Z3S3x42m61hLg&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=t5-iizum22jx2vJcDWN_lA&oh=00_AfK59DMvisB6cS5mc2X7As_fXGDwxaa0yQQlznm-tU_AMQ&oe=684656BC"
                 alt="Vision Outreach"
                 className="w-full h-32 object-cover rounded-t-lg mb-2"
                 onError={(e) => {
@@ -98,12 +106,12 @@ function About_Con() {
               <p className="text-gray-700">Our Vision is to make the community a place of hope and transform lives through community outreach programmes.</p>
             </div>
           </div>
-          <div id="core-values" className="py-12 bg-gradient-to-b from-teal-100 to-white text-center mt-4">
+          <div id="core-values" className="py-12 bg-gradient-to-b from-teal-100 to-white text-center">
             <div className="container mx-auto px-4">
               <h4 className="text-xl sm:text-2xl font-serif font-bold text-teal-800 mb-4">Core Values</h4>
               <div className="border-t-2 border-teal-800 w-20 sm:w-24 mx-auto mb-6"></div>
               <div
-                className="max-w-3xl mx-auto bg-white bg-opacity-90 rounded-lg p-6 sm:p-8 shadow-lg relative "
+                className="max-w-3xl mx-auto bg-white bg-opacity-90 rounded-lg p-6 sm:p-8 shadow-lg relative"
                 onMouseEnter={() => clearInterval(intervalRef.current)}
                 onMouseLeave={() => {
                   intervalRef.current = setInterval(nextSlide, 4000);
@@ -145,6 +153,27 @@ function About_Con() {
                 >
                   ›
                 </button>
+              </div>
+            </div>
+          </div>
+          <div id="support-reasons" className="py-12 bg-gradient-to-b from-teal-100 to-white text-center">
+            <div className="container mx-auto px-4">
+              <h4 className="text-xl sm:text-2xl font-serif font-bold text-teal-800 mb-4">Why Support Road 2 Jannah Foundation</h4>
+              <div className="border-t-2 border-teal-800 w-20 sm:w-24 mx-auto mb-6"></div>
+              <div className="max-w-3xl mx-auto">
+                {supportReasons.map((reason, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                    className="bg-white bg-opacity-90 rounded-lg p-4 sm:p-6 shadow-lg mb-4 last:mb-0"
+                  >
+                    <p className="text-lg sm:text-xl font-semibold text-teal-800 leading-relaxed">
+                      #{index + 1} {reason}
+                    </p>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>

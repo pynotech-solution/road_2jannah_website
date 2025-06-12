@@ -1,7 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function About_Con() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef(null);
 
   const fullText = [
     "Road2Jannah Foundation is dedicated to glorifying Allah (SWT) by uplifting vulnerable communities across the globe. Established with a vision to provide hope and support, we focus on initiatives that address poverty, education, and healthcare, ensuring that every individual has the opportunity to thrive. Our work is rooted in the principles of compassion, generosity, and faith, inspired by the teachings of Islam.",
@@ -14,6 +17,30 @@ function About_Con() {
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % 4);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + 4) % 4);
+  };
+
+  // Auto-scroll logic with Framer Motion
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      nextSlide();
+    }, 4000); // 4 seconds for a smooth feel
+
+    return () => clearInterval(intervalRef.current); // Cleanup interval on unmount
+  }, []); // Empty dependency array to run only on mount/unmount
+
+  const coreValues = [
+    { title: "Compassion", description: "We treat communities with sensitivity and empathy." },
+    { title: "Accountability", description: "We believe in transparency and promote organisational responsibilities." },
+    { title: "Respect", description: "We honour the dignity of our communities and membership." },
+    { title: "Empowering", description: "We create an environment for individuals to make confident decisions to help build a better community." },
+  ];
 
   return (
     <article id="about" className="container mx-auto py-8 sm:py-12 px-4 ma-w-5xl">
@@ -40,40 +67,79 @@ function About_Con() {
             />
           </div>
         </div>
-        {/* Mission, Vision, and Core Values Section */}
-                     <div className="mt-8">
-  <h4 className="text-xl sm:text-2xl font-serif font-bold text-teal-800 mb-4">Our Mission & Vision</h4>
-  <div className="border-t-2 border-teal-800 w-20 sm:w-24 mx-auto mb-6"></div>
-  <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
-    <div className="p-4 bg-gray-50 rounded-lg shadow-inner">
-      <img
-        src="https://i.ibb.co/kVt7Ksw6/image.png"
-        alt="Mission Support"
-        className="w-full h-32 object-cover rounded-t-lg mb-2"
-        onError={(e) => {
-          e.target.src = "https://via.placeholder.com/300";
-          console.error("Mission image failed to load:", e.target.src);
-        }}
-      />
-      <h5 className="text-lg font-semibold text-teal-700 mb-2">Mission Statement</h5>
-      <p className="text-gray-700">Our Mission is to prevent and alleviate the increasing rate of vulnerability in society.</p>
-    </div>
-    <div className="p-4 bg-gray-50 rounded-lg shadow-inner">
-      <img
-        src="https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494218817_9489761007727080_5164433794427945810_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=102&ccb=1-7&_nc_sid=536f4a&_nc_eui2=AeHWgBj_ScLPZtAkKgXgS2I3u1t0bWHnKMS7W3RtYecoxKhy8B7NdHswEjMMyNSnW3QVU9PavISHGDd9rMWnza4B&_nc_ohc=PTgVcLdEKssQ7kNvwGqfwf2&_nc_oc=AdlDp9Bt_R3sUI8fdq88AlHH6vWuuEVe8Tvf_uI0-czlRnE2uZDtx8Z3S3x42m61hLg&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=t5-iizum22jx2vJcDWN_lA&oh=00_AfK59DMvisB6cS5mc2X7As_fXGDwxaa0yQQlznm-tU_AMQ&oe=684656BC"
-        alt="Vision Outreach"
-        className="w-full h-32 object-cover rounded-t-lg mb-2"
-        onError={(e) => {
-          e.target.src = "https://via.placeholder.com/300";
-          console.error("Vision image failed to load:", e.target.src);
-        }}
-      />
-      <h5 className="text-lg font-semibold text-teal-700 mb-2">Vision Statement</h5>
-      <p className="text-gray-700">Our Vision is to make the community a place of hope and transform lives through community outreach programmes.</p>
-    </div>
-  </div>
-</div>
+        <div className="mt-8">
+          <h4 className="text-xl sm:text-2xl font-serif font-bold text-teal-800 mb-4">Our Mission & Vision</h4>
+          <div className="border-t-2 border-teal-800 w-20 sm:w-24 mx-auto mb-6"></div>
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+            <div className="p-4 bg-gray-50 rounded-lg shadow-inner">
+              <img
+                src="https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494152552_9504517902918057_5715987183796554615_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFuihgAcgcZrI8AOKDSPcBVuTgCgCQps_q5OAKAJCmz-uoexvlpJ1Hk7TUoVrz6ef_CzPswE8i0Ji7obYL9rt3j&_nc_ohc=xjfNmfMmCUcQ7kNvwEhqBbj&_nc_oc=AdmHoZu8ze2rMe_KBZw5X0kBcPlOIc0V3nbAiaeijoH6ri5zaaL0wxhViUMEUKx_zJE&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=dowWGy-xWCg29b1Mdn8y-g&oh=00_AfKqMDqJQ7DOPwe7z-CYXRznhz367NBjRTtkIALK0aYH1w&oe=68464A37"
+                alt="Mission Support"
+                className="w-full h-32 object-cover rounded-t-lg mb-2"
+                onError={(e) => {
+                  e.target.src = "https://via.placeholder.com/300";
+                  console.error("Mission image failed to load:", e.target.src);
+                }}
+              />
+              <h5 className="text-lg font-semibold text-teal-700 mb-2">Mission Statement</h5>
+              <p className="text-gray-700">Our Mission is to prevent and alleviate the increasing rate of vulnerability in society.</p>
+            </div>
+            <div className="p-4 bg-gray-50 rounded-lg shadow-inner">
+              <img
+                src="https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494218817_9489761007727080_5164433794427945810_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=102&ccb=1-7&_nc_sid=536f4a&_nc_eui2=AeHWgBj_ScLPZtAkKgXgS2I3u1t0bWHnKMS7W3RtYecoxKhy8B7NdHswEjMMyNSnW3QVU9PavISHGDd9rMWnza4B&_nc_ohc=PTgVcLdEKssQ7kNvwGqfwf2&_nc_oc=AdlDp9Bt_R3sUI8fdq88AlHH6vWuuEVe8Tvf_uI0-czlRnE2uZDtx8Z3S3x42m61hLg&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=t5-iizum22jx2vJcDWN_lA&oh=00_AfK59DMvisB6cS5mc2X7As_fXGDwxaa0yQQlznm-tU_AMQ&oe=684656BC"
+                alt="Vision Outreach"
+                className="w-full h-32 object-cover rounded-t-lg mb-2"
+                onError={(e) => {
+                  e.target.src = "https://via.placeholder.com/300";
+                  console.error("Vision image failed to load:", e.target.src);
+                }}
+              />
+              <h5 className="text-lg font-semibold text-teal-700 mb-2">Vision Statement</h5>
+              <p className="text-gray-700">Our Vision is to make the community a place of hope and transform lives through community outreach programmes.</p>
+            </div>
+          </div>
+          <div className="mt-6">
+            <h4 className="text-xl sm:text-2xl font-serif font-bold text-teal-800 mb-4">Core Values</h4>
+            <div className="border-t-2 border-teal-800 w-20 sm:w-24 mx-auto mb-6"></div>
+            <div
+              className="relative w-full max-w-2xl mx-auto"
+              onMouseEnter={() => clearInterval(intervalRef.current)}
+              onMouseLeave={() => {
+                intervalRef.current = setInterval(nextSlide, 4000);
+              }}
+            >
+              <AnimatePresence initial={false} mode="wait">
+                <motion.div
+                  key={currentIndex}
+                  className="absolut w-full flex items-center justify-center p-2"
+                  initial={{ opacity: 0, x: 300 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -300 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                >
+                  <div className="p-4 bg-gray-50 rounded-lg shadow-inner text-center w-full">
+                    <h5 className="text-lg font-semibold text-teal-700 mb-2">{coreValues[currentIndex].title}</h5>
+                    <p className="text-gray-700">{coreValues[currentIndex].description}</p>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+              <button
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-teal-800 text-white p-2 rounded-full hover:bg-teal-600 transition-colors"
+              >
+                ‹
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-teal-800 text-white p-2 rounded-full hover:bg-teal-600 transition-colors"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
+
 
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">

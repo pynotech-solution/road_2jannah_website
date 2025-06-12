@@ -26,7 +26,7 @@ function About_Con() {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + 4) % 4);
   };
 
-  // Auto-scroll logic with Framer Motion
+  // Auto-scroll logic
   useEffect(() => {
     intervalRef.current = setInterval(() => {
       nextSlide();
@@ -73,7 +73,7 @@ function About_Con() {
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
             <div className="p-4 bg-gray-50 rounded-lg shadow-inner">
               <img
-                src="https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494152552_9504517902918057_5715987183796554615_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFuihgAcgcZrI8AOKDSPcBVuTgCgCQps_q5OAKAJCmz-uoexvlpJ1Hk7TUoVrz6ef_CzPswE8i0Ji7obYL9rt3j&_nc_ohc=xjfNmfMmCUcQ7kNvwEhqBbj&_nc_oc=AdmHoZu8ze2rMe_KBZw5X0kBcPlOIc0V3nbAiaeijoH6ri5zaaL0wxhViUMEUKx_zJE&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=dowWGy-xWCg29b1Mdn8y-g&oh=00_AfKqMDqJQ7DOPwe7z-CYXRznhz367NBjRTtkIALK0aYH1w&oe=68464A37"
+                src="https://i.ibb.co/V0s1Vczp/image.png"
                 alt="Mission Support"
                 className="w-full h-32 object-cover rounded-t-lg mb-2"
                 onError={(e) => {
@@ -86,7 +86,7 @@ function About_Con() {
             </div>
             <div className="p-4 bg-gray-50 rounded-lg shadow-inner">
               <img
-                src="https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494218817_9489761007727080_5164433794427945810_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=102&ccb=1-7&_nc_sid=536f4a&_nc_eui2=AeHWgBj_ScLPZtAkKgXgS2I3u1t0bWHnKMS7W3RtYecoxKhy8B7NdHswEjMMyNSnW3QVU9PavISHGDd9rMWnza4B&_nc_ohc=PTgVcLdEKssQ7kNvwGqfwf2&_nc_oc=AdlDp9Bt_R3sUI8fdq88AlHH6vWuuEVe8Tvf_uI0-czlRnE2uZDtx8Z3S3x42m61hLg&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=t5-iizum22jx2vJcDWN_lA&oh=00_AfK59DMvisB6cS5mc2X7As_fXGDwxaa0yQQlznm-tU_AMQ&oe=684656BC"
+                src="https://i.ibb.co/V0s1Vczp/image.png"
                 alt="Vision Outreach"
                 className="w-full h-32 object-cover rounded-t-lg mb-2"
                 onError={(e) => {
@@ -98,43 +98,54 @@ function About_Con() {
               <p className="text-gray-700">Our Vision is to make the community a place of hope and transform lives through community outreach programmes.</p>
             </div>
           </div>
-          <div className="mt-6">
-            <h4 className="text-xl sm:text-2xl font-serif font-bold text-teal-800 mb-4">Core Values</h4>
-            <div className="border-t-2 border-teal-800 w-20 sm:w-24 mx-auto mb-6"></div>
-            <div
-              className="relative w-full max-w-2xl mx-auto"
-              onMouseEnter={() => clearInterval(intervalRef.current)}
-              onMouseLeave={() => {
-                intervalRef.current = setInterval(nextSlide, 4000);
-              }}
-            >
-              <AnimatePresence initial={false} mode="wait">
-                <motion.div
-                  key={currentIndex}
-                  className="absolut w-full flex items-center justify-center p-2"
-                  initial={{ opacity: 0, x: 300 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -300 }}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
+          <div id="core-values" className="py-12 bg-gradient-to-b from-teal-100 to-white text-center mt-4">
+            <div className="container mx-auto px-4">
+              <h4 className="text-xl sm:text-2xl font-serif font-bold text-teal-800 mb-4">Core Values</h4>
+              <div className="border-t-2 border-teal-800 w-20 sm:w-24 mx-auto mb-6"></div>
+              <div
+                className="max-w-3xl mx-auto bg-white bg-opacity-90 rounded-lg p-6 sm:p-8 shadow-lg relative "
+                onMouseEnter={() => clearInterval(intervalRef.current)}
+                onMouseLeave={() => {
+                  intervalRef.current = setInterval(nextSlide, 4000);
+                }}
+              >
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentIndex}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    className="text-2xl sm:text-3xl font-semibold text-teal-800 italic leading-relaxed text-center"
+                  >
+                    {coreValues[currentIndex].title}
+                  </motion.div>
+                </AnimatePresence>
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentIndex + "-desc"}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
+                    className="mt-4 text-teal-600 text-base sm:text-lg font-medium"
+                  >
+                    {coreValues[currentIndex].description}
+                  </motion.div>
+                </AnimatePresence>
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-teal-800 text-white p-2 rounded-full hover:bg-teal-600 transition-colors"
                 >
-                  <div className="p-4 bg-gray-50 rounded-lg shadow-inner text-center w-full">
-                    <h5 className="text-lg font-semibold text-teal-700 mb-2">{coreValues[currentIndex].title}</h5>
-                    <p className="text-gray-700">{coreValues[currentIndex].description}</p>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-              <button
-                onClick={prevSlide}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-teal-800 text-white p-2 rounded-full hover:bg-teal-600 transition-colors"
-              >
-                ‹
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-teal-800 text-white p-2 rounded-full hover:bg-teal-600 transition-colors"
-              >
-                ›
-              </button>
+                  ‹
+                </button>
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-teal-800 text-white p-2 rounded-full hover:bg-teal-600 transition-colors"
+                >
+                  ›
+                </button>
+              </div>
             </div>
           </div>
         </div>

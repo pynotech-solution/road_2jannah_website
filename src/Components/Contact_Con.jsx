@@ -4,11 +4,24 @@ function Contact_Con({ openContactModal }) {
   return (
     <div id="contact" className="py-12">
       <div className="container mx-auto sm:px-4 px-0">
-        <div className="relative bg-cover bg-center h-64 mb-8 mx-auto" style={{ backgroundImage: 'https://i.ibb.co/Rk8XfyCy/image.png' }}>
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h1 className="text-4xl font-bold text-white">Contact Us</h1>
-          </div>
+       <div className="relative bg-cover bg-center h-64 mb-8 mx-auto" style={{ backgroundImage: `url('https://i.ibb.co/Rk8XfyCy/image.png')` }}>
+  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <h1 className="text-4xl font-bold text-white">Contact Us</h1>
+  </div>
+  {/* Fallback if image fails to load */}
+  {(() => {
+    const img = new Image();
+    img.src = 'https://i.ibb.co/Rk8XfyCy/image.png';
+    if (!img.complete || img.naturalWidth === 0) {
+      return (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-300">
+          <p className="text-white text-lg">Image not available</p>
         </div>
+      );
+    }
+    return null;
+  })()}
+</div>
         <div className="bg-white rounded-lg shadow-md p-8 mx-auto">
           <h2 className="text-2xl font-bold text-teal-800 mb-6 text-center">Get in Touch</h2>
           <p className="text-gray-700 text-lg mb-6 text-center">We’d love to hear from you! Reach out to us directly to share your thoughts, inquiries, or feedback.</p>

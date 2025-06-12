@@ -560,7 +560,7 @@ media: [
 
       <Programs_Con programs={programs} />
 
-      <MissionVision />
+      {/* <MissionVision /> */}
 
       <Gallery_Con gallery={gallery} openGalleryModal={openGalleryModal} />
 

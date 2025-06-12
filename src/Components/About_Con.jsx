@@ -79,7 +79,7 @@ function About_Con() {
           </div>
           <div className="flex items-center">
             <img
-              src="https://i.ibb.co/V0s1Vczp/image.png"
+              src="https://i.ibb.co/Rk8XfyCy/image.png"
               alt="Community Support"
               className="w-full h-40 sm:h-80 object-cover rounded-lg shadow-md"
             />

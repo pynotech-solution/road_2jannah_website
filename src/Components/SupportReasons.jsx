@@ -5,14 +5,17 @@ const SupportReasons = () => {
     {
       title: "Road 2 Jannah is your local partner in community development",
       description: "As a local partner, Road 2 Jannah works hand-in-hand with community leaders to design and implement development projects that address specific local needs, fostering sustainable growth and empowerment at the grassroots level.",
+      src: "https://i.ibb.co/Y5tCLP7/image.png",
     },
     {
       title: "Road 2 Jannah brings you closer to the community",
       description: "Through volunteer opportunities and outreach programs, Road 2 Jannah connects supporters directly with the people they help, building bridges of understanding and shared purpose within the community.",
+      src: "https://i.ibb.co/Y5tCLP7/image.png",
     },
     {
       title: "Road 2 Jannah provides you with an exhaustive community outreach in the entire country",
       description: "With a nationwide network, Road 2 Jannah ensures comprehensive support, reaching even the most remote areas to deliver aid, education, and healthcare to those in need across the country.",
+      src: "https://i.ibb.co/Y5tCLP7/image.png",
     },
     {
       title: "Road 2 Jannah Foundation is the best platform for the vulnerable communities",
@@ -21,6 +24,7 @@ const SupportReasons = () => {
     {
       title: "Road 2 Jannah Foundation is a true reflection of the vulnerable communities",
       description: "Rooted in the values and voices of the communities it serves, Road 2 Jannah ensures its initiatives are shaped by the real experiences and needs of those it aims to support.",
+      src: "https://i.ibb.co/Y5tCLP7/image.png",
     },
   ];
 
@@ -68,7 +72,7 @@ const SupportReasons = () => {
                   transition={{ duration: 0.5, delay: index * 0.2 + 0.4 }}
                 >
                   <img
-                    src={`https://i.ibb.co/cWJhXRh/image.png`}
+                    src={reason.src || "https://via.placeholder.com/200"}
                     alt={`Support Reason ${index + 1}`}
                     className="w-full h-44 md:h-48 object-cover rounded-lg"
                     onError={(e) => {

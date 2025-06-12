@@ -69,12 +69,14 @@ function About_Con() {
           </div>
           <div className="flex items-center">
             <img
-              src="https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/472206263_8807425239293997_4094478365450783416_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeFgYvaMkYwsdtWa3NtNCa2UEYhCQPwVae0RiEJA_BVp7W2KnehFDQ-xDrdjeeJYwmeTeIUkk1kh6XXtX6kQj77A&_nc_ohc=YIIHG1fnkR8Q7kNvwE3kmqa&_nc_oc=Adn5505DgHbOcAaf1sX04cpTOqnTjJTdBjK6cFJKxIebQfJpdJdXJgalLUQBvnM6Pmc&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=UM72uAG9yYsDzDFNmH7F-w&oh=00_AfK_va7R-6J6C92vlUS80PixzwcDFVQWyxHX_E6uljpIjQ&oe=68465979"
+              src="https://i.ibb.co/mrZX0kL6/image.png"
               alt="Community Support"
               className="w-full h-40 sm:h-80 object-cover rounded-lg shadow-md"
             />
           </div>
         </div>
+
+        
         <div className="mt-8">
           <h4 className="text-xl sm:text-2xl font-serif font-bold text-teal-800 mb-4">Our Mission & Vision</h4>
           <div className="border-t-2 border-teal-800 w-20 sm:w-24 mx-auto mb-6"></div>

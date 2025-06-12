@@ -155,10 +155,15 @@ const news = [
       "The courtesy call which saw Road 2 Jannah Foundation led by it's Executive Director/Founder, presented Citation to stakeholders of the just ended Ramadan Community Outreach Phase 2 Project. This gesture was to appreciate their support and be enlightened more in the humanitarian sector. The foundation first visited Dawadawa Jollof Delight @Adenta where conversations about empowerment took the center stage. The CEO of Dawadawa Jollof Delight, Rabiatu Atule Akamim observed from her findings on gender equality in the zongo communities that Representation of Muslim women in decision making is almost nonexistent and some Muslim women are very timid at decision making table and has therefore charged the group to facilitate a sensitization program that will see to empower the Moslem Women to be vocal at decision making table. The group then moved to cantonments where they joined a moslem congregation, a prayer led by Imam of National Police Mosque Chief Supt. of Police Imam Hussein Abdul Rahim Hussein in Jumah prayers. Imam Hussein Abdul Rahim Hussein and his deputy Imam Abass Abdul-Karim then engaged the foundation in a close door meeting after prayers where he invoke the blessings of Almighty Allah and spirit of unity in the group. Imam Hussein Abdul Rahim Hussein asked the foundation to take a critical look in and around the communities their membership is based and make an impact of changing lives. On his part, Imam Abass Abdul-Karim mentioned about sustainability of NGO's due to lack of structural absence in their modules of operandi and advice the group to employ the act of sustainability and keep up the good work. A Citation was then presented to Imam Hussein Abdul Rahim Hussein to honour his role in positive change in soceity through his impactful sermons. Baina Tv, the official media partner for the foundation in it's operations also received a citation for supporting the course with it's platforms to reach higher heights. The last to be awarded citation was the proprietor of Rahma Orphanage Home Sheikh Yusif Musah for dedicating his life for the vulnerable kids in society.",
 
     media: [
-      { type: "image", src:"https://i.ibb.co/0ytTZLn6/image.png", alt: "R2J Courtesy Cal"  },
 
+      
+      { type: "image", src:"https://i.ibb.co/3mz2WbTj/image.png"
+, alt: "R2J Courtesy Cal" },
+{ type: "image", src:"https://i.ibb.co/0ytTZLn6/image.png", alt: "R2J Courtesy Cal"  },
       { type: "image", src:"https://i.ibb.co/xq6FWctK/image.png"
 , alt: "R2J Courtesy Cal" },
+{ type: "image", src:"https://i.ibb.co/0ytTZLn6/image.png", alt: "R2J Courtesy Cal"  },
+      
 
 
       { type: "image", src:       "https://i.ibb.co/3m0jcw5C/image.png",alt: "R2J Courtesy Cal " },
@@ -496,31 +501,47 @@ media: [
         items: [
           {
              type: "image",
-              src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/495461016_9592896200746893_7163327202326270463_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHhPgraJFCg8gPcLCfc_79ZrYIEbAC8kHatggRsALyQdrnPcqJDMRrGKk6CV_tuAKW0hkuAotkrJ5RUZnHnLIhU&_nc_ohc=BEbRsoQdpm8Q7kNvwHIq55h&_nc_oc=AdlbVZUD6nhPpJGAnUL4x3dcs-NFrBkPmTINqTtrYq4DDVqPkkOE6u3ebGSh8604Bgw&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=ox7ZhqW_IttcmguMQDLHiA&oh=00_AfO81rohruCoM2zcUbjLA9IueJc54CnMZW7QUf2By7mTNA&oe=6847F505",
+              src: "https://i.ibb.co/xq6FWctK/image.png",
                alt: ""
                }, 
           {
              type: "image",
-              src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/495856015_9593036517399528_7973012033177796404_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeF9s2HMXtQ5tqrvQFcoHW3tzhbswQxN6qPOFuzBDE3qoyzUY_d6775ztpyZHxx0f8LCKFBx9Aunq93tnfCDHEpP&_nc_ohc=EC8M9Zh8TQsQ7kNvwEHjhT5&_nc_oc=AdkxjhnQPihLxeOfuiD7zaB_rEqPpdl38NCwQnPYQ88hGfDILsM_eiYDa4ThKAwNhUo&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=ox7ZhqW_IttcmguMQDLHiA&oh=00_AfPoTkmlL3UGlNN0V05UAJdu_UOMy8GupOcKcYE7TQpzVw&oe=6847F5D7",
+              src: "https://i.ibb.co/N2LJKXgy/image.png",
                alt: ""
                }, 
           {
              type: "image",
-              src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/495806469_9593036530732860_6681287673732612863_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeE8Mxe8zuoTvWCYVq9X5aVc59QOXlfT3Ezn1A5eV9PcTHUqJW8CbbYyKvbQC7dbClwtDE94aC3hp5riPzL-b1Mp&_nc_ohc=tJgrP_SOklgQ7kNvwF1xLcO&_nc_oc=AdnbkVln28ET6pN-cRUIgA7Ud4Ph3UjmaWHLbT-Q0bfvV-zXNUC1TrqBH9IazeNa_ds&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=ox7ZhqW_IttcmguMQDLHiA&oh=00_AfOCqMfFE16-0Isbo_yPlI9zh6Bxjo0IPZBAYr7rvyMVuw&oe=6847E40D",
+              src: "https://i.ibb.co/QvNNK7pf/image.png",
                alt: ""
                }, 
           {
              type: "image",
-              src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/495805064_9593036577399522_5771634513842279882_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeGv55-pnqtp2Wk21L5lIBqr1-OHQuHVO0HX44dC4dU7Qa2Nf0vU_ZIw9_VvwPK0Ik0X5ppZHwbJZIjJBaDQhhRz&_nc_ohc=fO4p5qA7dncQ7kNvwH5hTOX&_nc_oc=Adl1KLCYGYlfScBDXbJWJhfzlANthzHju78h5LLu9kDpvTUOXfTuV_o5qXC-DIRWJ5w&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=9IneI8tVDebmyoJUrF2y6Q&oh=00_AfMSEOWLbcf7v6LlhrWrFqVNxNTFb__lW0PuJGPBfHgFFA&oe=6847E741",
+              src: "https://i.ibb.co/bqBQTbn/image.png",
                alt: ""
                }, 
           
-          {
-             type: "image",
-              src: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/496254434_9593036554066191_1275625130246270772_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEGktLm3r1jLtFraVbgzP0rcx-KM9PLiaxzH4oz08uJrOM9S1GJ_ux7Dn6h8ccySfwVD3J5Lghzp5QEhaU4H70x&_nc_ohc=ElO7RdO7mF8Q7kNvwEd9tkc&_nc_oc=AdkmEv6p_Qozit5TVTecy2BW_bhtUfBwu6zJg-T_BAmNdx1UaNHvyNMG9c_u0VP7qE0&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=O4EVqpgOSYJJBphDEXviaw&oh=00_AfN6LbKSybMpg5NN-sJVvqbibrhU8gUgHEX8cJaJXbGl0A&oe=6847D455",
-               alt: ""
-               }, 
-          
+               
+               {
+                  type: "image",
+                   src: "https://i.ibb.co/jZBLPj8n/image.png",
+                    alt: ""
+                    }, 
+               {
+                  type: "image",
+                   src: "https://i.ibb.co/XZkCX8BH/image.png",
+                    alt: ""
+                    }, 
+               {
+                  type: "image",
+                   src: "https://i.ibb.co/2zj9kW7/image.png",
+                    alt: ""
+                    }, 
+      
+               {
+                  type: "image",
+                   src: "https://i.ibb.co/XZXyFr2P/image.png",
+                    alt: ""
+                    }, 
       
           ] 
         },

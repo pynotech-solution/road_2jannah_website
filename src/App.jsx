@@ -122,6 +122,18 @@ function App() {
       setCurrentIndex(newIndex);
     }
   };
+  
+  const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % quotes.length);
+    }, 5000); // Change quote every 5 seconds
+    return () => clearInterval(interval);
+  }, [quotes.length]);
+  
+  // In the return statement:
+  
   const quotes = [
   { quote: "The best among you are those who bring the most benefit to the rest of mankind.", attribution: "Prophet Muhammad (Peace Be Upon Him)" },
   { quote: "Give charity without delay, for it stands in the way of calamity.", attribution: "Prophet Muhammad (Peace Be Upon Him)" },
@@ -129,18 +141,6 @@ function App() {
   { quote: "The best charity is that given in Ramadan.", attribution: "Prophet Muhammad (Peace Be Upon Him)" },
   { quote: "A good word is a charity.", attribution: "Prophet Muhammad (Peace Be Upon Him)" },
 ];
-
-const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
-
-useEffect(() => {
-  const interval = setInterval(() => {
-    setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % quotes.length);
-  }, 5000); // Change quote every 5 seconds
-  return () => clearInterval(interval);
-}, [quotes.length]);
-
-// In the return statement:
-
   const programs = [
     { title: "Ramadan Community Outreach", description: "During the holy month of Ramadan, we provide iftar meals, essential grains, and support to 1,000 families, ensuring no one goes hungry...", donateText: "Donate to Ramadan Outreach", image: "", alt: "Ramadan Community Outreach" },
     { title: 'Medwuma Pa "Community Empowerment Outreach"', description: 'Medwuma Pa, meaning "Good Work" in Akan, supports sustainable livelihoods by providing small grants...', donateText: "Support Community Empowerment", image: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/495856015_9593036517399528_7973012033177796404_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeF9s2HMXtQ5tqrvQFcoHW3tzhbswQxN6qPOFuzBDE3qoyzUY_d6775ztpyZHxx0f8LCKFBx9Aunq93tnfCDHEpP&_nc_ohc=GOHE0ny2qbUQ7kNvwF5nuqp&_nc_oc=AdleZXBoE8iZ8UU0LU6ym8wnT7Hcly8wG310mA86Vq50rkrT0u5W9Vgcb6d52HoI0Ls&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=ApZEiMgQ-ac8joqUvaPypg&oh=00_AfJWZQXr-nVobre8cp72Vkv4-OTjOkYbX6I14KZ387ghWQ&oe=68466C17", alt: "Medwuma Pa Empowerment" },
@@ -221,7 +221,7 @@ const news = [
     ],
     category: "Events",
   },
-  
+
   {
     title: "The annual Ramadan Community Outreach PHASE 1 Project was a success courtesy your support",
     date: "February 10, 2025",

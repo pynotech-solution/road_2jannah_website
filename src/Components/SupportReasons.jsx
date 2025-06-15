@@ -29,11 +29,11 @@ const SupportReasons = () => {
   ];
 
   return (
-    <div id="support-reasons" className="py-12 bg-gradient-to-b from-teal-100 to-white text-center h-[600px] overflow-auto mx-auto md:w-[80%] sm:w-[90%] w-full">
+    <div id="support-reasons" className="py-12 bg-gradient-to-b from-teal-100 to-white text-center  mx-auto md:w-[80%] sm:w-[90%] w-full">
       <div className="container px-2 sm:px-4 md:px-6">
         <h4 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-teal-800 mb-2 sm:mb-4">Why Support Road 2 Jannah Foundation</h4>
         <div className="border-t-2 border-teal-800 w-16 sm:w-20 md:w-24 mx-auto mb-2 sm:mb-6"></div>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto h-[600px] overflow-auto">
           {supportReasons.map((reason, index) => {
             const isImageRight = index % 2 === 0; // Image on right for even indices (0, 2, 4), left for odd (1, 3)
             return (

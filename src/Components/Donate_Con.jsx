@@ -13,7 +13,7 @@ function Donate_Con({ openDonationModal }) {
           </div>
         </div>
         <div>
-          <img src="https://i.ibb.co/gLjwKGgY/image.png" alt="Donate Now Community Support" className="w-full h-96 object-cover rounded-lg" />
+          <img src="https://i.ibb.co/9kdSQrVZ/image.png" alt="Donate Now Community Support" className="w-full h-96 object-cover rounded-lg" />
         </div>
       </div>
     </div>

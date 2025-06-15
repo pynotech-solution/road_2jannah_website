@@ -184,6 +184,7 @@ const news = [
     
     category: "General News",
   },
+
   {
     title: "Road 2 Jannah  Foundation donates to Rahma Orphanage Home",
     date: "April 11, 2025",
@@ -208,6 +209,7 @@ const news = [
     ],
     category: "General News",
   },
+
   {
     title: "Let's create a conducive environment for teaching and learning for these 2 schools by contributing",
     date: "August 24, 2024",
@@ -219,6 +221,7 @@ const news = [
     ],
     category: "Events",
   },
+  
   {
     title: "The annual Ramadan Community Outreach PHASE 1 Project was a success courtesy your support",
     date: "February 10, 2025",

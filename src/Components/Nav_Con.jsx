@@ -23,6 +23,9 @@ function Nav_Con() {
     setIsMenuOpen(false); // Close mobile menu after clicking
   };
 
+
+  
+
   return (
     <nav className="bg-teal-800 text-white sticky top-0 z-50">
       <div className="container mx-auto px-4 py-2 md:py-4 flex justify-between items-center">

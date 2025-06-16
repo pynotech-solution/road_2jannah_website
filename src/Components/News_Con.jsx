@@ -29,7 +29,7 @@ function News_Con({ featuredNews, news, openModal, updateFeaturedNews }) {
     } else if (mediaItem.type === "video") {
       return (
         <video
-          src={mediaItem.src}
+          src='https://photos.app.goo.gl/7ofnrnFcpsaFJ5TE9'
           className="w-full h-[500px] object-cover object-top transition duration-300 group-hover:scale-105 group-hover:brightness-75"
           muted
           autoPlay

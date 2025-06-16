@@ -17,7 +17,9 @@
   ];
 
  export const news = [
+
   {
+      section:'News',
     title: "R2J Pays Courtesy Call To RCO'24 Stakeholders",
     date: "July 19, 2024", 
     description:
@@ -161,7 +163,7 @@ media: [
         alt: "support the transformation agenda of our education sector through outreach.", caption: "support the transformation agenda of our education sector through outreach." },
 
     { type: "video",
-       src: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fweb.facebook.com%2Freel%2F1407430334023708%2F&show_text=false&width=267&t=0",
+       src: "https://photos.app.goo.gl/7ofnrnFcpsaFJ5TE9",
 
       
         alt: "Christian Atsu Education Complex*  orphanage Video",
@@ -190,6 +192,7 @@ media: [
            
                 ]
                },
+
     { type: "album",
        src: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/494135333_9503102626392918_2278131271513998804_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFV31yFYOSEr4uDC_Nptrq6zSBa5RQEvS3NIFrlFAS9LSHtonfRoxCXQoCKiMxfIF4-kqwlYjp6u792dXl2RbdM&_nc_ohc=NlBf2EUE480Q7kNvwHm5sjI&_nc_oc=Adm32OMzOCSvgTqBKMPzibLKgzGANMkkMShodCIUXc20SWxEynxE12jR9QJYo6QIbv4&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=tQ1gRnfb5KdX9Bn7oumyOQ&oh=00_AfNxMzHyz-Ei1gsUQDqI9ZmUlM3KREr4YkD-I9P5gLPcOA&oe=6847E0F1",
         alt: "Medwuma Pa Album",
@@ -365,6 +368,7 @@ media: [
                }, 
             
           ]  },
+
 
           
           { type: "album", 

@@ -142,8 +142,7 @@ function App() {
 
       <HeroCarousel_Con />
 
-        <About_Con />
-
+      <About_Con />
 
       <Focus_Con />
 
@@ -170,9 +169,9 @@ function App() {
 
 
 
-    <SupportReasons />
+      <SupportReasons />
 
-        <Donate_Con openDonationModal={openDonationModal} />
+      <Donate_Con openDonationModal={openDonationModal} />
         
       <DonationModal_Con
         isDonationModalOpen={isDonationModalOpen}

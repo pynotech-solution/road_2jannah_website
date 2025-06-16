@@ -1,6 +1,7 @@
 import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion';
 
-const MissionVision = () => {
+const MissionVision = ({coreValues,nextSlide,prevSlide,currentIndex}) => {
   return (
        <div className="mt-8">
           <h4 className="text-xl sm:text-2xl font-serif font-bold text-teal-800 mb-4">Our Mission & Vision</h4>

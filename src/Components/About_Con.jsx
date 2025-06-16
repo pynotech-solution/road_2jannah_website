@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import MissionVision from './MissionVision';
 
 function About_Con() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -85,7 +86,7 @@ function About_Con() {
             />
           </div>
         </div>
-     <M />
+        <MissionVision currentIndex={currentIndex} nextSlide={nextSlide} prevSlide={previewText} coreValues={coreValues} />
       </section>
 
 

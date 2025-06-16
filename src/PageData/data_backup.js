@@ -236,12 +236,12 @@
           ]
         
         
-        }
+        },
     {type: "album",
         description:"Road 2 Jannah  Foundation donates to Rahma Orphanage Home Road 2 Jannah (R2J) Foundation with support from KGL Foundation and Wilmar Ghana has made a significant donation to the orphans at Rahma Orphanage Home in Alajo, a suburb of the Ayawaso Central Constituency in the Greater Accra Region.The donation forms part of the foundations' annual project marking the end of Ramadan was made in the spirit of love, care and community support.The items donated included rice, oil, sanitary pads, beverages, toilet soaps, detergents, clothes, blueband bread spread, exercise books, and other essential goods.KGL Foundation and Wilmar Ghana, known for their support and commitment to community development over the years, has once again extended their support for this year's project.Speaking on behalf of the Executive Director of Road 2 Jannah Foundation, Mr. Kamaru Abdulai, the Foundation’s Public Relations Officer, Mr Yussif Okai, shared a message of  hope and compassion. He lamented about the outreach not just giving food items but creating a space where people feel seen, heard and supported especially during such a meaningful time of year. He as well thanked KGL Foundation and Wilmar Ghana for their tremendous support and help in making difference in the lives of the less privilege.The Proprietor of Rahma Orphanage Home, Sheikh Yusuf Musah, expressed heartfelt gratitude to Road 2 Jannah Foundation, KGL Foundation and Wilmar Ghana for their unwavering support in bringing joy to the lives of the orphans.He has added his voice to the call for supporting the Foundation's Borehole construction project to the underserved communities this year.",
         title: "Road 2 Jannah Foundation donates to Rahma Orphanage Home",
         date: "11/04/2025",
-          media:[
+        media:[
             {
                 type: "image",
                 src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037400/1_b3bmrb.jpg",
@@ -278,6 +278,124 @@
                 type: "video",
                 src: "https://res.cloudinary.com/dzqdfaghg/video/upload/v1750037913/snapsave-app_1199272497855023_sd_uxfljx.mp4",
             },
+           
+        
+            
+        
+          ]
+        
+        
+        },
+    {type: "album",
+        description:"Road 2 Jannah Foundation is wishing His Eminence the National Chief Imam of Ghana and Executive Director Global of Road 2 Jannah Foundation a Happy Birthday.A year ago R2J together with KGL paid a courtesy call to the National Chief Imam at his residence and presented to him a CITATION of championing the peaceful cohesion between the religious bodies in the country and we at Road 2 Jannah Foundation automatically sees the National Chief Imam of Ghana as the Executive Director Global for Road 2 Jannah Foundation.",
+        title: "Happy Birthday to His Eminence the National Chief Imam of Ghana",
+        date: "23/04/2025",
+          media:[
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037892/1_y0ivfi.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037892/2_xxatyg.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037892/4_ajfczc.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037892/3_muhthb.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037893/6_m6hqm6.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037893/5_tk8rhf.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037893/7_kl4ofe.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037893/9_nt8yxz.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037892/4_ajfczc.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037891/10_oymoky.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037894/8_yh6lhz.jpg",
+            },
+    
+          
+           
+        
+            
+        
+          ]
+        
+        
+        },
+    {type: "album",
+        description:"Road 2 Jannah Foundation is wishing His Eminence the National Chief Imam of Ghana and Executive Director Global of Road 2 Jannah Foundation a Happy Birthday.A year ago R2J together with KGL paid a courtesy call to the National Chief Imam at his residence and presented to him a CITATION of championing the peaceful cohesion between the religious bodies in the country and we at Road 2 Jannah Foundation automatically sees the National Chief Imam of Ghana as the Executive Director Global for Road 2 Jannah Foundation.",
+        title: "Happy Birthday to His Eminence the National Chief Imam of Ghana",
+        date: "23/04/2025",
+          media:[
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037892/1_y0ivfi.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037892/2_xxatyg.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037892/4_ajfczc.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037892/3_muhthb.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037893/6_m6hqm6.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037893/5_tk8rhf.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037893/7_kl4ofe.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037893/9_nt8yxz.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037892/4_ajfczc.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037891/10_oymoky.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037894/8_yh6lhz.jpg",
+            },
+    
+          
            
         
             

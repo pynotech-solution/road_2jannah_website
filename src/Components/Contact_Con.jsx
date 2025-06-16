@@ -4,14 +4,14 @@ function Contact_Con({ openContactModal }) {
   return (
     <div id="contact" className="py-12">
       <div className="container mx-auto sm:px-4 px-0">
-       <div className="relative bg-cover bg-center h-64 mb-8 mx-auto" style={{ backgroundImage: `url('https://res.cloudinary.com/dzqdfaghg/image/upload/v1750027303/5_bnqf7e.jpg')` }}>
+       <div className="relative bg-cover bg-center h-64 mb-8 mx-auto" style={{ backgroundImage: `url('https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/493835824_9489760884393759_2944748360786138881_n_ozbgsg.jpg')` }}>
   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
     <h1 className="text-4xl font-bold text-white">Contact Us</h1>
   </div>
   {/* Fallback if image fails to load */}
   {(() => {
     const img = new Image();
-    img.src = 'https://i.ibb.co/Rk8XfyCy/image.png';
+    img.src = 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/493835824_9489760884393759_2944748360786138881_n_ozbgsg.jpg';
     if (!img.complete || img.naturalWidth === 0) {
       return (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-300">

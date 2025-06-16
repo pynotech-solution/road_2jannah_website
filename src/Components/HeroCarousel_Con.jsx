@@ -35,7 +35,7 @@ function HeroCarousel_Con() {
   backgroundImage: `url(${slide.image})`,
   backgroundSize: 'contain',
   backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
+  // backgroundRepeat: 'no-repeat',
 }}
         >
           <div className="flex flex-col items-center justify-center h-full text-white bg-black bg-opacity-50">

@@ -427,6 +427,71 @@
           ]
         
         
+        },
+    {type: "album",
+        description:"Support Let's Complete Ansarul Islam School Building ProjectThe foundation in it's quest to support and empower communities, paid a courtesy call on Ansarul Islam School upon a request by the Proprietor Mallam Abdul Kadir Saeed.The visit was to discuss way forward of how to  complete a 3 floor storey building project that has begun but lack of funds has stall the project.The project if completed will not only provide a conducive environment for teaching and learning but also an avenue that will empower vulnerable kids acquire skills training ( Fashion Design) as empowerment centre.The group had the chance to tour the uncompleted facility with Management of Ansarul Islam School to ascertain the stage at which the project has stalled due to lack of funds.As part of Road 2 Jannah Foundation's commitment to resourcing communities through outreach projects, such issues is our main primary objective to know what challenges the communities we reach out to faces and solutions.You can support the project by donating building materials like Cement, Iron rods, Building Bricks, Sand, Woods, Tiles, Paints and Cash Amount.Road 2 Jannah Foundation is therefore calling on Organisations, Benovelent Donors, Individuals, Cooperate Institutions and NGO's to come support for completion of the project.",
+        title: "Support Let's Complete Ansarul Islam School Building Project",
+        date: "04/05/2025",
+          media:[
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750038740/1_khpvrj.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750038740/2_bfrlow.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750038740/3_hhyuxg.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750038740/4_byu1ev.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750038740/5_xribeg.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750038741/7_iazbha.jpg",
+            },
+               {
+                type: "video",
+                src: "https://res.cloudinary.com/dzqdfaghg/video/upload/v1750039613/SCHOOL_j9bvhb.mp4",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750038765/8_oatvtu.jpg",
+            },
+               {
+                type: "video",
+                src: "https://res.cloudinary.com/dzqdfaghg/video/upload/v1750039606/SCHOOL_BUILDING_1_omsxdu.mp4",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750038791/9_jknirx.jpg",
+            },
+         
+            {
+                type: "video",
+                src: "https://res.cloudinary.com/dzqdfaghg/video/upload/v1750039609/SCHOOL_BUILDING_afvtfl.mp4",
+            },
+         
+        
+           
+         
+        
+        
+          
+           
+        
+            
+        
+          ]
+        
+        
         }
 
 

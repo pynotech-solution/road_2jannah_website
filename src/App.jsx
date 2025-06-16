@@ -17,7 +17,8 @@ import FAQ_Con from './components/FAQ_Con';
 import Footer_Con from './components/Footer_Con';
 import MissionVision from './components/MissionVision';
 import SupportReasons from './components/SupportReasons';
-import { gallery, news, programs, quotes } from './PageData/data';
+import { news, programs, quotes } from './PageData/data';
+import { gallery } from './PageData/data_backup';
 
 
 
@@ -109,16 +110,16 @@ function App() {
   };
 
   const nextItem = () => {
-    if (selectedGalleryItem?.items) {
-      const newIndex = (currentIndex + 1) % selectedGalleryItem.items.length;
+    if (selectedGalleryItem?.media) {
+      const newIndex = (currentIndex + 1) % selectedGalleryItem.media.length;
       console.log("Navigating to next item, new index:", newIndex);
       setCurrentIndex(newIndex);
     }
   };
 
   const prevItem = () => {
-    if (selectedGalleryItem?.items) {
-      const newIndex = (currentIndex - 1 + selectedGalleryItem.items.length) % selectedGalleryItem.items.length;
+    if (selectedGalleryItem?.media) {
+      const newIndex = (currentIndex - 1 + selectedGalleryItem.media.length) % selectedGalleryItem.media.length;
       console.log("Navigating to previous item, new index:", newIndex);
       setCurrentIndex(newIndex);
     }

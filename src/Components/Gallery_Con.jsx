@@ -7,7 +7,7 @@ function Gallery_Con({ gallery, openGalleryModal }) {
       <p className="text-center text-gray-700 mb-6">See the difference your donations make in the lives of those we serve.</p>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
         {gallery.map((item, index) => (
-          <GalleryItem_Con key={index} type={item.type} src={item.src} alt={item.alt} caption={item.caption} items={item.items} onClick={() => openGalleryModal(item, 0)} />
+          <GalleryItem_Con key={index} type={item.type} src={item.media[0].src}  title={item.title} items={item.media} onClick={() => openGalleryModal(item, 0)} />
         ))}
       </div>
     </div>

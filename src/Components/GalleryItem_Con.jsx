@@ -1,11 +1,11 @@
 import { Folder, Play } from 'lucide-react';
 
-function GalleryItem_Con({ type, src, alt, caption, items, onClick }) {
+function GalleryItem_Con({ type, src, title , items, onClick }) {
   const wordLimit = 10;
-  const truncatedCaption = caption
-    ? caption.split(/\s+/).length > wordLimit
-      ? caption.split(/\s+/).slice(0, wordLimit).join(' ') + '...'
-      : caption
+  const truncatedCaption = title
+    ? title.split(/\s+/).length > wordLimit
+      ? title.split(/\s+/).slice(0, wordLimit).join(' ') + '...'
+      : title
     : '';
 
   return (
@@ -15,10 +15,10 @@ function GalleryItem_Con({ type, src, alt, caption, items, onClick }) {
     >
       <img
         src={src}
-        alt={alt}
+        alt={title || 'Gallery Item'}
         className="w-full h-48 object-cover rounded-lg transition duration-300 hover:brightness-90"
       />
-      {caption && (
+      {title && (
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-teal-800 to-transparent text-white p-4 transition duration-300 hover:from-teal-900">
           <p className="text-sm font-semibold">{truncatedCaption}</p>
         </div>

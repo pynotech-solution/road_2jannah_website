@@ -46,6 +46,26 @@
                 ]
                },
 
+    { type: "album",
+        description:'INFOCUS ON HEALTHY MORNING LIVE ON HSTV || 21/03/2024 KINDLY LIKE, SHARE AND FOLLOW THIS PAGE FOR MORE UPDATES.',
+        title: "InFocus on Healthy Morning Live on HSTV",
+        date: "20/03/2024",
+          media:
+           [
+            
+            { type: "image", 
+                src: 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750044294/a4fd355b-b724-4bcb-9979-c55c214efbfd.png',
+              }, 
+            { type: "video", 
+                src: 'https://res.cloudinary.com/dzqdfaghg/video/upload/v1750037016/TV_bwjpgd.mp4',
+              }, 
+            
+
+            
+           
+                ]
+               },
+
 
 
 

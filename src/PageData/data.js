@@ -1,3 +1,5 @@
+import { img } from "framer-motion/client";
+
   
   
   
@@ -486,9 +488,11 @@ media: [
             {
               title: 'Our Mission',
               content: 'Our Mission is to prevent and alleviate the increasing rate of vulnerability in society',
+              img : 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037397/9_yz0ima.jpg',
             },
             {
               title: 'Our Vision',
               content: 'Our Vision is to make the community a place of hope and transform lives through community outreach programmes.',
+              img : 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494051333_9489761157727065_7600707138854965521_n_wfs2yf.jpg',
             },
           ]

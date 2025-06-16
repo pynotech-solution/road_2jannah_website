@@ -24,7 +24,7 @@ const MissionVision = ({coreValues,nextSlide,prevSlide,currentIndex}) => {
               <img
                 src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494051333_9489761157727065_7600707138854965521_n_wfs2yf.jpg"
                 alt="Vision Outreach"
-                className="w-full h-32 object-cover rounded-t-lg mb-2"
+                className="w-full h-2/4 object-cover rounded-t-lg mb-2"
                 onError={(e) => {
                   e.target.src = "https://via.placeholder.com/300";
                   console.error("Vision image failed to load:", e.target.src);

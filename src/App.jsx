@@ -17,8 +17,16 @@ import FAQ_Con from './components/FAQ_Con';
 import Footer_Con from './components/Footer_Con';
 import MissionVision from './components/MissionVision';
 import SupportReasons from './components/SupportReasons';
-import { news, programs, quotes } from './PageData/data';
-import { gallery } from './PageData/data_backup';
+import {  programs, quotes } from './PageData/data';
+import { news,gallery } from './PageData/data_backup';
+
+// const news = gallery.filter(item => item.section === 'news').map(item => ([
+//   {title: item.title,
+//   description: item.description,
+//   date: new Date().toLocaleDateString(), // Placeholder date, you can modify this
+//   category: item.type,
+//   media: item.media,}
+// ]));
 
 
 

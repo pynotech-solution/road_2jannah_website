@@ -463,19 +463,19 @@ media: [
 
          export const slides = [
             {
-              image: 'https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/493544405_9489761114393736_4391759523238548369_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=103&ccb=1-7&_nc_sid=536f4a&_nc_eui2=AeEK70-7WWAUULp7f_7WGpwC4znxrjt9HGHjOfGuO30cYe6ZyEFnQnH0UOSbZE9azt1MDEdp0ZNpGoThqilDQcbt&_nc_ohc=k6h3iwS5zNYQ7kNvwEdvd-Z&_nc_oc=Adl4P17dO4XQo-q5a2JMOS9TF-f8_82ArEhbj1-TOjRlvZrivk3fuz43jd60teCqt6s&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=t5-iizum22jx2vJcDWN_lA&oh=00_AfLHM_e1-DfJVuOzq1oVLJx4sh_ycvAyHHBqzwPAKADNDQ&oe=68466507',
+              image: 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494009957_9489761161060398_7555241959544768369_n_vmi8cs.jpg',
               title: 'Ramadan Community Outreach',
               description: 'Providing iftar meals and support to 1,000 families during Ramadan.',
               buttonText: 'Support Ramadan',
             },
             {
-              image: 'https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/495999213_9593036607399519_5885767734663083777_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeG2pw_erM2iZynF8OMrhMOCO99dUChzC6M7311QKHMLo7z0M_D8NUVQMHsZk1U6btO07TGHNxEXRTVEhtJWX3f7&_nc_ohc=6P5OAtq1lJkQ7kNvwE_kBPC&_nc_oc=AdmoALmuTb-vmNOFNpB61I7uWFLZ_gQ1_BRHDBAdamb64VEj0bMXUhRjHD0oQ3cipsQ&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=_LSbHI4QFUuyLj-10smrhA&oh=00_AfJHiUcQDv1FBePp5R5ILabveLc16RCVmBqPH0f1QpBWhQ&oe=68466146',
+              image: 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/472206263_8807425239293997_4094478365450783416_n_xeyctj.jpg',
               title: 'Medwuma Pa Empowerment',
               description: 'Empowering women with grants and training for sustainable livelihoods.',
               buttonText: 'Empower Communities',
             },
             {
-              image: 'https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/494171396_9503102649726249_4138975646496756975_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFZeIFloWfkk_CxG9_tICyZA6Ap4iufOYoDoCniK585inM_M_w99qlsoy0DAIHiehqeRtVwaDKJGWdNZ-udbmtf&_nc_ohc=BnSSv-NFyNcQ7kNvwG8stHQ&_nc_oc=AdmqOs7Pr5Z2Yi3ppK6ZbNoWlF4CtYKHK2hDgjF6ZVEzQkJoEA7-JcDV3zdPqOEC8WY&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=o6WGuMWbBgSZE5d3HflBSQ&oh=00_AfKs0lHKBMsLzC8arrTFkEjqOWxmFeleKybm0IoU7gkdFQ&oe=684660CD',
+              image: 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/489864149_9380395991996916_7669150771096563103_n_kmgslx.jpg',
               title: 'Shave or Braid the Orphan',
               description: 'Bringing dignity to orphans with free haircuts and braiding.',
               buttonText: 'Help Orphans',

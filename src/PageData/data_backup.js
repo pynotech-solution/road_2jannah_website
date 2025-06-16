@@ -191,6 +191,100 @@
           ]
         
         
+        },
+    {type: "album",
+        description:"Road 2 Jannah Foundation's RCO'24 hits New Bakpa in the Volta Region The Road 2 Jannah Foundation commenced this year's outreach project dubbed Ramadan Community Outreach  *RCO'24'* to the *New Bakpa* Community in the Central Tongu District of the Volta Region for its annual outreach Project on Friday 5th April, 2024.Every year the Foundation visits some selected Communities during Ramadan to ensure the needy there are not left out of the festive season by donating items provided by cooperate organizations and benevolent donors.The Foundation donated Rice, Oil, Sanitary pads, Maize, Clothes and Exercise Books along with a number of other items to these Communities.The Chief of New Bakpa, Togbe Sakpiti V expressed immense appreciation for the foundation's continuous effort over the years to support the needy through it's initiative and has urge organizations to lend more support to Road 2 Jannah Foundation to impact more lives.Togbe Sakpiti V called for more to be done in their education sector for children in the New Bakpa community, Still on the matter of education in the New Bakpa community,  Hon. Simon Kumashie,  AssemblyMan for Awadiwoe Kome also reiterates the challenges and is also adding his voice to Togbe Sakpiti V calling for support from donors across the globe to come to their aid.Let's make a Change together by donating any amount to support RCO'24 Phase Two Project The outreach was supported by Wilmar Gh, NLA Good Causes Foundation, Dawadawa Jollof Delight and Kingdom of Saudi Arabia ",
+        title: "Road 2 Jannah Foundation's RCO'24 hits New Bakpa in the Volta Region",
+        date: "20/04/2024",
+          media:[
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037398/1_ptkvjf.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037398/4_wepkvz.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037398/5_j2cipj.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037398/6_busodl.jpg",
+            },
+            
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037398/2_sk6yyt.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037398/3_ig11db.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037398/7_zxw4su.jpg",
+            },
+            
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037399/8_k8wjer.jpg",
+            },
+            
+        
+          ]
+        
+        
+        }
+    {type: "album",
+        description:"Road 2 Jannah  Foundation donates to Rahma Orphanage Home Road 2 Jannah (R2J) Foundation with support from KGL Foundation and Wilmar Ghana has made a significant donation to the orphans at Rahma Orphanage Home in Alajo, a suburb of the Ayawaso Central Constituency in the Greater Accra Region.The donation forms part of the foundations' annual project marking the end of Ramadan was made in the spirit of love, care and community support.The items donated included rice, oil, sanitary pads, beverages, toilet soaps, detergents, clothes, blueband bread spread, exercise books, and other essential goods.KGL Foundation and Wilmar Ghana, known for their support and commitment to community development over the years, has once again extended their support for this year's project.Speaking on behalf of the Executive Director of Road 2 Jannah Foundation, Mr. Kamaru Abdulai, the Foundation’s Public Relations Officer, Mr Yussif Okai, shared a message of  hope and compassion. He lamented about the outreach not just giving food items but creating a space where people feel seen, heard and supported especially during such a meaningful time of year. He as well thanked KGL Foundation and Wilmar Ghana for their tremendous support and help in making difference in the lives of the less privilege.The Proprietor of Rahma Orphanage Home, Sheikh Yusuf Musah, expressed heartfelt gratitude to Road 2 Jannah Foundation, KGL Foundation and Wilmar Ghana for their unwavering support in bringing joy to the lives of the orphans.He has added his voice to the call for supporting the Foundation's Borehole construction project to the underserved communities this year.",
+        title: "Road 2 Jannah Foundation donates to Rahma Orphanage Home",
+        date: "11/04/2025",
+          media:[
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037400/1_b3bmrb.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037422/2_hbibln.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037448/3_m7m8po.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037890/4_jj3yfk.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037890/6_ms6jyv.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037891/7_qnu8on.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037891/5_utxayx.jpg",
+            },
+            {
+                type: "video",
+                src: "https://res.cloudinary.com/dzqdfaghg/video/upload/v1750037902/QURAN_RECITE_kslxe0.mp4",
+            },
+            {
+                type: "video",
+                src: "https://res.cloudinary.com/dzqdfaghg/video/upload/v1750037913/snapsave-app_1199272497855023_sd_uxfljx.mp4",
+            },
+           
+        
+            
+        
+          ]
+        
+        
         }
 
 

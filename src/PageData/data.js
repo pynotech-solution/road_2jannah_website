@@ -163,7 +163,7 @@ media: [
         alt: "support the transformation agenda of our education sector through outreach.", caption: "support the transformation agenda of our education sector through outreach." },
 
     { type: "video",
-       src: "https://photos.app.goo.gl/7ofnrnFcpsaFJ5TE9",
+       src: "https://res.cloudinary.com/dzqdfaghg/video/upload/v1750039605/VIDEO_OF_PLEAD_vacvt3.mp4",
 
       
         alt: "Christian Atsu Education Complex*  orphanage Video",

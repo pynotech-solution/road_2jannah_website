@@ -108,13 +108,14 @@ function NewsModal_Con({ isModalOpen, selectedNews, closeModal }) {
       {/* Full-Screen Media Modal */}
       {isFullMediaModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[60] p-4">
-          <div className="relative w-full h-full max-w-[90vw] max-h-[90vh] flex items-center justify-center">
             <button
               onClick={closeFullMediaModal}
               className="absolute top-4 right-4 text-white hover:text-teal-200 text-2xl"
             >
               <X />
             </button>
+          <div className="relative w-full h-full max-w-[90vw] max-h-[90vh] flex items-center justify-center">
+          
             {renderMedia(selectedNews.media[currentMediaIndex], true)}
             {selectedNews.media.length > 1 && selectedNews.media[currentMediaIndex].type !== "facebook-video" && (
               <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-4">

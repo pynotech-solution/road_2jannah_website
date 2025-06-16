@@ -481,3 +481,14 @@ media: [
               buttonText: 'Help Orphans',
             },
           ];
+
+          export const missionVision =[
+            {
+              title: 'Our Mission',
+              content: 'Our Mission is to prevent and alleviate the increasing rate of vulnerability in society',
+            },
+            {
+              title: 'Our Vision',
+              content: 'Our Vision is to make the community a place of hope and transform lives through community outreach programmes.',
+            },
+          ]

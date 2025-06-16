@@ -13,9 +13,28 @@ import { img } from "framer-motion/client";
   { quote: "A good word is a charity.", attribution: "Prophet Muhammad (Peace Be Upon Him)" },
 ];
    export const programs = [
-    { title: "Ramadan Community Outreach", description: "During the holy month of Ramadan, we provide iftar meals, essential grains, and support to 1,000 families, ensuring no one goes hungry...", donateText: "Donate to Ramadan Outreach", image: "", alt: "Ramadan Community Outreach" },
-    { title: 'Medwuma Pa "Community Empowerment Outreach"', description: 'Medwuma Pa, meaning "Good Work" in Akan, supports sustainable livelihoods by providing small grants...', donateText: "Support Community Empowerment", image: "https://scontent.facc1-1.fna.fbcdn.net/v/t39.30808-6/495856015_9593036517399528_7973012033177796404_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeF9s2HMXtQ5tqrvQFcoHW3tzhbswQxN6qPOFuzBDE3qoyzUY_d6775ztpyZHxx0f8LCKFBx9Aunq93tnfCDHEpP&_nc_ohc=GOHE0ny2qbUQ7kNvwF5nuqp&_nc_oc=AdleZXBoE8iZ8UU0LU6ym8wnT7Hcly8wG310mA86Vq50rkrT0u5W9Vgcb6d52HoI0Ls&_nc_zt=23&_nc_ht=scontent.facc1-1.fna&_nc_gid=ApZEiMgQ-ac8joqUvaPypg&oh=00_AfJWZQXr-nVobre8cp72Vkv4-OTjOkYbX6I14KZ387ghWQ&oe=68466C17", alt: "Medwuma Pa Empowerment" },
-    { title: "Shave or Braid the Orphan", description: "This unique initiative offers free haircuts and braiding services to orphans...", donateText: "Help an Orphan", image: "https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-6/496940432_9621165381253308_5638857211374510766_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHoD6FckslT8lnzbi9AlpdBjpzEvfjxzXiOnMS9-PHNeMh4K_3HXwUiu7SNAf2XaDR_-ElfTLd6ffp_xc6OGC-u&_nc_ohc=v6mAellPu4oQ7kNvwEWUC50&_nc_oc=AdlYDHKJpvdvgQgvbaXiD5FLqy0D6KCKAWAwRc9rG5cjcWBQITkgi7yFmFYVZ7Qx6kk&_nc_zt=23&_nc_ht=scontent.facc6-1.fna&_nc_gid=wFid_3-U3Cs8IUV9XcBCQw&oh=00_AfKM96Z0s_tvuUY0ubBn5ifew1dnVLoIlbGKiGVkLRXbnQ&oe=684669C4", alt: "Shave or Braid the Orphan" },
+    { 
+      title: "Ramadan Community Outreach", 
+      description: "During the holy month of Ramadan, we provide iftar meals, essential grains, and support to 1,000 families, ensuring no one goes hungry...", 
+      donateText: "Donate to Ramadan Outreach", 
+      image: "", alt: "Ramadan Community Outreach",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494150289_9504480932921754_3623303014442368409_n_shi6nm.jpg", 
+
+    },
+
+    { 
+      title: 'Medwuma Pa "Community Empowerment Outreach"',
+      description: 'Medwuma Pa, meaning "Good Work" in Akan, supports sustainable livelihoods by providing small grants...', 
+      donateText: "Support Community Empowerment", 
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036913/3_se7ga6.jpg", 
+      alt: "Medwuma Pa Empowerment"
+     },
+
+    { 
+      title: "Shave or Braid the Orphan", 
+      description: "This unique initiative offers free haircuts and braiding services to orphans...", donateText: "Help an Orphan", 
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/489864149_9380395991996916_7669150771096563103_n_kmgslx.jpg", 
+      alt: "Shave or Braid the Orphan" },
   ];
 
  export const news = [

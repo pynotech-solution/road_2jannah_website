@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { Typewriter } from 'react-simple-typewriter';
 
 function Nav_Con() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleNavClick = (e, sectionId) => {
     e.preventDefault();
@@ -16,130 +15,95 @@ function Nav_Con() {
     } else {
       const section = document.getElementById(sectionId);
       if (section) {
-        const offset = 80; // Adjust based on navbar height (~64px for py-2 + padding)
+        const offset = 80;
         const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
     }
-    setIsMenuOpen(false); // Close mobile menu after clicking
+    setIsMenuOpen(false);
   };
 
-  // Animation variants
-  const logoVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
   };
 
-  const mottoVariants = {
-    hidden: { opacity: 0, width: 0 },
-    visible: { opacity: 1, width: 'auto', transition: { duration: 1, ease: 'easeOut', delay: 0.5 } },
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut'
+      }
+    }
   };
 
   return (
-    <nav className="bg-teal-800 text-white sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-2 md:py-4 flex justify-between items-center">
-        <div className="flex flex-col items-start">
+    <nav className="bg-teal-800 text-white sticky top-0 z-50 shadow-lg">
+      <div className="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
+        {/* Logo + Typing Motto */}
+        <motion.div
+          className="flex flex-col items-start"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
           <motion.a
             href="#home"
             onClick={(e) => handleNavClick(e, 'home')}
-            className="text-xl md:text-2xl font-bold hover:text-teal-200"
-            initial="hidden"
-            animate="visible"
-            variants={logoVariants}
+            className="text-2xl md:text-3xl font-extrabold tracking-tight hover:text-teal-200"
+            variants={itemVariants}
           >
             Road2Jannah Foundation
           </motion.a>
+
           <motion.p
-            className="text-sm md:text-base text-teal-100 italic font-light"
-            initial="hidden"
-            animate="visible"
-            variants={mottoVariants}
+            className="text-sm md:text-base text-teal-100 italic font-light mt-1"
+            variants={itemVariants}
           >
-            Resourcing the Communities Through Outreach
+            <Typewriter
+              words={['Resourcing the Communities Through Outreach']}
+              loop={0} // or use loop={Infinity} for infinite
+              cursor
+              cursorStyle="_"
+              typeSpeed={60}
+              deleteSpeed={30}
+              delaySpeed={2000}
+            />
           </motion.p>
-        </div>
+        </motion.div>
+
+        {/* Hamburger Icon */}
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-white focus:outline-none">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
+
+        {/* Navigation Links */}
         <ul
           className={`${
             isMenuOpen ? 'block' : 'hidden'
           } md:flex md:space-x-6 absolute md:static top-full left-0 w-full md:w-auto bg-teal-800 md:bg-transparent p-4 md:p-0`}
         >
-          <li>
-            <a
-              href="#home"
-              onClick={(e) => handleNavClick(e, 'home')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about"
-              onClick={(e) => handleNavClick(e, 'about')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#programs"
-              onClick={(e) => handleNavClick(e, 'programs')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              Programs
-            </a>
-          </li>
-          <li>
-            <a
-              href="#gallery"
-              onClick={(e) => handleNavClick(e, 'gallery')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              Gallery
-            </a>
-          </li>
-          <li>
-            <a
-              href="#news"
-              onClick={(e) => handleNavClick(e, 'news')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              News
-            </a>
-          </li>
-          <li>
-            <a
-              href="#donate"
-              onClick={(e) => handleNavClick(e, 'donate')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              Donate
-            </a>
-          </li>
-          <li>
-            <a
-              href="#faq"
-              onClick={(e) => handleNavClick(e, 'faq')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              FAQ
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              onClick={(e) => handleNavClick(e, 'contact')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              Contact
-            </a>
-          </li>
+          {['home', 'about', 'programs', 'gallery', 'news', 'donate', 'faq', 'contact'].map((id) => (
+            <li key={id}>
+              <a
+                href={`#${id}`}
+                onClick={(e) => handleNavClick(e, id)}
+                className="block py-2 md:py-0 hover:text-teal-200 capitalize"
+              >
+                {id}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import MissionVision from './MissionVision';
-import MissionVisionDiv from './MissionVisionDiv'; // Fixed typo
+import MissionVisionDiv from './MIssionVisionDiv'; // Fixed typo
 
 function About_Con() {
   const [isModalOpen, setIsModalOpen] = useState(false);

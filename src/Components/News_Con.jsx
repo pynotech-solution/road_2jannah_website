@@ -160,6 +160,7 @@ function News_Con({ featuredNews, news, openModal, updateFeaturedNews }) {
             {news.map((item, index) =>
               item !== featuredNews && (
                 <div
+                onClick={() => updateFeaturedNews(item)}
                   key={index}
                   className="bg-white p-4 rounded-lg shadow-md hover:bg-teal-50 transition animate-fadeInUp"
                   style={{ animationDelay: `${index * 0.2}s` }}
@@ -168,7 +169,7 @@ function News_Con({ featuredNews, news, openModal, updateFeaturedNews }) {
                   <p className="text-xs mb-1">{item.date}</p>
                   <h4 className="text-sm font-bold text-teal-800">{item.title}</h4>
                   <button
-                    onClick={() => updateFeaturedNews(item)}
+                onClick={() => openModal(featuredNews)}
                     className="mt-2 text-teal-600 font-semibold text-sm hover:text-teal-500"
                   >
                     → Read now

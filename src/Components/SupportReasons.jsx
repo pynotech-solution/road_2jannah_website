@@ -48,7 +48,7 @@ const SupportReasons = () => {
     },
     {
       title: "Road 2 Jannah provides exhaustive outreach nationwide",
-      src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037398/3_ig11db.jpg",
+      src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750126469/d1925ff1-b810-437b-9ff2-999ed42890b5.png",
       description: "With a nationwide network, Road 2 Jannah reaches even the most remote areas to deliver aid, education, and healthcare.",
     },
     {

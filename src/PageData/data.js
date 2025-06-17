@@ -2,7 +2,32 @@ import { img } from "framer-motion/client";
 
   
   
+  export const videos = [
+    {
+      title: "et's support R2J Foundation construct a Borehole for Anupensu,",
+      description: "Let's support R2J Foundation construct a Borehole for Anupensu, Sapeiman and provide Water Storage Tank for Dawhenya Autism Centre.Donate any amount to support this worthy course 🙏You And I Can Make A Change",
+      url: "https://res.cloudinary.com/dzqdfaghg/video/upload/v1750126431/snapsave-app_1264795514627225_hd_tx3ktf.mp4", 
+    },
+
+    {
+      title: "*Christian Atsu Education Complex* Outreach",
+      description: "The annual *Phase 2 Community Outreach* is here again.Help us in our quest to serve the underserved communities with good source of drinking water, feed, maintain and support *Christian Atsu Education Complex* ' orphanage 'Send your donations to ;Acc Name : Road 2 Jannah Foundation Momo No.: 0242 524634 Cheques: ROAD 2 JANNAH FOUNDATION",
+      url: "https://res.cloudinary.com/dzqdfaghg/video/upload/v1750036134/CHRITIAN_ATSU_rkhhsk.mp4", 
+    },
+    {
+      title: "INFOCUS ON HEALTHY MORNING LIVE ON HSTV",
+      description: "INFOCUS ON HEALTHY MORNING LIVE ON HSTV || 21/03/2024 KINDLY LIKE, SHARE AND FOLLOW THIS PAGE FOR MORE UPDATES.",
+      url: "https://res.cloudinary.com/dzqdfaghg/video/upload/v1750037016/TV_bwjpgd.mp4", 
+    },
   
+    
+    {
+      title: "R2J Foundation Borehole Construction for Gomoa Techiman Community",
+      description: "R2J Foundation is urging all to support the construction of new Borehole for Gomoa Techiman Community in the Gomoa West District, Central Region",
+      url: "https://res.cloudinary.com/dzqdfaghg/video/upload/v1750126441/snapsave-app_1294870344953075_sd_mjhxke.mp4", 
+    },
+  ];
+
   
   
     export const quotes = [

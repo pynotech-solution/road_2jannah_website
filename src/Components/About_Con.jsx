@@ -1,14 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import MissionVision from './MissionVision';
-import MissionVisionDiv from './MIssionVisionDiv'; // Fixed typo
+import MissionVisionDiv from './MissionVisionDiv';
+import VideoComponent from './VideoComponent';
+import { videos } from '../PageData/data';
 
 function About_Con() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const intervalRef = useRef(null);
   const [isSmallScreen, setIsSmallScreen] = useState(window.matchMedia("(max-width: 640px)").matches);
-  const modalRef = useRef(null); // Ref for the modal content
+  const modalRef = useRef(null);
 
   const fullText = [
     "Road2Jannah Foundation is dedicated to glorifying Allah (SWT) by uplifting vulnerable communities across the globe. Established with a vision to provide hope and support, we focus on initiatives that address poverty, education, and healthcare, ensuring that every individual has the opportunity to thrive. Our work is rooted in the principles of compassion, generosity, and faith, inspired by the teachings of Islam.",
@@ -16,7 +18,6 @@ function About_Con() {
     "We believe that small acts of charity can create a ripple effect of positive change. Whether it’s providing iftar meals during Ramadan or empowering women with vocational skills, our mission is to serve humanity and reflect the values of unity and care. Join us on this journey to make a difference and support the path to Jannah for all."
   ];
 
-  // Dynamically set preview text based on screen size
   const previewText = isSmallScreen ? fullText[0].slice(0, 250) + "..." : fullText[0].slice(0, 950) + "...";
 
   const toggleModal = () => {
@@ -31,16 +32,13 @@ function About_Con() {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + 4) % 4);
   };
 
-  // Auto-scroll logic
   useEffect(() => {
     intervalRef.current = setInterval(() => {
       nextSlide();
     }, 4000);
-
     return () => clearInterval(intervalRef.current);
   }, []);
 
-  // Handle screen size changes
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 640px)");
     const handleResize = (e) => setIsSmallScreen(e.matches);
@@ -55,13 +53,13 @@ function About_Con() {
     { title: "Empowering", description: "We create an environment for individuals to make confident decisions to help build a better community." },
   ];
 
-  // Handle click outside to close modal
   const handleOverlayClick = (e) => {
     if (modalRef.current && !modalRef.current.contains(e.target)) {
       toggleModal();
     }
   };
 
+  
   return (
     <article id="about" className="container mx-auto py-8 sm:py-12 px-4 max-w-5xl">
       <header className="text-center mb-6 sm:mb-8">
@@ -90,10 +88,13 @@ function About_Con() {
         <MissionVision
           currentIndex={currentIndex}
           nextSlide={nextSlide}
-          prevSlide={prevSlide} // Corrected from previewText
+          prevSlide={prevSlide}
           coreValues={coreValues}
         />
       </section>
+
+      {/* Video Component with Multiple Videos */}
+      <VideoComponent videos={videos} />
 
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50" onClick={handleOverlayClick}>

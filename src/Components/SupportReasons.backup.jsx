@@ -1,7 +1,33 @@
 import { motion } from 'framer-motion';
 
 const SupportReasons = () => {
- 
+  const supportReasons = [
+    {
+      title: "Road 2 Jannah is your local partner in community development",
+      description: "As a local partner, Road 2 Jannah works hand-in-hand with community leaders to design and implement development projects that address specific local needs, fostering sustainable growth and empowerment at the grassroots level.",
+      src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750116604/90c7a16d-d597-461f-bd5e-d5d6ce037b1a.png",
+    },
+    {
+      title: "Road 2 Jannah brings you closer to the community",
+      description: "Through volunteer opportunities and outreach programs, Road 2 Jannah connects supporters directly with the people they help, building bridges of understanding and shared purpose within the community.",
+      src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494051333_9489761157727065_7600707138854965521_n_wfs2yf.jpg",
+    },
+    {
+      title: "Road 2 Jannah provides you with an exhaustive community outreach in the entire country",
+      src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037398/3_ig11db.jpg",
+      description: "With a nationwide network, Road 2 Jannah ensures comprehensive support, reaching even the most remote areas to deliver aid, education, and healthcare to those in need across the country.",
+    },
+    {
+      title: "Road 2 Jannah Foundation is the best platform for the vulnerable communities",
+      src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750117310/43cb3586-3487-4a6a-b3d6-e026dc202fc5.png",
+      description: "Road 2 Jannah offers tailored programs that uplift vulnerable groups, providing resources, skills training, and advocacy to help them overcome challenges and thrive in a supportive environment.",
+    },
+    {
+      title: "Road 2 Jannah Foundation is a true reflection of the vulnerable communities",
+      description: "Rooted in the values and voices of the communities it serves, Road 2 Jannah ensures its initiatives are shaped by the real experiences and needs of those it aims to support.",
+      src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037049/3_dlwvub.jpg",
+    },
+  ];
 
   return (
     <div id="support-reasons" className="py-12 bg-gradient-to-b  from-teal-100 to-white text-center  mx-auto md:w-[80%] sm:w-[90%] w-full">

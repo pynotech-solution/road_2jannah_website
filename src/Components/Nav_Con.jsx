@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 function Nav_Con() {
@@ -15,7 +16,7 @@ function Nav_Con() {
     } else {
       const section = document.getElementById(sectionId);
       if (section) {
-        const offset = 80; // Adjust based on navbar height (~64px for py-4 + padding)
+        const offset = 80; // Adjust based on navbar height (~64px for py-2 + padding)
         const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
@@ -23,19 +24,40 @@ function Nav_Con() {
     setIsMenuOpen(false); // Close mobile menu after clicking
   };
 
+  // Animation variants
+  const logoVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+  };
 
-  
+  const mottoVariants = {
+    hidden: { opacity: 0, width: 0 },
+    visible: { opacity: 1, width: 'auto', transition: { duration: 1, ease: 'easeOut', delay: 0.5 } },
+  };
 
   return (
     <nav className="bg-teal-800 text-white sticky top-0 z-50">
       <div className="container mx-auto px-4 py-2 md:py-4 flex justify-between items-center">
-        <a
-          href="#home"
-          onClick={(e) => handleNavClick(e, 'home')}
-          className="text-xl md:text-2xl font-bold hover:text-teal-200"
-        >
-          Road2Jannah Foundation
-        </a>
+        <div className="flex flex-col items-start">
+          <motion.a
+            href="#home"
+            onClick={(e) => handleNavClick(e, 'home')}
+            className="text-xl md:text-2xl font-bold hover:text-teal-200"
+            initial="hidden"
+            animate="visible"
+            variants={logoVariants}
+          >
+            Road2Jannah Foundation
+          </motion.a>
+          <motion.p
+            className="text-sm md:text-base text-teal-100 italic font-light"
+            initial="hidden"
+            animate="visible"
+            variants={mottoVariants}
+          >
+            Resourcing the Communities Through Outreach
+          </motion.p>
+        </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-white focus:outline-none">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

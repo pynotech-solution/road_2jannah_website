@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
 const SupportReasons = () => {
   const scrollRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
+  const [showMotto, setShowMotto] = useState(false);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
-
     let scrollY = 0;
     let animationFrame;
 
@@ -15,7 +15,7 @@ const SupportReasons = () => {
       if (!isPaused && scrollContainer) {
         scrollY += 0.5;
         if (scrollY >= scrollContainer.scrollHeight - scrollContainer.clientHeight) {
-          scrollY = 0; // reset to top
+          scrollY = 0;
         }
         scrollContainer.scrollTop = scrollY;
       }
@@ -27,30 +27,38 @@ const SupportReasons = () => {
     return () => cancelAnimationFrame(animationFrame);
   }, [isPaused]);
 
- const supportReasons = [
+  // Toggle title and motto every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowMotto((prev) => !prev);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const supportReasons = [
     {
       title: "Road 2 Jannah is your local partner in community development",
-      description: "As a local partner, Road 2 Jannah works hand-in-hand with community leaders to design and implement development projects that address specific local needs, fostering sustainable growth and empowerment at the grassroots level.",
+      description: "As a local partner, Road 2 Jannah works hand-in-hand with community leaders to design and implement development projects that address specific local needs.",
       src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750116604/90c7a16d-d597-461f-bd5e-d5d6ce037b1a.png",
     },
     {
       title: "Road 2 Jannah brings you closer to the community",
-      description: "Through volunteer opportunities and outreach programs, Road 2 Jannah connects supporters directly with the people they help, building bridges of understanding and shared purpose within the community.",
+      description: "Through volunteer opportunities and outreach programs, Road 2 Jannah connects supporters directly with the people they help.",
       src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494051333_9489761157727065_7600707138854965521_n_wfs2yf.jpg",
     },
     {
-      title: "Road 2 Jannah provides you with an exhaustive community outreach in the entire country",
+      title: "Road 2 Jannah provides exhaustive outreach nationwide",
       src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037398/3_ig11db.jpg",
-      description: "With a nationwide network, Road 2 Jannah ensures comprehensive support, reaching even the most remote areas to deliver aid, education, and healthcare to those in need across the country.",
+      description: "With a nationwide network, Road 2 Jannah reaches even the most remote areas to deliver aid, education, and healthcare.",
     },
     {
-      title: "Road 2 Jannah Foundation is the best platform for the vulnerable communities",
+      title: "Road 2 Jannah Foundation supports vulnerable communities",
       src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750117310/43cb3586-3487-4a6a-b3d6-e026dc202fc5.png",
-      description: "Road 2 Jannah offers tailored programs that uplift vulnerable groups, providing resources, skills training, and advocacy to help them overcome challenges and thrive in a supportive environment.",
+      description: "Road 2 Jannah offers tailored programs, resources, and advocacy to help vulnerable groups overcome challenges.",
     },
     {
-      title: "Road 2 Jannah Foundation is a true reflection of the vulnerable communities",
-      description: "Rooted in the values and voices of the communities it serves, Road 2 Jannah ensures its initiatives are shaped by the real experiences and needs of those it aims to support.",
+      title: "Road 2 Jannah reflects the voices of communities",
+      description: "Rooted in community values, Road 2 Jannah ensures its initiatives are shaped by real experiences and needs.",
       src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037049/3_dlwvub.jpg",
     },
   ];
@@ -85,17 +93,37 @@ const SupportReasons = () => {
               transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
             >
               <div className="mb-2 sm:mb-4 text-center">
-    <div className="inline-block bg-gradient-to-r from-teal-500 to-green-400 text-white text-sm sm:text-base font-bold px-4 py-1 rounded-full shadow-md mb-3">
-    {index + 1}
-  </div>
-  <p className="text-lg sm:text-xl md:text-2xl font-semibold text-teal-800 mt-1 leading-snug">
-    {reason.title}
-  </p>
-  <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed mt-1">
-    {reason.description}
-  </p>
-</div>
+                <div className="inline-block bg-gradient-to-r from-teal-500 to-green-400 text-white text-sm sm:text-base font-bold px-4 py-1 rounded-full shadow-md mb-3">
+                  #{index + 1}
+                </div>
 
+                {/* Animate title and motto */}
+                <div className="min-h-[60px]">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={showMotto ? 'motto' : 'title'}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.6, ease: "easeInOut" }}
+                    >
+                      {!showMotto ? (
+                        <p className="text-xl sm:text-2xl font-bold text-teal-900 mt-1 mb-2 leading-snug">
+                          {reason.title}
+                        </p>
+                      ) : (
+                        <p className="text-xl sm:text-2xl italic text-teal-700 mt-1 mb-2">
+                          Empowering Communities, Changing Lives 🌍
+                        </p>
+                      )}
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+
+                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed mt-1">
+                  {reason.description}
+                </p>
+              </div>
             </motion.div>
 
             <motion.div

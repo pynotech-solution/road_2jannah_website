@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import MissionVision from './MissionVision';
-import MIssionVisionDiv from './MIssionVisionDiv';
+import MissionVisionDiv from './MissionVisionDiv'; // Fixed typo
 
 function About_Con() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,9 +35,9 @@ function About_Con() {
   useEffect(() => {
     intervalRef.current = setInterval(() => {
       nextSlide();
-    }, 4000); // 4 seconds for a smooth feel
+    }, 4000);
 
-    return () => clearInterval(intervalRef.current); // Cleanup interval on unmount
+    return () => clearInterval(intervalRef.current);
   }, []);
 
   // Handle screen size changes
@@ -87,13 +87,17 @@ function About_Con() {
             />
           </div>
         </div>
-        <MissionVision currentIndex={currentIndex} nextSlide={nextSlide} prevSlide={previewText} coreValues={coreValues} />
+        <MissionVision
+          currentIndex={currentIndex}
+          nextSlide={nextSlide}
+          prevSlide={prevSlide} // Corrected from previewText
+          coreValues={coreValues}
+        />
       </section>
 
-
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
-          <div className="bg-white rounded-xl shadow-2xl w-full max-w-[90vw] sm:max-w-3xl mx-4 p-6 sm:p-8 md:p-10 relative max-h-[90vh] sm:max-h-[85vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50" onClick={handleOverlayClick}>
+          <div ref={modalRef} className="bg-white rounded-xl shadow-2xl w-full max-w-[90vw] sm:max-w-3xl mx-4 p-6 sm:p-8 md:p-10 relative max-h-[90vh] sm:max-h-[85vh] overflow-y-auto">
             <button
               onClick={toggleModal}
               className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 transition-colors"
@@ -129,22 +133,16 @@ function About_Con() {
                 </p>
                 <div className="clear-both sm:clear-none"></div>
               </div>
-              <div className="my-6 sm:my-8" >
-
-                  <div        
-                    className={` inset-0 transition-opacity duration-500  w-full h-40`}
-                      style={{
-                        backgroundImage: 
-                        `url('https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494009957_9489761161060398_7555241959544768369_n_vmi8cs.jpg')`,
-                        backgroundSize: 'contain',
-                        backgroundPosition: 'center',
-                        // backgroundRepeat: 'no-repeat', 
-                        }}></div>
-                {/* <img
-                  src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494009957_9489761161060398_7555241959544768369_n_vmi8cs.jpg"
-                  alt="Community Outreach"
-                  className="w-full h-40 sm:h-60 object-contain rounded-lg shadow-md mx-auto"
-                /> */}
+              <div className="my-6 sm:my-8">
+                <div
+                  className="w-full h-40 sm:h-60 bg-cover bg-center transition-opacity duration-500"
+                  style={{
+                    backgroundImage: `url('https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494009957_9489761161060398_7555241959544768369_n_vmi8cs.jpg')`,
+                    backgroundSize: 'contain',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                  }}
+                />
                 <p className="text-xs sm:text-sm text-gray-500 text-center mt-2 italic">
                   Empowering through outreach and kindness
                 </p>
@@ -154,19 +152,18 @@ function About_Con() {
                 <img
                   src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/496940432_9621165381253308_5638857211374510766_n_eyfmqt.jpg"
                   alt="Community Unity"
-                  className="w-20 h-20 sm:w-32 sm:h-32 object-cover rounded-md shadow-md float-left mr-3 sm:mr-4 mt-1 "
+                  className="w-20 h-20 sm:w-32 sm:h-32 object-cover rounded-md shadow-md float-left mr-3 sm:mr-4 mt-1"
                 />
                 <p className="leading-relaxed text-justify first-letter:text-3xl sm:first-letter:text-4xl first-letter:font-bold first-letter:text-teal-800 first-letter:float-left first-letter:mr-2 sm:first-letter:mr-3">
                   {fullText[2]}
                 </p>
                 <div className="clear-both sm:clear-none"></div>
               </div>
-              {/* Mission, Vision, and Core Values in Modal */}
               <div className="mt-8">
-  <h4 className="text-xl sm:text-2xl font-serif font-bold text-teal-800 mb-4">Our Mission & Vision</h4>
-  <div className="border-t-2 border-teal-800 w-20 sm:w-24 mx-auto mb-6"></div>
-  <MIssionVisionDiv />
-</div>
+                <h4 className="text-xl sm:text-2xl font-serif font-bold text-teal-800 mb-4">Our Mission & Vision</h4>
+                <div className="border-t-2 border-teal-800 w-20 sm:w-24 mx-auto mb-6"></div>
+                <MissionVisionDiv />
+              </div>
             </div>
           </div>
         </div>

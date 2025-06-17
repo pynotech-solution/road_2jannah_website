@@ -84,12 +84,18 @@ const SupportReasons = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
             >
-              <p className="text-base sm:text-lg md:text-xl font-semibold text-teal-800 leading-relaxed mb-1 sm:mb-2 truncate">
-                #{index + 1} {reason.title}
-              </p>
-              <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
-                {reason.description}
-              </p>
+              <div className="mb-2 sm:mb-4 text-center">
+    <div className="inline-block bg-gradient-to-r from-teal-500 to-green-400 text-white text-sm sm:text-base font-bold px-4 py-1 rounded-full shadow-md mb-3">
+    {index + 1}
+  </div>
+  <p className="text-lg sm:text-xl md:text-2xl font-semibold text-teal-800 mt-1 leading-snug">
+    {reason.title}
+  </p>
+  <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed mt-1">
+    {reason.description}
+  </p>
+</div>
+
             </motion.div>
 
             <motion.div

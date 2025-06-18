@@ -38,19 +38,37 @@ function Nav_Con() {
   return (
     <nav className="bg-teal-800 text-white sticky top-0 z-50">
       <div className="container mx-auto px-4 py-2 md:py-4 flex justify-between items-center">
-        <div className="flex flex-col items-start">
+        <div className="flex  items-start">
 
-          <img src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/472206263_8807425239293997_4094478365450783416_n_xeyctj.jpg" alt="" />
-          <motion.a
+          <img 
+          src="
+          https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/472206263_8807425239293997_4094478365450783416_n_xeyctj.jpg
+          "
+          alt="road3jannah logo"
+          className="w-12 h-12 rounded-full mb-2"
+          loading="lazy"
+
+          
+          />
+          <div className="">
+            <motion.a
             href="#home"
             onClick={(e) => handleNavClick(e, 'home')}
-            className="text-xl md:text-2xl font-bold hover:text-teal-200"
+            className="text-[.9rem] md:text-2xl font-bold hover:text-teal-200"
             initial="hidden"
             animate="visible"
             variants={logoVariants}
           >
             Road2Jannah Foundation
           </motion.a>
+            <motion.p
+              initial="hidden"
+              animate="visible"
+              variants={logoVariants}
+            >
+              Resourcing the Communities Through Outreach
+            </motion.p>
+          </div>
           {/* <motion.p
             className="text-sm md:text-base text-teal-100 italic font-light"
             initial="hidden"

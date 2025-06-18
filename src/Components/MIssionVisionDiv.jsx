@@ -1,7 +1,7 @@
 import React from 'react'
 import { missionVision } from '../PageData/data'
 
-const MIssionVisionDiv = () => {
+const MissionVisionDiv = () => {
   return (
      <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
           {missionVision.map((item, index) => (
@@ -23,4 +23,4 @@ const MIssionVisionDiv = () => {
   )
 }
 
-export default MIssionVisionDiv
+export default MissionVisionDiv

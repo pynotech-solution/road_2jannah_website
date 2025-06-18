@@ -4,13 +4,16 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-// Dual-line typewriter
-function useTwoLineTypewriter(name, motto, speed = 100, pause = 1500) {
+// Custom hook to animate name + alternating mottos
+function useTwoLineTypewriter(name, mottos, speed = 100, pause = 1500) {
   const [nameText, setNameText] = useState('');
   const [mottoText, setMottoText] = useState('');
-  const [phase, setPhase] = useState('typingName'); // typingMotto, deletingName, deletingMotto
+  const [phase, setPhase] = useState('typingName');
   const [index, setIndex] = useState(0);
+  const [mottoIndex, setMottoIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
+
+  const currentMotto = mottos[mottoIndex];
 
   useEffect(() => {
     let timeout;
@@ -31,9 +34,9 @@ function useTwoLineTypewriter(name, motto, speed = 100, pause = 1500) {
         break;
 
       case 'typingMotto':
-        if (index < motto.length) {
+        if (index < currentMotto.length) {
           timeout = setTimeout(() => {
-            setMottoText((prev) => prev + motto[index]);
+            setMottoText((prev) => prev + currentMotto[index]);
             setIndex(index + 1);
           }, speed);
         } else {
@@ -52,7 +55,7 @@ function useTwoLineTypewriter(name, motto, speed = 100, pause = 1500) {
           }, speed);
         } else {
           timeout = setTimeout(() => {
-            setIndex(motto.length - 1);
+            setIndex(currentMotto.length - 1);
             setPhase('deletingMotto');
           }, pause);
         }
@@ -66,6 +69,7 @@ function useTwoLineTypewriter(name, motto, speed = 100, pause = 1500) {
           }, speed);
         } else {
           timeout = setTimeout(() => {
+            setMottoIndex((prev) => (prev + 1) % mottos.length);
             setIndex(0);
             setPhase('typingName');
           }, pause);
@@ -77,9 +81,8 @@ function useTwoLineTypewriter(name, motto, speed = 100, pause = 1500) {
     }
 
     return () => clearTimeout(timeout);
-  }, [phase, index, name, motto, speed, pause]);
+  }, [phase, index, name, currentMotto, speed, pause]);
 
-  // Cursor blink
   useEffect(() => {
     const interval = setInterval(() => {
       setShowCursor((prev) => !prev);
@@ -88,13 +91,15 @@ function useTwoLineTypewriter(name, motto, speed = 100, pause = 1500) {
   }, []);
 
   return {
-    nameLine: nameText + (showCursor && (phase === 'typingName' || phase === 'deletingName') ? '|' : ''),
-    mottoLine: mottoText + (showCursor && (phase === 'typingMotto' || phase === 'deletingMotto') ? '|' : ''),
+    nameLine: nameText + (showCursor && phase.includes('Name') ? '|' : ''),
+mottoLine: mottoText + (showCursor && phase.includes('Motto') ? '|' : ''),
+
   };
 }
 
 function Nav_Con() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleNavClick = (e, sectionId) => {
@@ -112,7 +117,9 @@ function Nav_Con() {
 
   const { nameLine, mottoLine } = useTwoLineTypewriter(
     'Road2Jannah Foundation',
-    'Resourcing the Communities Through Outreach',
+    [
+      'Resourcing the Communities Through Outreach',
+       "Touching Hearts, Changing Lives",    ],
     70,
     1500
   );
@@ -140,31 +147,30 @@ function Nav_Con() {
           />
 
           <div className="whitespace-nowrap flex flex-col justify-center leading-tight">
-  <motion.div
-    initial="hidden"
-    animate="visible"
-    variants={{
-      hidden: { opacity: 0, y: 10 },
-      visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-    }}
-    className="text-[.8rem] md:text-[.9rem] font-bold hover:text-teal-200 typewriter-text min-h-[1.25rem]"
-  >
-    {nameLine || <span>&nbsp;</span>}
-  </motion.div>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+              }}
+              className="text-[.8rem] md:text-[.9rem] font-bold hover:text-teal-200 typewriter-text min-h-[1.25rem]"
+            >
+              {nameLine || <span>&nbsp;</span>}
+            </motion.div>
 
-  <motion.div
-    initial="hidden"
-    animate="visible"
-    variants={{
-      hidden: { opacity: 0, y: 10 },
-      visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-    }}
-    className="text-[.6rem] md:text-[] lg:text-sm text-teal-100 italic font-light typewriter-text min-h-[1.2rem]"
-  >
-    {mottoLine || <span>&nbsp;</span>}
-  </motion.div>
-</div>
-
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+              }}
+              className="text-[.6rem] md:text-sm lg:text-sm text-teal-100 italic font-light typewriter-text min-h-[1.2rem]"
+            >
+              {mottoLine || <span>&nbsp;</span>}
+            </motion.div>
+          </div>
         </div>
 
         <div className="md:hidden">

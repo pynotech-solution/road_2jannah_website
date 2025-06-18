@@ -85,7 +85,7 @@ function About_Con() {
             />
           </div>
         </div>
-        <MissionVision
+        <MissionVisionDiv
           currentIndex={currentIndex}
           nextSlide={nextSlide}
           prevSlide={prevSlide}
@@ -99,9 +99,10 @@ function About_Con() {
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50" onClick={handleOverlayClick}>
           <div ref={modalRef} className="bg-white rounded-xl shadow-2xl w-full max-w-[90vw] sm:max-w-3xl mx-4 p-6 sm:p-8 md:p-10 relative max-h-[90vh] sm:max-h-[85vh] overflow-y-auto">
-            <button
+            <div className="flex justify-end">
+              <button
               onClick={toggleModal}
-              className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 transition-colors"
+              className=" top-4 right-4 text-white bg-red-500 hover:bg-red-700 hover:text-white transition-colors"
             >
               <svg
                 className="w-6 sm:w-8 h-6 sm:h-8"
@@ -118,6 +119,7 @@ function About_Con() {
                 />
               </svg>
             </button>
+            </div>
             <div className="prose prose-base sm:prose-lg text-gray-800">
               <h3 className="text-2xl sm:text-3xl font-serif font-bold text-teal-800 mb-4 sm:mb-6 text-center tracking-tight">
                 About Road2Jannah Foundation

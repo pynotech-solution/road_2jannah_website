@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
-import MIssionVisionDiv from './MIssionVisionDiv';
+import MIssionVisionDiv from './MissionVisionDiv';
 
 const MissionVision = ({coreValues,nextSlide,prevSlide,currentIndex}) => {
   return (

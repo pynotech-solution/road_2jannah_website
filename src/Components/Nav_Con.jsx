@@ -4,98 +4,133 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-// Typewriter with typing + deleting + infinite loop
-function useTypewriterLoop(texts, speed = 100, pause = 1500) {
-  const [textIndex, setTextIndex] = useState(0);
-  const [displayed, setDisplayed] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [charIndex, setCharIndex] = useState(0);
+// Dual-line typewriter
+function useTwoLineTypewriter(name, motto, speed = 100, pause = 1500) {
+  const [nameText, setNameText] = useState('');
+  const [mottoText, setMottoText] = useState('');
+  const [phase, setPhase] = useState('typingName'); // typingMotto, deletingName, deletingMotto
+  const [index, setIndex] = useState(0);
+  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
-    const currentText = texts[textIndex];
     let timeout;
 
-    if (!isDeleting) {
-      if (charIndex < currentText.length) {
-        timeout = setTimeout(() => {
-          setDisplayed((prev) => prev + currentText[charIndex]);
-          setCharIndex((prev) => prev + 1);
-        }, speed);
-      } else {
-        timeout = setTimeout(() => setIsDeleting(true), pause);
-      }
-    } else {
-      if (charIndex > 0) {
-        timeout = setTimeout(() => {
-          setDisplayed((prev) => prev.slice(0, -1));
-          setCharIndex((prev) => prev - 1);
-        }, speed / 2);
-      } else {
-        timeout = setTimeout(() => {
-          setIsDeleting(false);
-          setTextIndex((prev) => (prev + 1) % texts.length);
-        }, pause / 2);
-      }
+    switch (phase) {
+      case 'typingName':
+        if (index < name.length) {
+          timeout = setTimeout(() => {
+            setNameText((prev) => prev + name[index]);
+            setIndex(index + 1);
+          }, speed);
+        } else {
+          timeout = setTimeout(() => {
+            setIndex(0);
+            setPhase('typingMotto');
+          }, pause);
+        }
+        break;
+
+      case 'typingMotto':
+        if (index < motto.length) {
+          timeout = setTimeout(() => {
+            setMottoText((prev) => prev + motto[index]);
+            setIndex(index + 1);
+          }, speed);
+        } else {
+          timeout = setTimeout(() => {
+            setIndex(name.length - 1);
+            setPhase('deletingName');
+          }, pause);
+        }
+        break;
+
+      case 'deletingName':
+        if (index >= 0) {
+          timeout = setTimeout(() => {
+            setNameText((prev) => prev.slice(0, -1));
+            setIndex(index - 1);
+          }, speed);
+        } else {
+          timeout = setTimeout(() => {
+            setIndex(motto.length - 1);
+            setPhase('deletingMotto');
+          }, pause);
+        }
+        break;
+
+      case 'deletingMotto':
+        if (index >= 0) {
+          timeout = setTimeout(() => {
+            setMottoText((prev) => prev.slice(0, -1));
+            setIndex(index - 1);
+          }, speed);
+        } else {
+          timeout = setTimeout(() => {
+            setIndex(0);
+            setPhase('typingName');
+          }, pause);
+        }
+        break;
+
+      default:
+        break;
     }
 
     return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, textIndex, texts, speed, pause]);
+  }, [phase, index, name, motto, speed, pause]);
 
-  return displayed;
+  // Cursor blink
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowCursor((prev) => !prev);
+    }, 500);
+    return () => clearInterval(interval);
+  }, []);
+
+  return {
+    nameLine: nameText + (showCursor && (phase === 'typingName' || phase === 'deletingName') ? '|' : ''),
+    mottoLine: mottoText + (showCursor && (phase === 'typingMotto' || phase === 'deletingMotto') ? '|' : ''),
+  };
 }
 
 function Nav_Con() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleNavClick = (e, sectionId) => {
     e.preventDefault();
+    const section = document.getElementById(sectionId);
     if (sectionId === 'home') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        const offset = 80;
-        const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
+    } else if (section) {
+      const offset = 80;
+      const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
     setIsMenuOpen(false);
   };
 
-  const logoVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
-  };
-
-  // Use typewriter loop
-  const textList = [
+  const { nameLine, mottoLine } = useTwoLineTypewriter(
     'Road2Jannah Foundation',
     'Resourcing the Communities Through Outreach',
-  ];
-  const animatedText = useTypewriterLoop(textList, 80, 2000);
+    70,
+    1500
+  );
 
   return (
     <nav className="bg-teal-800 text-white sticky top-1 z-50 max-w-[1800px] mx-auto">
       <style>
         {`
-          .blinking-cursor {
-            display: inline-block;
-            width: 1px;
-            background-color: white;
-            margin-left: 2px;
-            animation: blink 1s steps(2, start) infinite;
-          }
-          @keyframes blink {
-            to {
-              visibility: hidden;
-            }
+          .typewriter-text {
+            font-family: monospace;
+            white-space: nowrap;
+            overflow: hidden;
           }
         `}
       </style>
 
       <div className="containe mx-auto px-4 sm:px-4 lg:px-10 py-2 flex justify-between items-center gap-4">
+
         <div className="flex gap-2 items-start">
           <img 
             src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/472206263_8807425239293997_4094478365450783416_n_xeyctj.jpg"
@@ -104,17 +139,32 @@ function Nav_Con() {
             loading="lazy"
           />
 
-          <div className="whitespace-nowrap flex flex-col justify-center gap-1">
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={logoVariants}
-              className="text-[.8rem] md:text-[.9rem] font-bold hover:text-teal-200"
-            >
-              {animatedText}
-              <span className="blinking-cursor">&nbsp;</span>
-            </motion.div>
-          </div>
+          <div className="whitespace-nowrap flex flex-col justify-center leading-tight">
+  <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={{
+      hidden: { opacity: 0, y: 10 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    }}
+    className="text-[.8rem] md:text-[.9rem] font-bold hover:text-teal-200 typewriter-text min-h-[1.25rem]"
+  >
+    {nameLine || <span>&nbsp;</span>}
+  </motion.div>
+
+  <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={{
+      hidden: { opacity: 0, y: 10 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    }}
+    className="text-[.6rem] md:text-[] lg:text-sm text-teal-100 italic font-light typewriter-text min-h-[1.2rem]"
+  >
+    {mottoLine || <span>&nbsp;</span>}
+  </motion.div>
+</div>
+
         </div>
 
         <div className="md:hidden">

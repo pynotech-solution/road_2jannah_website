@@ -85,7 +85,7 @@ function About_Con() {
             />
           </div>
         </div>
-        <MissionVisionDiv
+        <MissionVision
           currentIndex={currentIndex}
           nextSlide={nextSlide}
           prevSlide={prevSlide}
@@ -99,10 +99,10 @@ function About_Con() {
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50" onClick={handleOverlayClick}>
           <div ref={modalRef} className="bg-white rounded-xl shadow-2xl w-full max-w-[90vw] sm:max-w-3xl mx-4 p-6 sm:p-8 md:p-10 relative max-h-[90vh] sm:max-h-[85vh] overflow-y-auto">
-            <div className="flex justify-end">
+            <div className="flex justify-end cursor-pointer mb-3">
               <button
               onClick={toggleModal}
-              className=" top-4 right-4 text-white bg-red-500 hover:bg-red-700 hover:scale-110 transition duration-300 "
+              className=" top-4 right-4  text-white bg-red-500 hover:bg-red-700 hover:scale-110 transition duration-300 "
             >
               <svg
                 className="w-6 sm:w-8 h-6 sm:h-8"

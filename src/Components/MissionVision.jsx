@@ -45,13 +45,13 @@ const MissionVision = ({coreValues,nextSlide,prevSlide,currentIndex}) => {
                 </AnimatePresence>
                 <button
                   onClick={prevSlide}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-teal-800 text-white p-2 rounded-full hover:bg-teal-600 transition-colors"
+                  className="absolute left-1 sm:left-4 top-1/2 transform -translate-y-1/2 bg-teal-800 text-white p-2 rounded-full hover:bg-teal-600 transition-colors"
                 >
                   ‹
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-teal-800 text-white p-2 rounded-full hover:bg-teal-600 transition-colors"
+                  className="absolute right-1 sm:right-4 top-1/2 transform -translate-y-1/2 bg-teal-800 text-white p-2 rounded-full hover:bg-teal-600 transition-colors"
                 >
                   ›
                 </button>

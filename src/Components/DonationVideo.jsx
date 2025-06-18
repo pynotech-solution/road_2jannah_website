@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-function DonationVideo({ videos, donateRef }) {
+function DonationVideo({ videos, openDonationModal }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextVideo = () => {
@@ -12,9 +12,12 @@ function DonationVideo({ videos, donateRef }) {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + videos.length) % videos.length);
   };
 
-  const handleDonateClick = () => {
+  const handleDonateClick = (e) => {
+    e.preventDefault();
     if (donateRef && donateRef.current) {
-      donateRef.current.scrollIntoView({ behavior: 'smooth' });
+      const offset = 80; // Offset to account for fixed nav or other headers
+      const y = donateRef.current.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
@@ -43,7 +46,7 @@ function DonationVideo({ videos, donateRef }) {
               <h3 className="text-lg sm:text-xl font-semibold mb-2">Support Our Mission</h3>
               <p className="text-sm sm:text-base mb-4">Your donation can make a difference in uplifting communities. Every contribution helps provide essential support.</p>
               <button
-                onClick={handleDonateClick}
+                onClick={openDonationModal}
                 className="inline-block bg-white text-teal-800 font-bold py-2 px-4 rounded hover:bg-teal-100 transition-colors"
               >
                 Donate Now
@@ -109,7 +112,7 @@ function DonationVideo({ videos, donateRef }) {
             <h3 className="text-lg sm:text-xl font-semibold mb-2">Support Our Mission</h3>
             <p className="text-sm sm:text-base mb-4">Your donation can make a difference in uplifting communities. Every contribution helps provide essential support.</p>
             <button
-              onClick={handleDonateClick}
+              onClick={openDonationModal}
               className="inline-block bg-white text-teal-800 font-bold py-2 px-4 rounded hover:bg-teal-100 transition-colors"
             >
               Donate Now

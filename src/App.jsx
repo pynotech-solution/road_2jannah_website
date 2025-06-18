@@ -17,7 +17,7 @@ import FAQ_Con from './components/FAQ_Con';
 import Footer_Con from './components/Footer_Con';
 import MissionVision from './components/MissionVision';
 import SupportReasons from './components/SupportReasons';
-import {  programs, quotes, videos } from './PageData/data';
+import {  donatevideo, programs, quotes, videos } from './PageData/data';
 import { news,gallery } from './PageData/data_backup';
 import DonationVideo from './components/DonationVideo';
 
@@ -182,7 +182,7 @@ function App() {
       <SupportReasons />
 
 
-      <DonationVideo  videos={videos}/>
+      <DonationVideo openDonationModal={openDonationModal}  videos={donatevideo}/>
 
       <Donate_Con openDonationModal={openDonationModal} />
         

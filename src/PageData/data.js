@@ -1,10 +1,19 @@
 import { img } from "framer-motion/client";
 
+
+
+export const donatevideo = [
+    {
+      title: "Please let's donate any amount or kind gestures to support RCO'25",
+      url: "https://res.cloudinary.com/dzqdfaghg/video/upload/v1750126428/snapsave-app_1067334074373371_sd_onmqqh.mp4", 
+    },
+
+]
   
   
   export const videos = [
     {
-      title: "et's support R2J Foundation construct a Borehole for Anupensu,",
+      title: "Let's support R2J Foundation construct a Borehole for Anupensu,",
       description: "Let's support R2J Foundation construct a Borehole for Anupensu, Sapeiman and provide Water Storage Tank for Dawhenya Autism Centre.Donate any amount to support this worthy course 🙏You And I Can Make A Change",
       url: "https://res.cloudinary.com/dzqdfaghg/video/upload/v1750126431/snapsave-app_1264795514627225_hd_tx3ktf.mp4", 
     },

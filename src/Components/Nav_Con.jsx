@@ -1,6 +1,44 @@
-import { useState } from 'react';
+// Eugene Afriyie UEB3502023
+
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+
+// Enhanced typewriter hook
+function useTypewriterSequence(sequence, speed = 50, pause = 1500) {
+  const [index, setIndex] = useState(0);        // current character
+  const [textIndex, setTextIndex] = useState(0); // current string
+  const [displayed, setDisplayed] = useState('');
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    let timeout;
+
+    if (textIndex < sequence.length) {
+      const text = sequence[textIndex];
+      if (index < text.length) {
+        timeout = setTimeout(() => {
+          setDisplayed((prev) => prev + text[index]);
+          setIndex(index + 1);
+        }, speed);
+      } else {
+        timeout = setTimeout(() => {
+          setDisplayed('');
+          setIndex(0);
+          setTextIndex((prev) => (prev + 1) % sequence.length);
+        }, pause);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [index, textIndex, sequence, speed, pause]);
+
+  useEffect(() => {
+    setDone(displayed.length === sequence[textIndex].length);
+  }, [displayed, textIndex, sequence]);
+
+  return [displayed, textIndex, done];
+}
 
 function Nav_Con() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,69 +54,59 @@ function Nav_Con() {
     } else {
       const section = document.getElementById(sectionId);
       if (section) {
-        const offset = 80; // Adjust based on navbar height (~64px for py-2 + padding)
+        const offset = 80;
         const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
     }
-    setIsMenuOpen(false); // Close mobile menu after clicking
+    setIsMenuOpen(false);
   };
 
-  // Animation variants
   const logoVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
   };
 
-  // const mottoVariants = {
-  //   hidden: { opacity: 0, width: 0 },
-  //   visible: { opacity: 1, width: 'auto', transition: { duration: 1, ease: 'easeOut', delay: 0.5 } },
-  // };
+  // Typewriter Logic
+  const [nameText, nameIndex, nameDone] = useTypewriterSequence(['Road2Jannah Foundation'], 70, 2000);
+  const [mottoText, ,] = useTypewriterSequence(
+    nameDone ? ['Resourcing the Communities Through Outreach'] : [''],
+    60,
+    2000
+  );
 
   return (
     <nav className="bg-teal-800 text-white sticky top-1 z-50 max-w-[1800px] mx-auto">
-      <div className="containe mx-auto px-4 sm:px-4 lg:px-10 py-2  flex justify-between items-center gap-4">
+      <div className="containe mx-auto px-4 sm:px-4 lg:px-10 py-2 flex justify-between items-center gap-4">
 
-        <div className="flex gap-2 items-start ">
-
+        <div className="flex gap-2 items-start">
           <img 
-          src="
-          https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/472206263_8807425239293997_4094478365450783416_n_xeyctj.jpg
-          "
-          alt="road3jannah logo"
-          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mb-2"
-          loading="lazy"
-
-          
+            src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/472206263_8807425239293997_4094478365450783416_n_xeyctj.jpg"
+            alt="road3jannah logo"
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mb-2"
+            loading="lazy"
           />
-          <div className=" whitespace-nowrap flex flex-col justify-center gap-1">
+
+          <div className="whitespace-nowrap flex flex-col justify-center gap-1">
             <motion.a
-            href="#home"
-            onClick={(e) => handleNavClick(e, 'home')}
-            className="text-[.8rem] md:text-[.9rem] font-bold hover:text-teal-200"
-            initial="hidden"
-            animate="visible"
-            variants={logoVariants}
-          >
-            Road2Jannah Foundation
-          </motion.a>
+              href="#home"
+              onClick={(e) => handleNavClick(e, 'home')}
+              className="text-[.8rem] md:text-[.9rem] font-bold hover:text-teal-200"
+              initial="hidden"
+              animate="visible"
+              variants={logoVariants}
+            >
+              {nameText}
+            </motion.a>
             <motion.p
               initial="hidden"
               animate="visible"
               variants={logoVariants}
-              className='text-[.6rem] md:text-[] lg:text-sm text-teal-100 italic font-light'
+              className="text-[.6rem] md:text-[] lg:text-sm text-teal-100 italic font-light"
             >
-              Resourcing the Communities Through Outreach
+              {mottoText}
             </motion.p>
           </div>
-          {/* <motion.p
-            className="text-sm md:text-base text-teal-100 italic font-light"
-            initial="hidden"
-            animate="visible"
-            variants={mottoVariants}
-          >
-            Resourcing the Communities Through Outreach
-          </motion.p> */}
         </div>
 
         <div className="md:hidden">
@@ -86,87 +114,29 @@ function Nav_Con() {
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
+
         <ul
           className={`${
             isMenuOpen ? 'block' : 'hidden'
           } md:flex md:space-x-3 lg:space-x-6 absolute md:static top-full left-0 w-full md:w-auto bg-teal-800 md:bg-transparent p-4 md:p-0`}
         >
-          <li>
-            <a
-              href="#home"
-              onClick={(e) => handleNavClick(e, 'home')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about"
-              onClick={(e) => handleNavClick(e, 'about')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#programs"
-              onClick={(e) => handleNavClick(e, 'programs')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              Programs
-            </a>
-          </li>
-          <li>
-            <a
-              href="#gallery"
-              onClick={(e) => handleNavClick(e, 'gallery')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              Gallery
-            </a>
-          </li>
-          <li>
-            <a
-              href="#news"
-              onClick={(e) => handleNavClick(e, 'news')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              News
-            </a>
-          </li>
-          <li>
-            <a
-              href="#donate"
-              onClick={(e) => handleNavClick(e, 'donate')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              Donate
-            </a>
-          </li>
-          <li>
-            <a
-              href="#faq"
-              onClick={(e) => handleNavClick(e, 'faq')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              FAQ
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              onClick={(e) => handleNavClick(e, 'contact')}
-              className="block py-2 md:py-0 hover:text-teal-200"
-            >
-              Contact
-            </a>
-          </li>
+          {[
+            'home', 'about', 'programs', 'gallery', 'news', 'donate', 'faq', 'contact'
+          ].map(section => (
+            <li key={section}>
+              <a
+                href={`#${section}`}
+                onClick={(e) => handleNavClick(e, section)}
+                className="block py-2 md:py-0 hover:text-teal-200 capitalize"
+              >
+                {section}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
   );
 }
 
-export default Nav_Con; 
+export default Nav_Con;

@@ -125,7 +125,7 @@ function Nav_Con() {
   );
 
   return (
-    <nav className="bg-teal-800 text-white sticky top-1 z-50 max-w-[1800px] mx-auto">
+    <nav className="bg-teal-800 text-white sticky top-0 z-50 max-w-[1800px] mx-auto">
       <style>
         {`
           .typewriter-text {

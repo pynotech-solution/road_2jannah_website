@@ -8,19 +8,7 @@ function Contact_Con({ openContactModal }) {
   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
     <h1 className="text-4xl font-bold text-white">Contact Us</h1>
   </div>
-  {/* Fallback if image fails to load */}
-  {(() => {
-    const img = new Image();
-    img.src = 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/493835824_9489760884393759_2944748360786138881_n_ozbgsg.jpg';
-    if (!img.complete || img.naturalWidth === 0) {
-      return (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-300">
-          <p className="text-white text-lg">Image not available</p>
-        </div>
-      );
-    }
-    return null;
-  })()}
+ 
 </div>
         <div className="bg-white rounded-lg shadow-md p-8 mx-auto">
           <h2 className="text-2xl font-bold text-teal-800 mb-6 text-center">Get in Touch</h2>

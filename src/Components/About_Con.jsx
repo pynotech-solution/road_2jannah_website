@@ -102,7 +102,7 @@ function About_Con() {
             <div className="flex justify-end">
               <button
               onClick={toggleModal}
-              className=" top-4 right-4 text-white bg-red-500 hover:bg-red-700 hover:text-white transition-colors"
+              className=" top-4 right-4 text-white bg-red-500 hover:bg-red-700 hover:scale-110 transition duration-300 "
             >
               <svg
                 className="w-6 sm:w-8 h-6 sm:h-8"

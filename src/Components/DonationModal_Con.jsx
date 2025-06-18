@@ -10,7 +10,24 @@ function DonationModal_Con({ isDonationModalOpen, closeDonationModal, copyToClip
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={handleOverlayClick}>
       <div className="bg-white rounded-lg p-6 max-w-lg w-full mx-4 relative" onClick={(e) => e.stopPropagation()}>
-        <button onClick={closeDonationModal} className="absolute top-2 right-2 text-teal-800 hover:text-teal-600 hover:scale-110 transition duration-300 text-xl">×</button>
+     <div className="flex justify-end cursor-pointer mb-3">
+         <button onClick={closeDonationModal} className=" top-2 right-2 text-white bg-red-500 hover:bg-red-700 hover:scale-110 transition duration-300 text-xl">
+           <svg
+                className="w-6 sm:w-8 h-6 sm:h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+        </button>
+     </div>
         <h3 className="text-2xl font-bold text-teal-800 mb-4 text-center">Donation Details</h3>
         <div className="border-t border-teal-800 w-16 mx-auto mb-4"></div>
         <p className="text-gray-700 text-lg text-center">Please make your donation to the following accounts:</p>

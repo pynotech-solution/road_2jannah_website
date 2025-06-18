@@ -72,7 +72,7 @@ function NewsModal_Con({ isModalOpen, selectedNews, closeModal }) {
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
         <div className="bg-white rounded-lg p-6 max-w-lg w-full mx-4 relative max-h-[90vh] overflow-y-auto">
           <div className="flex justify-end cursor-pointer mb-3">
-            <button onClick={closeModal} className=" top-2 right-2 text-white bg-red-500 hover:bg-red-700 hover:text-white0 text-xl">
+            <button onClick={closeModal} className=" top-2 right-2 text-white bg-red-500 hover:bg-red-700 hover:scale-110 transition duration-300  text-xl">
              <svg
                 className="w-6 sm:w-8 h-6 sm:h-8"
                 fill="none"

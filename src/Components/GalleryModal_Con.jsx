@@ -17,7 +17,7 @@ function GalleryModal_Con({ selectedGalleryItem, currentIndex, closeGalleryModal
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-end cursor-pointer mb-3">
-          <button onClick={closeGalleryModal} className=" top-2 right-2 text-white bg-red-500 hover:bg-red-700 hover:text-white  text-xl sm:text-2xl">
+          <button onClick={closeGalleryModal} className=" top-2 right-2 text-white bg-red-500 hover:bg-red-700 hover:scale-110 transition duration-300  text-xl sm:text-2xl">
            <svg
                 className="w-6 sm:w-8 h-6 sm:h-8"
                 fill="none"

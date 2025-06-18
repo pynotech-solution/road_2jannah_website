@@ -4,48 +4,50 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-// Enhanced typewriter hook
-function useTypewriterSequence(sequence, speed = 50, pause = 1500) {
-  const [index, setIndex] = useState(0);        // current character
-  const [textIndex, setTextIndex] = useState(0); // current string
+// Typewriter with typing + deleting + infinite loop
+function useTypewriterLoop(texts, speed = 100, pause = 1500) {
+  const [textIndex, setTextIndex] = useState(0);
   const [displayed, setDisplayed] = useState('');
-  const [done, setDone] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
+    const currentText = texts[textIndex];
     let timeout;
 
-    if (textIndex < sequence.length) {
-      const text = sequence[textIndex];
-      if (index < text.length) {
+    if (!isDeleting) {
+      if (charIndex < currentText.length) {
         timeout = setTimeout(() => {
-          setDisplayed((prev) => prev + text[index]);
-          setIndex(index + 1);
+          setDisplayed((prev) => prev + currentText[charIndex]);
+          setCharIndex((prev) => prev + 1);
         }, speed);
       } else {
+        timeout = setTimeout(() => setIsDeleting(true), pause);
+      }
+    } else {
+      if (charIndex > 0) {
         timeout = setTimeout(() => {
-          setDisplayed('');
-          setIndex(0);
-          setTextIndex((prev) => (prev + 1) % sequence.length);
-        }, pause);
+          setDisplayed((prev) => prev.slice(0, -1));
+          setCharIndex((prev) => prev - 1);
+        }, speed / 2);
+      } else {
+        timeout = setTimeout(() => {
+          setIsDeleting(false);
+          setTextIndex((prev) => (prev + 1) % texts.length);
+        }, pause / 2);
       }
     }
 
     return () => clearTimeout(timeout);
-  }, [index, textIndex, sequence, speed, pause]);
+  }, [charIndex, isDeleting, textIndex, texts, speed, pause]);
 
-  useEffect(() => {
-    setDone(displayed.length === sequence[textIndex].length);
-  }, [displayed, textIndex, sequence]);
-
-  return [displayed, textIndex, done];
+  return displayed;
 }
 
 function Nav_Con() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleNavClick = (e, sectionId) => {
     e.preventDefault();
@@ -67,18 +69,33 @@ function Nav_Con() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
   };
 
-  // Typewriter Logic
-  const [nameText, nameIndex, nameDone] = useTypewriterSequence(['Road2Jannah Foundation'], 70, 2000);
-  const [mottoText, ,] = useTypewriterSequence(
-    nameDone ? ['Resourcing the Communities Through Outreach'] : [''],
-    60,
-    2000
-  );
+  // Use typewriter loop
+  const textList = [
+    'Road2Jannah Foundation',
+    'Resourcing the Communities Through Outreach',
+  ];
+  const animatedText = useTypewriterLoop(textList, 80, 2000);
 
   return (
     <nav className="bg-teal-800 text-white sticky top-1 z-50 max-w-[1800px] mx-auto">
-      <div className="containe mx-auto px-4 sm:px-4 lg:px-10 py-2 flex justify-between items-center gap-4">
+      <style>
+        {`
+          .blinking-cursor {
+            display: inline-block;
+            width: 1px;
+            background-color: white;
+            margin-left: 2px;
+            animation: blink 1s steps(2, start) infinite;
+          }
+          @keyframes blink {
+            to {
+              visibility: hidden;
+            }
+          }
+        `}
+      </style>
 
+      <div className="containe mx-auto px-4 sm:px-4 lg:px-10 py-2 flex justify-between items-center gap-4">
         <div className="flex gap-2 items-start">
           <img 
             src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/472206263_8807425239293997_4094478365450783416_n_xeyctj.jpg"
@@ -88,24 +105,15 @@ function Nav_Con() {
           />
 
           <div className="whitespace-nowrap flex flex-col justify-center gap-1">
-            <motion.a
-              href="#home"
-              onClick={(e) => handleNavClick(e, 'home')}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={logoVariants}
               className="text-[.8rem] md:text-[.9rem] font-bold hover:text-teal-200"
-              initial="hidden"
-              animate="visible"
-              variants={logoVariants}
             >
-              {nameText}
-            </motion.a>
-            <motion.p
-              initial="hidden"
-              animate="visible"
-              variants={logoVariants}
-              className="text-[.6rem] md:text-[] lg:text-sm text-teal-100 italic font-light"
-            >
-              {mottoText}
-            </motion.p>
+              {animatedText}
+              <span className="blinking-cursor">&nbsp;</span>
+            </motion.div>
           </div>
         </div>
 

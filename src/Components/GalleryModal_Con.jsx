@@ -16,7 +16,24 @@ function GalleryModal_Con({ selectedGalleryItem, currentIndex, closeGalleryModal
         className="bg-white rounded-lg p-4 sm:p-6 max-w-[90vw] sm:max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto relative flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        <button onClick={closeGalleryModal} className="absolute top-2 right-2 text-teal-800 hover:text-teal-600 text-xl sm:text-2xl">×</button>
+        <div className="flex justify-end cursor-pointer mb-3">
+          <button onClick={closeGalleryModal} className=" top-2 right-2 text-white bg-red-500 hover:bg-red-700 hover:text-white  text-xl sm:text-2xl">
+           <svg
+                className="w-6 sm:w-8 h-6 sm:h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+        </button>
+        </div>
         {currentItem ? (
           <>
             <div className="relative flex-shrink-0 min-h-0">

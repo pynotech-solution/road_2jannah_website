@@ -36,25 +36,26 @@ function Nav_Con() {
   // };
 
   return (
-    <nav className="bg-teal-800 text-white sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-2 md:py-4 flex justify-between items-center">
-        <div className="flex  items-start">
+    <nav className="bg-teal-800 text-white sticky top-1 z-50 max-w-[1800px] mx-auto">
+      <div className="containe mx-auto px-4 sm:px-4 lg:px-10 py-2  flex justify-between items-center gap-4">
+
+        <div className="flex gap-2 items-start ">
 
           <img 
           src="
           https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/472206263_8807425239293997_4094478365450783416_n_xeyctj.jpg
           "
           alt="road3jannah logo"
-          className="w-12 h-12 rounded-full mb-2"
+          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mb-2"
           loading="lazy"
 
           
           />
-          <div className="">
+          <div className=" whitespace-nowrap flex flex-col justify-center gap-1">
             <motion.a
             href="#home"
             onClick={(e) => handleNavClick(e, 'home')}
-            className="text-[.9rem] md:text-2xl font-bold hover:text-teal-200"
+            className="text-[.8rem] md:text-[.9rem] font-bold hover:text-teal-200"
             initial="hidden"
             animate="visible"
             variants={logoVariants}
@@ -65,6 +66,7 @@ function Nav_Con() {
               initial="hidden"
               animate="visible"
               variants={logoVariants}
+              className='text-[.6rem] md:text-[] lg:text-sm text-teal-100 italic font-light'
             >
               Resourcing the Communities Through Outreach
             </motion.p>
@@ -78,6 +80,7 @@ function Nav_Con() {
             Resourcing the Communities Through Outreach
           </motion.p> */}
         </div>
+
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-white focus:outline-none">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -86,7 +89,7 @@ function Nav_Con() {
         <ul
           className={`${
             isMenuOpen ? 'block' : 'hidden'
-          } md:flex md:space-x-6 absolute md:static top-full left-0 w-full md:w-auto bg-teal-800 md:bg-transparent p-4 md:p-0`}
+          } md:flex md:space-x-3 lg:space-x-6 absolute md:static top-full left-0 w-full md:w-auto bg-teal-800 md:bg-transparent p-4 md:p-0`}
         >
           <li>
             <a

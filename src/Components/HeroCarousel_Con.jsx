@@ -24,7 +24,7 @@ function HeroCarousel_Con() {
   }, []);
 
   return (
-    <div id="home" className="relative w-full h-96">
+    <div id="home" className="relative w-full h-96 max-w-[1800px] mx-auto overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}

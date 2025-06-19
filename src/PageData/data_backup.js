@@ -1,4 +1,4 @@
-import { section } from "framer-motion/client";
+import { link, section } from "framer-motion/client";
 
    export const gallery = [
 
@@ -256,6 +256,7 @@ import { section } from "framer-motion/client";
         description:"Road 2 Jannah  Foundation donates to Rahma Orphanage Home Road 2 Jannah (R2J) Foundation with support from KGL Foundation and Wilmar Ghana has made a significant donation to the orphans at Rahma Orphanage Home in Alajo, a suburb of the Ayawaso Central Constituency in the Greater Accra Region.The donation forms part of the foundations' annual project marking the end of Ramadan was made in the spirit of love, care and community support.The items donated included rice, oil, sanitary pads, beverages, toilet soaps, detergents, clothes, blueband bread spread, exercise books, and other essential goods.KGL Foundation and Wilmar Ghana, known for their support and commitment to community development over the years, has once again extended their support for this year's project.Speaking on behalf of the Executive Director of Road 2 Jannah Foundation, Mr. Kamaru Abdulai, the Foundation’s Public Relations Officer, Mr Yussif Okai, shared a message of  hope and compassion. He lamented about the outreach not just giving food items but creating a space where people feel seen, heard and supported especially during such a meaningful time of year. He as well thanked KGL Foundation and Wilmar Ghana for their tremendous support and help in making difference in the lives of the less privilege.The Proprietor of Rahma Orphanage Home, Sheikh Yusuf Musah, expressed heartfelt gratitude to Road 2 Jannah Foundation, KGL Foundation and Wilmar Ghana for their unwavering support in bringing joy to the lives of the orphans.He has added his voice to the call for supporting the Foundation's Borehole construction project to the underserved communities this year.",
         title: "Road 2 Jannah Foundation donates to Rahma Orphanage Home",
         date: "2025/04/11",
+        link: "https://l.facebook.com/l.php?u=https%3A%2F%2Fstarrfm.com.gh%2Froad-2-jannah-foundation-donates-to-rahma-orphanage-home%2F%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExa3hZUGRzUXNONFZ1UnE5cwEeaSRlnFmKx3mzBwb0pQhLn40EQQrEcdAabXMDsjb1FiM2T8eEZQxIbLUT1PY_aem_4mKu1KsRsHdt9CfaheNwZQ&h=AT0HB2jCSXrZm53uPrIEZtYXCGMy2VUdrck5t0R6gQYIhFmYTojhz5YTgXzQdWUOm7uBt4mIq1HatyMjCYMrsvYSTJRLBhVvoXblnor3bTKHZ43X2Hu1SWFQ-ilj9XzqfVtw7QxF4DGQqQkJ&__tn__=-UK-R&c[0]=AT1m7_PmdtakhV_IB9KNqRydTPXh30BTzO2UnLFg4kVFLFmnRFqqhu7lMkP_MiV26o3OHPFiWNIYojBCMeeFntZV59By3b5GM8l6DVz00sBl13zi8k_expsBHKc-gWq_AqM6-MzPP4t2ak6MNMKF_uOLHF0NOMHleYJ66DXoc3M4Mr4YyIkKGVDGSfjYv-OjyzrmBqJYM14k935NVy0CtSBkCYj7ERLOTA",
         media:[
             {
                 type: "image",
@@ -494,6 +495,121 @@ import { section } from "framer-motion/client";
                 type: "video",
                 src: "https://res.cloudinary.com/dzqdfaghg/video/upload/v1750039609/SCHOOL_BUILDING_afvtfl.mp4",
             },
+         
+        
+           
+         
+        
+        
+          
+           
+        
+            
+        
+          ]
+        
+        
+        }
+        ,
+    {type: "album",
+        category: "Event News",
+        section: "news",
+        description:"As part of our commitment as foundation to build a community free of Hardship, Hunger, Gender Equality & Empowering Women ; Road 2 Jannah Foundation took the initiative of Empowering Women Through Skills Acquisition which falls in line with goal 3 of the Millenium Development Goals.The beneficiaries of the maiden empowerment program put together by Road 2 Jannah Foundation in collaboration with Executive Hands Vocational Institute and supported by our benevolent donors after a week intensive training, graduated on the 18th September, 2021.They were awarded certificate for their participation.Various speakers commended the foundation for their effort to support communities through  such initiatives and urge all to support the Road 2 Jannah Foundation do more of such projects in other communities.The next edition of Empowering Women Through Skills Acquisition will be made known soon.Contact For More information 0243 457868 or 0573 512410 R2JOutreach22@gmail.com",
+        title: ' initiative of Empowering Women Through Skills Acquisition ' ,
+        date: "2022/06/27",
+          media:[
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365164/484343329_9203388273031023_6680636292088024982_n_npuxvl.jpg",
+            },
+           
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365166/484490229_9203388099697707_4773935021569406278_n_sxz9pt.jpg",
+            },
+           
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365167/484800518_9203388329697684_3265039558919353539_n_xvsjpa.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365167/484980167_9203388369697680_1967618197559617222_n_vlrpkz.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365167/484826555_9203388269697690_9146585642386547559_n_c7b1fy.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365167/484850140_9203388056364378_7115083139529948861_n_fwjx4s.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365166/484518914_9203388299697687_8975870851902332121_n_jiwkyz.jpg",
+            },
+           
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365166/484514523_9203388059697711_3924887768207712997_n_ykizhe.jpg",
+            },
+           
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365166/484483521_9203388346364349_3039258758850653005_n_iadnaj.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365166/484490229_9203388099697707_4773935021569406278_n_sxz9pt.jpg",
+            },
+           
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365165/484373616_9203388283031022_3839085872358935519_n_h8xitw.jpg",
+            },
+           
+           
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365165/484363010_9203388386364345_4395104010752065011_n_ztbjql.jpg",
+            },
+           
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365165/483524359_9203388316364352_7233168868436057678_n_ubskyq.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365165/483524522_9203388076364376_3054941949219634403_n_zhoeh7.jpg",
+            },
+           
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365164/483526137_9203388309697686_1760233644753660783_n_errv88.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365164/484343329_9203388273031023_6680636292088024982_n_npuxvl.jpg",
+            },
+           
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365164/483511222_9203388279697689_8919023967866094210_n_lp0dge.jpg",
+            },
+           
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365164/483522599_9203388039697713_3284941513945352441_n_xnzn2v.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365164/484176182_9203388333031017_4566956145912041608_n_dgrdd3.jpg",
+            },
+            {
+                type: "image",
+                src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365163/483488380_9203387963031054_140443732217422428_n_kd5a98.jpg",
+            },
+           
          
         
            

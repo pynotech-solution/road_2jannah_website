@@ -4,8 +4,6 @@ import { slides } from '../PageData/data';
 function HeroCarousel_Con() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
- 
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
@@ -19,9 +17,8 @@ function HeroCarousel_Con() {
   };
 
   useEffect(() => {
-    // Auto-slide every 5 seconds
-    const interval = setInterval(nextSlide, 5000); 
-    return () => clearInterval(interval); 
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -29,26 +26,35 @@ function HeroCarousel_Con() {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-500  w-full h-full ${
+          className={`absolute inset-0 transition-opacity duration-500 w-full h-full ${
             index === currentSlide ? 'opacity-100' : 'opacity-0'
           }`}
-       style={{
-  backgroundImage: `url(${slide.image})`,
-  backgroundSize: 'contain',
-  backgroundPosition: 'center',
-  // backgroundRepeat: 'no-repeat',
-}}
+          style={{
+            backgroundImage: `url(${slide.image})`,
+            // backgroundSize: 'cover', // Ensures image fills the area
+            backgroundSize: 'contain', // Ensures image fits within the area
+            backgroundPosition: 'center',
+            // backgroundRepeat: 'no-repeat',
+          }}
         >
-          <div className="flex flex-col items-center justify-center h-full text-white bg-black bg-opacity-50">
-            <h2 className="text-[1.3rem] md:text-3xl font-semibold mb-4 text-center">{slide.title}</h2>
-            <p className="sm:text-xl font-semibold text-center mb-6">{slide.description}</p>
-            <a
-              href="#donate"
-              className="bg-teal-800 text-white py-2 px-6 rounded-lg hover:bg-teal-700"
-            >
-              {slide.buttonText}
-            </a>
-          </div>
+          {slide.hasOverlay && (
+            <div className="flex flex-col items-center justify-center h-full text-white bg-black bg-opacity-50">
+              {slide.title && (
+                <h2 className="text-[1.3rem] md:text-3xl font-semibold mb-4 text-center">{slide.title}</h2>
+              )}
+              {slide.description && (
+                <p className="sm:text-xl font-semibold text-center mb-6">{slide.description}</p>
+              )}
+              {slide.buttonText && (
+                <a
+                  href="#donate"
+                  className="bg-teal-800 text-white py-2 px-6 rounded-lg hover:bg-teal-700"
+                >
+                  {slide.buttonText}
+                </a>
+              )}
+            </div>
+          )}
         </div>
       ))}
       <button
@@ -78,4 +84,4 @@ function HeroCarousel_Con() {
   );
 }
 
-export default HeroCarousel_Con
+export default HeroCarousel_Con;

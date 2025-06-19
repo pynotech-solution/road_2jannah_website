@@ -768,31 +768,38 @@ export const donatevideo = [
   .map((item) => ({
     title: item.title,
     description: item.description,
-    date: new Date(item.date).toLocaleDateString(), // Example event date; adjust as needed
+    date: new Date(item.date).toLocaleDateString(), 
     category: item.category || "General News",
     media: item.media,
   }));
 
          export const slides = [
-            {
-              image: 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494009957_9489761161060398_7555241959544768369_n_vmi8cs.jpg',
-              title: 'Ramadan Community Outreach',
-              description: 'Providing iftar meals and support to 1,000 families during Ramadan.',
-              buttonText: 'Support Ramadan',
-            },
-            {
-              image: 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/472206263_8807425239293997_4094478365450783416_n_xeyctj.jpg',
-              title: 'Medwuma Pa Empowerment',
-              description: 'Empowering women with grants and training for sustainable livelihoods.',
-              buttonText: 'Empower Communities',
-            },
-            {
-              image: 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/489864149_9380395991996916_7669150771096563103_n_kmgslx.jpg',
-              title: 'Shave or Braid the Orphan',
-              description: 'Bringing dignity to orphans with free haircuts and braiding.',
-              buttonText: 'Help Orphans',
-            },
-          ];
+  {
+    image: 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494009957_9489761161060398_7555241959544768369_n_vmi8cs.jpg',
+    title: 'Ramadan Community Outreach',
+    description: 'Providing iftar meals and support to 1,000 families during Ramadan.',
+    buttonText: 'Support Ramadan',
+    hasOverlay: true, 
+  },
+  {
+    image: 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/472206263_8807425239293997_4094478365450783416_n_xeyctj.jpg',
+    title: 'Medwuma Pa Empowerment',
+    description: 'Empowering women with grants and training for sustainable livelihoods.',
+    buttonText: 'Empower Communities',
+    hasOverlay: true, 
+  },
+  {
+    image: 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036910/489864149_9380395991996916_7669150771096563103_n_kmgslx.jpg',
+    title: 'Shave or Braid the Orphan',
+    description: 'Bringing dignity to orphans with free haircuts and braiding.',
+    buttonText: 'Help Orphans',
+    hasOverlay: true, 
+  },
+  {
+    image: 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494150289_9504480932921754_3623303014442368409_n_shi6nm.jpg',
+    hasOverlay: false, 
+  },
+];
 
           export const missionVision =[
             {

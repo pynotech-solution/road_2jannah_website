@@ -19,7 +19,7 @@ function Focus_Con() {
           </div>
         </div>
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1750116258/29e6e89d-681b-4384-99c7-0e46c519256b.png" alt="Economic Empowerment" className="w-full h-48 object-cover" />
+          <img src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365166/484514523_9203388059697711_3924887768207712997_n_ykizhe.jpg" alt="Economic Empowerment" className="w-full h-48 object-cover" />
           <div className="p-4">
             <h3 className="text-lg font-bold text-teal-800 mb-2">Economic Empowerment</h3>
             <p className="text-gray-700 text-sm">Through programs like Medwuma Pa, we provide grants and training...</p>

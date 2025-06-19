@@ -117,14 +117,20 @@ function NewsModal_Con({ isModalOpen, selectedNews, closeModal }) {
 
           <div className="">
            <p className="text-xs bg-teal-200 inline-block px-2 py-1 text-teal-800 font-bold mb-2">{selectedNews.category}</p>
-          <p className="text-xs text-gray-600 mb-2">{selectedNews.date}</p>
+          <p className="text-xs text-gray-600 mb-2" >{selectedNews.date}</p>
          </div>
 
+        
+
+         {selectedNews.externalLink && (
+
          <button className='text-xs bg-teal-200 inline-block p-2 text-teal-800 font-bold'>
-          <a href="">
+          <a href={selectedNews.followLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
             <p className="text-[.9rem] text-gray-600 ">Read more</p>
           </a>
          </button>
+
+         )}
          </div>
           <h3 className="text-xl font-bold text-teal-800 mb-2">{selectedNews.title}</h3>
           {paragraphs}

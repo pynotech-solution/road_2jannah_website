@@ -4,6 +4,9 @@ import { link, section } from "framer-motion/client";
 
     {   type: "album",
         section: "news",
+         category: "General News",  
+        date:'2024/04/20',
+        dataa: "https://www.facebook.com/100090885930870/videos/pc.100090885930870/1216466267870571/?app=fbl",
         title: "Road 2 Jannah Foundation's RCO'24 in Anyamam",
         description:"Road 2 Jannah Foundation's RCO'24 in Anyamam in the Ada West District of Greater Accra Region The Road 2 Jannah Foundation from New Bakpa made a stop at *Anyamam* in the Ada West District to donate to the affected tidal waves victims rendered homeless seeking shelter in churches and schools as part of the communities to reach out to.The month of Ramadan is a month to show compassion and love to the needy and vulnerable.  The foundation donated items provided by cooperate organizations and benevolent donors like Rice, Oil, Maize, Clothes and Exercise Books along with a number of other items to the Community.Hon. Philip Sai, the Assembly member of Anyamam welcome the gesture, lauded  R2J foundation on behalf of victims of the tidal waves for it's commitment in the quest to support vulnerable communities and urge co-operate organisations to continue supporting Road 2 Jannah Foundation do more.In his address, Hon. Philip Sai called on government to speed up on constructing the sea defence in the area to avoid further destruction of properties and possible lost of lives.Let's make a Change together by donating any amount to support RCO'24 Phase Two Project The outreach was supported by Wilmar Gh, NLA Good Causes Foundation, Dawadawa Jollof Delight and Kingdom of Saudi Arabia " ,
         media:
@@ -46,17 +49,17 @@ import { link, section } from "framer-motion/client";
             
            
                 ],
-        category: "General News",  
-        data:'2024-04-20',     
+            
                },
 
     { type: "album",
         section: "news",
+        category: "Event News",
 
         description:'INFOCUS ON HEALTHY MORNING LIVE ON HSTV || 21/03/2024 KINDLY LIKE, SHARE AND FOLLOW THIS PAGE FOR MORE UPDATES.',
         title: "InFocus on Healthy Morning Live on HSTV",
-        date: "20/03/2024",
         date: "2024/03/20",
+        followLink: "https://m.facebook.com/story.php?story_fbid=232057133267234&id=100083638188886&sfnsn=wa&mibextid=2Rb1fB",
           media:
            [
             
@@ -74,6 +77,7 @@ import { link, section } from "framer-motion/client";
                },
     { type: "album",
         section: "news",
+        followLink: "https://l.facebook.com/l.php?u=https%3A%2F%2Fcitinewsroom.com%2F2024%2F06%2Fr2j-donates-to-mampong-school-for-deaf-and-blind%2F%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExcXkxSWVWdTFWMHdmMUNPaAEe6bRlXTl4AEpMyc4xo1Z5AvPyMGgGtzj_HHaWQp-KsmRlbmqQDti4OAEh43M_aem_7BAOX11kih8okCv4eESm8Q&h=AT1-BwmBnUrv_8J47hYu4MtVjOPBbHEu7X0ECfr7Htdf9MMhObETU9hH2rOR5m7TdImf172OG3mO1UeSNIW2H1Uq8DxhqKCXTHSuO-HWSSdC6wcfU_Xub7U1KuUrUzv8m3dzk4Uu85znUFtK&__tn__=-UK-R&c[0]=AT3eqG7syqOF9fOUd7fzpUWK080A7ENk88QGEdOeiT-ADgKwlag74JvO-_EOotmHv77e_7Vs1ybSp_4djOP5mnlfd6jgN-DlFKv7hygjKFRAsg-iVPY6jb-FBPbjVDyzgkN6M20wbKYeVyHUTkbhLLrbDoQAxw49zXdoXTgruAgeFUA1gW-anjAvY2B2gSeiDm_26k4sjMtdglFFHyytlMGfxfpLUN3NWA",
 
         description:'',
         title: "R2J donate to Mampong School of blind",
@@ -252,11 +256,14 @@ import { link, section } from "framer-motion/client";
         
         
         },
+
     {type: "album",
+        section: "news",
+        category: "General News",
         description:"Road 2 Jannah  Foundation donates to Rahma Orphanage Home Road 2 Jannah (R2J) Foundation with support from KGL Foundation and Wilmar Ghana has made a significant donation to the orphans at Rahma Orphanage Home in Alajo, a suburb of the Ayawaso Central Constituency in the Greater Accra Region.The donation forms part of the foundations' annual project marking the end of Ramadan was made in the spirit of love, care and community support.The items donated included rice, oil, sanitary pads, beverages, toilet soaps, detergents, clothes, blueband bread spread, exercise books, and other essential goods.KGL Foundation and Wilmar Ghana, known for their support and commitment to community development over the years, has once again extended their support for this year's project.Speaking on behalf of the Executive Director of Road 2 Jannah Foundation, Mr. Kamaru Abdulai, the Foundation’s Public Relations Officer, Mr Yussif Okai, shared a message of  hope and compassion. He lamented about the outreach not just giving food items but creating a space where people feel seen, heard and supported especially during such a meaningful time of year. He as well thanked KGL Foundation and Wilmar Ghana for their tremendous support and help in making difference in the lives of the less privilege.The Proprietor of Rahma Orphanage Home, Sheikh Yusuf Musah, expressed heartfelt gratitude to Road 2 Jannah Foundation, KGL Foundation and Wilmar Ghana for their unwavering support in bringing joy to the lives of the orphans.He has added his voice to the call for supporting the Foundation's Borehole construction project to the underserved communities this year.",
         title: "Road 2 Jannah Foundation donates to Rahma Orphanage Home",
         date: "2025/04/11",
-        link: "https://l.facebook.com/l.php?u=https%3A%2F%2Fstarrfm.com.gh%2Froad-2-jannah-foundation-donates-to-rahma-orphanage-home%2F%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExa3hZUGRzUXNONFZ1UnE5cwEeaSRlnFmKx3mzBwb0pQhLn40EQQrEcdAabXMDsjb1FiM2T8eEZQxIbLUT1PY_aem_4mKu1KsRsHdt9CfaheNwZQ&h=AT0HB2jCSXrZm53uPrIEZtYXCGMy2VUdrck5t0R6gQYIhFmYTojhz5YTgXzQdWUOm7uBt4mIq1HatyMjCYMrsvYSTJRLBhVvoXblnor3bTKHZ43X2Hu1SWFQ-ilj9XzqfVtw7QxF4DGQqQkJ&__tn__=-UK-R&c[0]=AT1m7_PmdtakhV_IB9KNqRydTPXh30BTzO2UnLFg4kVFLFmnRFqqhu7lMkP_MiV26o3OHPFiWNIYojBCMeeFntZV59By3b5GM8l6DVz00sBl13zi8k_expsBHKc-gWq_AqM6-MzPP4t2ak6MNMKF_uOLHF0NOMHleYJ66DXoc3M4Mr4YyIkKGVDGSfjYv-OjyzrmBqJYM14k935NVy0CtSBkCYj7ERLOTA",
+        followLink: "https://l.facebook.com/l.php?u=https%3A%2F%2Fstarrfm.com.gh%2Froad-2-jannah-foundation-donates-to-rahma-orphanage-home%2F%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExcXkxSWVWdTFWMHdmMUNPaAEeIFyR8DuYIn41JTK86Lv6Rmrl1nRFvBbnXolZh5UatSTJgQdBxu7dYIHlLt0_aem_dyACP9qLR43ZseoR1vYPfA&h=AT0Pb4FF35gLCo7gzqAqmizxhBAs2FlldGpcp9BbI1JjAoNTxeQZKBzGivhoF7cR1je6vNWc5t7J9CLnm-mkw92GhgybTOd0T_YxjFTbu5NtUgwbFMviDX1QR2s5IyWeNWFN_ZBvRjZ79lSy&__tn__=-UK-R&c[0]=AT3tjlWfxRYcKwCWCQE41TkF-jUzQqexaPbwdfZOI8u9I-LhOr9hVvD9R1iZwGCD99IkIfCDfGAIaEa6__4h8yIFHc17Asx6INf0hH4z1NcRMwRsSsehd-wNDl6BtfgUV12Dn0i20kJchOPdKzSM8PATOdlG3ghUQoo9XivluixDQ1rp0dwnaipcIp3BZUZIWRgDKrczLNE1WU9FMpcwEjSMvDMqsfyrng",
         media:[
             {
                 type: "image",
@@ -446,6 +453,8 @@ import { link, section } from "framer-motion/client";
         
         },
     {type: "album",
+        section: "news",
+        category: "General News",
         description:"Support Let's Complete Ansarul Islam School Building ProjectThe foundation in it's quest to support and empower communities, paid a courtesy call on Ansarul Islam School upon a request by the Proprietor Mallam Abdul Kadir Saeed.The visit was to discuss way forward of how to  complete a 3 floor storey building project that has begun but lack of funds has stall the project.The project if completed will not only provide a conducive environment for teaching and learning but also an avenue that will empower vulnerable kids acquire skills training ( Fashion Design) as empowerment centre.The group had the chance to tour the uncompleted facility with Management of Ansarul Islam School to ascertain the stage at which the project has stalled due to lack of funds.As part of Road 2 Jannah Foundation's commitment to resourcing communities through outreach projects, such issues is our main primary objective to know what challenges the communities we reach out to faces and solutions.You can support the project by donating building materials like Cement, Iron rods, Building Bricks, Sand, Woods, Tiles, Paints and Cash Amount.Road 2 Jannah Foundation is therefore calling on Organisations, Benovelent Donors, Individuals, Cooperate Institutions and NGO's to come support for completion of the project.",
         title: "Support Let's Complete Ansarul Islam School Building Project",
         date: "2025/05/04",

@@ -799,6 +799,10 @@ export const donatevideo = [
     image: 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494150289_9504480932921754_3623303014442368409_n_shi6nm.jpg',
     hasOverlay: false, 
   },
+  {
+    image: 'https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036909/469045070_8629968920372964_2629557348216184035_n_uzwfey.jpg',
+    hasOverlay: false, 
+  },
 ];
 
           export const missionVision =[

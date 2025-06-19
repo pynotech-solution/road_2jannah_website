@@ -1,10 +1,8 @@
-// Eugene Afriyie UEB3502023
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-// Custom hook to animate name + alternating mottos
 function useTwoLineTypewriter(name, mottos, speed = 100, pause = 1500) {
   const [nameText, setNameText] = useState('');
   const [mottoText, setMottoText] = useState('');

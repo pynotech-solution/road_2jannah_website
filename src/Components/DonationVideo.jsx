@@ -12,16 +12,15 @@ function DonationVideo({ videos, openDonationModal }) {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + videos.length) % videos.length);
   };
 
-  const handleDonateClick = (e) => {
-    e.preventDefault();
-    if (donateRef && donateRef.current) {
-      const offset = 80; // Offset to account for fixed nav or other headers
-      const y = donateRef.current.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
+  // const handleDonateClick = (e) => {
+  //   e.preventDefault();
+  //   if (donateRef && donateRef.current) {
+  //     const offset = 80; // Offset to account for fixed nav or other headers
+  //     const y = donateRef.current.getBoundingClientRect().top + window.pageYOffset - offset;
+  //     window.scrollTo({ top: y, behavior: 'smooth' });
+  //   }
+  // };
 
-  // Single video mode
   if (videos.length === 1) {
     const { title, description, url } = videos[0];
     return (

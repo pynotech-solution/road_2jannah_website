@@ -13,6 +13,7 @@ function VideoComponent({ videos }) {
   };
 
   // Single video mode
+  
   if (videos.length === 1) {
     const { title, description, url } = videos[0];
     return (
@@ -40,6 +41,7 @@ function VideoComponent({ videos }) {
   }
 
   // Carousel mode for multiple videos
+
   const currentVideo = videos[currentIndex];
   return (
     <section className="py-6 sm:py-8 md:py-12 bg-gradient-to-b from-teal-100 to-white text-center">

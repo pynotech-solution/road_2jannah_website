@@ -24,12 +24,11 @@ function ContactModal_Con({ isContactModalOpen, closeContactModal }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate form submission (in a real app, this would send data to a backend)
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
       closeContactModal();
-    }, 3000); // Hide message and close modal after 3 seconds
+    }, 5000);
   };
 
   return (

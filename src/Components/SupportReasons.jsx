@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import { supportReasons } from '../PageData/data';
 
 const SupportReasons = () => {
   const scrollRef = useRef(null);
@@ -35,33 +36,7 @@ const SupportReasons = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const supportReasons = [
-    {
-      title: "Road 2 Jannah is your local partner in community development",
-      description: "As a local partner, Road 2 Jannah works hand-in-hand with community leaders to design and implement development projects that address specific local needs.",
-      src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750116604/90c7a16d-d597-461f-bd5e-d5d6ce037b1a.png",
-    },
-    {
-      title: "Road 2 Jannah brings you closer to the community",
-      description: "Through volunteer opportunities and outreach programs, Road 2 Jannah connects supporters directly with the people they help.",
-      src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494051333_9489761157727065_7600707138854965521_n_wfs2yf.jpg",
-    },
-    {
-      title: "Road 2 Jannah provides exhaustive outreach nationwide",
-      src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750126469/d1925ff1-b810-437b-9ff2-999ed42890b5.png",
-      description: "With a nationwide network, Road 2 Jannah reaches even the most remote areas to deliver aid, education, and healthcare.",
-    },
-    {
-      title: "Road 2 Jannah Foundation supports vulnerable communities",
-      src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750117310/43cb3586-3487-4a6a-b3d6-e026dc202fc5.png",
-      description: "Road 2 Jannah offers tailored programs, resources, and advocacy to help vulnerable groups overcome challenges.",
-    },
-    {
-      title: "Road 2 Jannah reflects the voices of communities",
-      description: "Rooted in community values, Road 2 Jannah ensures its initiatives are shaped by real experiences and needs.",
-      src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750037049/3_dlwvub.jpg",
-    },
-  ];
+
 
   return (
     <div

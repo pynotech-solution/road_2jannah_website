@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+@media screen and (max-width: 400px) {
+    .ssm-text {
+        font-size: .5rem;
+    }
+    
+}

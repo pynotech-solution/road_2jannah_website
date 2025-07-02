@@ -152,7 +152,7 @@ function Nav_Con() {
                 hidden: { opacity: 0, y: 10 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
               }}
-              className="text-[.8rem] md:text-[.9rem] font-bold hover:text-teal-200 typewriter-text min-h-[1.25rem]"
+              className=" text-[.8rem] md:text-[.9rem] font-bold hover:text-teal-200 typewriter-text min-h-[1.25rem]"
             >
               {nameLine || <span>&nbsp;</span>}
             </motion.div>
@@ -164,7 +164,7 @@ function Nav_Con() {
                 hidden: { opacity: 0, y: 10 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
               }}
-              className="text-[.6rem] md:text-sm lg:text-sm text-teal-100 italic font-light typewriter-text min-h-[1.2rem]"
+              className="ssm-text text-[.6rem] md:text-sm lg:text-sm text-teal-100 italic font-light typewriter-text min-h-[1.2rem]"
             >
               {mottoLine || <span>&nbsp;</span>}
             </motion.div>

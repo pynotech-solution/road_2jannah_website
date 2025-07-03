@@ -176,8 +176,6 @@ function App() {
         
     <QuoteSection_Con quote={quotes[currentQuoteIndex].quote} attribution={quotes[currentQuoteIndex].attribution} />
 
-
-
       <SupportReasons />
 
 

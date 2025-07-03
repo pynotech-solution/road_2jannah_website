@@ -740,16 +740,6 @@ export const donatevideo = [
                 type: "image",
                 src: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1750365163/483488380_9203387963031054_140443732217422428_n_kd5a98.jpg",
             },
-           
-         
-        
-           
-         
-        
-        
-          
-           
-        
             
         
           ]

@@ -31,8 +31,8 @@ function HeroCarousel_Con() {
           }`}
           style={{
             backgroundImage: `url(${slide.image})`,
-            // backgroundSize: 'cover', // Ensures image fills the area
-            backgroundSize: 'contain', // Ensures image fits within the area
+            // backgroundSize: 'cover', 
+            backgroundSize: 'contain', 
             backgroundPosition: 'center',
             // backgroundRepeat: 'no-repeat',
           }}

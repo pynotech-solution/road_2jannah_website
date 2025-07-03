@@ -143,7 +143,7 @@ function About_Con() {
                     backgroundImage: `url('https://res.cloudinary.com/dzqdfaghg/image/upload/v1750036911/494009957_9489761161060398_7555241959544768369_n_vmi8cs.jpg')`,
                     backgroundSize: 'contain',
                     backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
+                    // backgroundRepeat: 'no-repeat',
                   }}
                 />
                 <p className="text-xs sm:text-sm text-gray-500 text-center mt-2 italic">

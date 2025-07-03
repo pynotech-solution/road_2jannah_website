@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 function useTwoLineTypewriter(name, mottos, speed = 100, pause = 1500) {
+  
   const [nameText, setNameText] = useState('');
   const [mottoText, setMottoText] = useState('');
   const [phase, setPhase] = useState('typingName');
